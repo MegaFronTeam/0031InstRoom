@@ -3,10 +3,16 @@
 
 		display: flex;
 		text-align: center;
-		@include roww(20px);
+		@include roww(10px);
 		flex-wrap: wrap;
+		margin-left: 0;
 	}
-
+	@include media-breakpoint-up(xl) {
+		--bs-gutter-x: #{rem(30)};
+	}
+	@include media-breakpoint-up(xxl) {
+		--bs-gutter-x: #{rem(60)};
+	}
 	list-style: none;
 	position: relative;
 	margin-bottom: 0;
@@ -16,21 +22,38 @@
 		// margin-left: 0;
 		// margin-right: 0;
 		padding: 0;
+		&:last-child {
+			a {
+				padding-right: 0;
+			}
+		}
 	}
 	a{
+		color: $white;
+		font-weight: 500;
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		padding: 0 calc(var(--bs-gutter-x) / 2);
+		font-size: rem(15);
+		@include media-breakpoint-up(xl) {
+			font-size: rem(16);
+		}
+		&:hover {
+			color: $primary;
+		}
 	}
 }
 
 
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
-	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--h: #{rem(2)};
+	--color: #{$white};
+	--position: calc(var(--h) * 4);
 	&.on span {
 		--color: transparent;
+		&:before {
+			width: 100%;
+		}
 	}
 
 	&.on  { 
@@ -38,9 +61,9 @@
 		--rotate: 45deg;
 	}
 	display: block;
-	height: calc(var(--h)* 12);
+	height: calc(var(--h)* 9);
 	position: relative; 
-	font-size: 32px;
+	font-size: rem(24);
 	width: 1em;
 	cursor: pointer;
 	span:after,
@@ -53,16 +76,7 @@
 		@include a-cent(y);
 		display: block;
 	}
-
-	span:before { 
-		top: var(--position);
-		transform: rotate3d(0,0,1, var(--rotate, 0));
-	}
-
-	span:after {
-		bottom: var(--position);
-		transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
-	}
+	
 	span,
 	span:after,
 	span:before {
@@ -74,6 +88,18 @@
 		backface-visibility: hidden; 
 		transform-origin: 50% 50%;
 	} 
+
+	span:before { 
+		top: var(--position);
+		transform: rotate3d(0,0,1, var(--rotate, 0));
+		width: calc(100% - 8px);
+		right: 0;
+	}
+
+	span:after {
+		bottom: var(--position);
+		transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
+	}
 }
 @include media-breakpoint-down(lg) {
 

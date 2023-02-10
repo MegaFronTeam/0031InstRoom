@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>тест dffsdf dfsdтест 2222</title>
+		<title>Главная</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -17,22 +17,85 @@
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
+				<!-- start topLine-->
+				<div class="topLine section" id="topLine">
+					<div class="container">
+						<div class="topLine__row row">
+							<div class="col col-sm-auto col-lg-1 col-xxl-2">
+								<a class="topLine__logo" href="/"><img src="img/svg/logo.svg" alt="" loading="lazy"/>
+								</a>
+							</div>
+							<div class="col-auto col-lg-2 col-xxl-3 d-none d-md-block">
+								<div class="topLine__work-time">Время работы: <span>10:00–20:00</span>
+								</div>
+							</div>
+							<div class="col d-none d-md-block">
+								<a class="topLine__phone-link" href="tel:+74951203214">+7 495 120-32-14
+								</a>
+								<a class="topLine__phone-btn" href="#">Заказать звонок
+								</a>
+							</div>
+							<div class="col-12 col-sm col-md-auto order-last order-sm-5">
+								<div class="topLine__links">
+									<a class="topLine__link" href="#">
+										<div class="topLine__icon-wrap">
+											<svg class="icon icon-like ">
+												<use xlink:href="img/svg/sprite.svg#like"></use>
+											</svg><span>0</span>
+										</div>
+									</a>
+									<a class="topLine__link" href="#">
+										<div class="topLine__icon-wrap">
+											<svg class="icon icon-chart ">
+												<use xlink:href="img/svg/sprite.svg#chart"></use>
+											</svg><span>0</span>
+										</div>
+									</a>
+									<a class="topLine__link" href="#">
+										<div class="topLine__icon-wrap">
+											<svg class="icon icon-person ">
+												<use xlink:href="img/svg/sprite.svg#person"></use>
+											</svg>
+										</div>
+									</a>
+									<a class="topLine__link" href="#">
+										<div class="topLine__icon-wrap">
+											<svg class="icon icon-cart ">
+												<use xlink:href="img/svg/sprite.svg#cart"></use>
+											</svg><span>99</span>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-auto order-sm-last">
+								<div class="topLine__price">Товаров на сумму<span>2 000 ₽</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end topLine-->
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
 					<div class="container">
-						<div class="row">
-							<div class="col order-lg-0 order-last">
+						<div class="top-nav__row row">
+							<div class="col col-lg-auto col-xxl-2">
+								<div class="catalog-toggle catalog-toggle--js">
+									<div class="catalog-toggle__line-wrap"><span></span>
+									</div>Каталог товаров
+								</div>
+							</div>
+							<div class="col-auto col-lg order-lg-0 order-last">
 								<div class="menu-mobile menu-mobile--js">
 									<div class="menu-mobile__inner">
 										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 										</div>
 										<nav>
 											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хиты сезона</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новинки</a></li>
 											</ul>
 										</nav>
 									</div>
@@ -42,20 +105,171 @@
 								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 								</div>
 							</div>
+							<div class="col-lg-auto col-xl-2 d-none d-lg-block">
+								<div class="soc">
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-instagram ">
+											<use xlink:href="img/svg/sprite.svg#instagram"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-vk ">
+											<use xlink:href="img/svg/sprite.svg#vk"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-fb ">
+											<use xlink:href="img/svg/sprite.svg#fb"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="col-lg-3 d-none d-lg-block">
+								<div class="search-block">
+									<form>
+										<input type="text" placeholder="Поиск по каталогу"/>
+										<button> 
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="catalog-menu catalog-menu--js">
+						<div class="catalog-menu__container container">
+							<div class="catalog-menu__wrap">
+								<div class="catalog-menu__item">Малярные товары
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<div class="catalog-menu__content">
+									<ul>
+										<li>1</li>
+										<li>2</li>
+										<li>4</li>
+										<li>3</li>
+										<li>6</li>
+										<li>5</li>
+										<li>7</li>
+										<li>8</li>
+										<li>9</li>
+										<li>0</li>
+									</ul>
+								</div>
+							</div>
+							<div class="catalog-menu__wrap">
+								<div class="catalog-menu__item">Электроинструмент
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<div class="catalog-menu__content">
+									<ul>
+										<li>1</li>
+										<li>2</li>
+										<li>4</li>
+										<li>3</li>
+										<li>6</li>
+										<li>5</li>
+										<li>7</li>
+										<li>8</li>
+										<li>9</li>
+										<li>0</li>
+									</ul>
+								</div>
+							</div>
+							<div class="catalog-menu__wrap">
+								<div class="catalog-menu__item">Спецодежда
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<div class="catalog-menu__content">
+									<ul>
+										<li>1</li>
+										<li>2</li>
+										<li>4</li>
+										<li>3</li>
+										<li>6</li>
+										<li>5</li>
+										<li>7</li>
+										<li>8</li>
+										<li>9</li>
+										<li>0</li>
+									</ul>
+								</div>
+							</div>
+							<div class="catalog-menu__wrap">
+								<div class="catalog-menu__item">Сезонное
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<div class="catalog-menu__content">
+									<ul>
+										<li>1</li>
+										<li>2</li>
+										<li>4</li>
+										<li>3</li>
+										<li>6</li>
+										<li>5</li>
+										<li>7</li>
+										<li>8</li>
+										<li>9</li>
+										<li>0</li>
+									</ul>
+								</div>
+							</div>
+							<div class="catalog-menu__wrap">
+								<div class="catalog-menu__item">Для дома и дачи
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<div class="catalog-menu__content">
+									<ul>
+										<li>1</li>
+										<li>2</li>
+										<li>4</li>
+										<li>3</li>
+										<li>6</li>
+										<li>5</li>
+										<li>7</li>
+										<li>8</li>
+										<li>9</li>
+										<li>0</li>
+									</ul>
+								</div>
+							</div>
+							<div class="catalog-menu__wrap">
+								<div class="catalog-menu__item">Инструменты
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<div class="catalog-menu__content">
+									<ul>
+										<li>1</li>
+										<li>2</li>
+										<li>4</li>
+										<li>3</li>
+										<li>6</li>
+										<li>5</li>
+										<li>7</li>
+										<li>8</li>
+										<li>9</li>
+										<li>0</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<!-- end top-nav-->
-				<!-- start topLine-->
-				<div class="topLine section" id="topLine">
-					<div class="container">
-						<div class="section-title text-center">
-							<h2>topLine</h2>
-						</div>
-						<div class="row"></div>
-					</div>
-				</div>
-				<!-- end topLine-->
 			</header>
 			<!-- end header-->
 			<main>

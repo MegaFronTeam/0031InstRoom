@@ -464,7 +464,7 @@ $emphasis-color:            $black !default;
 // Style anchor elements.
 
 $link-color:                              $primary !default;
-$link-decoration:                         underline !default;
+$link-decoration:                         none !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
@@ -886,7 +886,7 @@ $input-disabled-color:                  null !default;
 $input-disabled-bg:                     var(--#{$prefix}form-control-disabled-bg) !default;
 $input-disabled-border-color:           null !default;
 
-$input-color:                           var(--#{$prefix}body-color) !default;
+$input-color:                           $black !default;
 $input-border-color:                    var(--#{$prefix}border-color) !default; //$gray-400
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      $box-shadow-inset !default;

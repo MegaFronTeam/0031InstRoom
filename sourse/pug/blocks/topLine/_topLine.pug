@@ -2,8 +2,28 @@ mixin topLine()
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
-			.row
+			+e.row.row
+				.col.col-sm-auto.col-lg-1.col-xxl-2
+					+e.logo(href='/'): +img('img/svg/logo.svg')
+				.col-auto.col-lg-2.col-xxl-3.d-none.d-md-block
+					+e.work-time Время работы: 
+						span 10:00–20:00
+				.col.d-none.d-md-block
+					+e.phone-link(href='tel:+74951203214') +7 495 120-32-14
+					+e.phone-btn(href='#') Заказать звонок
+				.col-12.col-sm.col-md-auto.order-last.order-sm-5
+					+e.links
+						mixin link(icon, count='0')
+							+e.link(href='#')
+								+e.icon-wrap
+									+icon(icon)
+									if count
+										span!=count
+						+link('like')
+						+link('chart')
+						+link('person', '')
+						+link('cart', '99')
+				.col-auto.order-sm-last
+					+e.price Товаров на сумму
+						span 2 000 ₽
 	// end topLine

@@ -1,23 +1,16 @@
 .top-nav {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	padding-top: rem(18);
+	padding-bottom: rem(18);
 	// --sTPB: #{rem()};
+	background-color: #000;
+	position: relative;
 	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
-
+		align-items: center;
 	}
-	.section-title{
-		
-	}
-	&__col{
-
-	}
-	&__item{
-
-	}
-	&__slide{
-		height: auto;
+	.soc {
+		@include media-breakpoint-up(xxl) {
+			margin-left: rem(15);
+		}
 	}
 
 	@include media-breakpoint-up(md) {}

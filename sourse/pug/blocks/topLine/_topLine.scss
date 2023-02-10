@@ -1,26 +1,117 @@
 
-	// start .topLine
-	.topLine {
-		 
-		// --sPT: #{rem()};
-	// --sPB: #{rem()};
+// start .topLine
+.topLine {
+	--sPT: #{rem(10)};
+	--sPB: #{rem(10)};
 	// --sTPB: #{rem()};
+	background-color: $gray-900;
+	color: $white;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(0)};
+		--sPB: #{rem(0)};
+	}
 	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(20)};
+
+		align-items: center;
+	}
+	&__logo {
+		display: block;
+		img {
+			width: 100%;
+			max-width: rem(90);
+		}
+	}
+	&__work-time {
+		font-weight: 500;
+		span {
+			display: block;
+			@include media-breakpoint-up(xxl) {
+				display: inline;
+			}
+		}
+	}
+	&__phone-link {
 
 	}
-	.section-title{
-		
+	&__phone-link {
+		display: block;
+		width: max-content;
+		font-size: rem(18);
+		line-height: 1.11em;
+		margin-bottom: rem(7);
+		font-weight: 600;
+		&:not(:hover) {
+			color: $white;
+		}
 	}
-	&__col{
-
+	&__phone-btn {
+		font-size: rem(14);
+		font-weight: 500;
+		text-decoration: underline;
+		line-height: 1.14em;
+		font-weight: 500;
 	}
-	&__item{
-
+	&__links {
+		@include roww('20px', 'm');
+		display: flex;
+		justify-content: space-around;
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(1)};
+		}
+		@include media-breakpoint-up(md) {
+			justify-content: flex-start;
+		}
+		@include media-breakpoint-up(sm) {
+			--bs-gutter-x: #{rem(10)};
+		}
 	}
-	&__slide{
-		height: auto;
+	&__link {
+		color: $white;
+		@include media-breakpoint-up(lg) {
+			background-color: $gray-800;
+			padding: rem(32);
+			&:hover {
+				background-color: $primary;
+			}
+		}
+	}
+	&__icon-wrap {
+		position: relative;
+		.icon {
+			font-size: rem(24);
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 2px;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(32);
+			}
+		}
+		span {
+			position: absolute;
+			right: -9px;
+			top: -6px;	
+			background-color: $primary;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: rem(11.2);
+			font-weight: 500;
+			line-height: 1.1em;
+			border-radius: 22px;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			min-width: rem(22);
+			min-height: rem(22);
+			padding: 1px 3px 0;
+		}
+	}
+	&__price {
+		font-weight: 500;
+		span {
+			font-weight: 700;
+			display: block;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
