@@ -95,6 +95,11 @@ body {
 			opacity: 0.76;
 		}
 	}
+	&.fixed2 {
+		@include media-breakpoint-down(lg) {
+			overflow: hidden;
+		}
+	}
 }
 
 .main-wrapper { 

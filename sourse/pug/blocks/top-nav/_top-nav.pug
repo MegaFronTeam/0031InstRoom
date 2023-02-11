@@ -40,24 +40,40 @@ mixin top-nav()
 				.col-lg-3.d-none.d-lg-block
 					+search
 		+b.catalog-menu--js
-			+e.container.container
+			+b.catalog-toggle--js
+				+e.line-wrap
+					span
+			+e.container.container-fluid.container-lg
 				mixin item(title)
 					+e.wrap
 						+e.item
 							!= title
 							+icon('chevron-right')
 						+e.content
+							+e.back-btn: +icon('chevron-left')
 							ul
-								li 1
-								li 2
-								li 4
-								li 3
-								li 6
-								li 5
-								li 7
-								li 8
-								li 9
-								li 0
+								li: a(href="#") Садово огородный инвентарь
+								li: a(href="#") Поливочный инвентарь
+								li: a(href="#") Поликарбонат
+								li: a(href="#") Грунт
+								li: a(href="#") Насосы
+								li: a(href="#") Сетка Рабица
+								li: a(href="#") Летний душ, умывальники, рукомойники
+								li: a(href="#") Побелка, краска садовая
+								li: a(href="#") Садовый декор
+								li: a(href="#") Товары для отдыха
+								li: a(href="#") Печное литьё и аксессуары
+								li: a(href="#") Садово огородный инвентарь
+								li: a(href="#") Поливочный инвентарь
+								li: a(href="#") Поликарбонат
+								li: a(href="#") Грунт
+								li: a(href="#") Насосы
+								li: a(href="#") Сетка Рабица
+								li: a(href="#") Летний душ, умывальники, рукомойники
+								li: a(href="#") Побелка, краска садовая
+								li: a(href="#") Садовый декор
+								li: a(href="#") Товары для отдыха
+								li: a(href="#") Печное литьё и аксессуары
 				+item('Малярные товары')
 				+item('Электроинструмент')
 				+item('Спецодежда')
