@@ -469,8 +469,7 @@ iframe {
 .custom-scroll {
 	/* ===== Scrollbar CSS ===== */
   /* Firefox */
-	--bs-primary: #DEDEDE;
- 
+	--bs-primary: #{$primary};
   & {
     scrollbar-width: auto;
     scrollbar-color: var(--bs-primary) transparent;

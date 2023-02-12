@@ -12,7 +12,106 @@
 			margin-left: rem(15);
 		}
 	}
+	&__search-wrap {
+		@include mt;
+		position: relative;
+		&.active {
+			@include media-breakpoint-up(lg) {
+				margin-left: rem(-160);
+			}
+			@include media-breakpoint-up(xl) {
+				margin-left: rem(-220);
+			}
+			@include media-breakpoint-up(xxl) {
+				margin-left: rem(-229);
+			}
+		}
+		&.shown {
+			.search-block {
+				input {
+					border-radius: 5px 5px 0 0;
+				}
+			}
+			.top-nav__search-content {
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
+	}
+	&__search-content {
+		@include mt;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		display: block;
+		width: 100%;
+		padding-top: rem(16);
+		background-color: #fff;
+		border-radius: 0 0 5px 5px;
+		opacity: 0;
+		pointer-events: none;
+		z-index: 12;
+	}
+	&__search-inner {
+		max-height: rem(360);
+		overflow-x: hidden;
+		overflow-y: auto;
+		@extend .custom-scroll;
+	}
+	&__search-item {
+		@include mt;
+		display: block;
+		padding: rem(5) rem(8) 0 rem(8);
+		@include media-breakpoint-up(lg) {
+			padding: rem(5) rem(24) 0 rem(24);
+		}
+		@include media-breakpoint-up(xl) {
+			padding: rem(5) rem(56) 0 rem(24);
+		}
+		&:hover {
+			background-color: $gray-100;
+		}
+		.row {
+			--bs-gutter-x: #{rem(20)};
+			
+			@include media-breakpoint-up(lg) {
+				flex-wrap: nowrap;
+			}
+			@include media-breakpoint-up(xl) {
+				--bs-gutter-x: #{rem(60)};
+			}
+		}
+		p {
+			color: #000;
+			margin-bottom: 0;
+			font-weight: 500;
+			line-height: 1.25em;
+			margin-top: rem(5);
+			@include media-breakpoint-up(lg) {
+				max-width: rem(230);
+			}
+		}
+		.h4 {
+			font-family: $font-family-sans-serif;
+			color: #000;
+			font-weight: 600;
+			margin-top: rem(5);
+		}
+	}
+	&__search-img-wrap {
+		@include block(60,60);
+		width: 100%;
+		min-width: rem(60);
+		max-width: rem(60);
+	}
+	&__search-btn {
+		--bs-btn-bg: #{$gray-800};
+		--bs-btn-padding-y: #{rem(19)};
 
+		width: 100%;
+		border-radius: 0 0 5px 5px;
+		margin-top: rem(16);
+	}
 	@include media-breakpoint-up(md) {}
 
 	@include media-breakpoint-up(sm) {}

@@ -30,6 +30,34 @@ mixin top-nav()
 				.col-auto.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
+							+e.search-wrap--js.d-lg-none
+								+search
+								+e.search-content
+									mixin item()
+										+e.search-item(href='#')
+											.row
+												.col-auto
+													+e.search-img-wrap
+														.img-wrap-center
+															+img(`img/search-product-img.png`)
+												.col
+													p Эмаль Condor ПФ-115 жёлтая 1,8 кг
+												.col-auto
+													.h4 500 ₽
+									+e.search-inner
+										+item()
+										+item()
+										+item()
+										+item()
+										+item()
+										+item()
+										+item()
+										+item()
+										+item()
+										+item()
+										+item()
+										+item()
+									+e.search-btn.btn.btn-dark(href='#') Показать все
 							+menu-toggle()
 							+mnu()
 					
@@ -38,7 +66,34 @@ mixin top-nav()
 				.col-lg-auto.col-xl-2.d-none.d-lg-block
 					+soc()
 				.col-lg-3.d-none.d-lg-block
-					+search
+					+e.search-wrap--js
+						+search
+						+e.search-content
+							mixin item()
+								+e.search-item(href='#')
+									.row
+										.col-auto
+											+e.search-img-wrap
+												.img-wrap-center
+													+img(`img/search-product-img.png`)
+										.col
+											p Эмаль Condor ПФ-115 жёлтая 1,8 кг
+										.col-auto
+											.h4 500 ₽
+							+e.search-inner
+								+item()
+								+item()
+								+item()
+								+item()
+								+item()
+								+item()
+								+item()
+								+item()
+								+item()
+								+item()
+								+item()
+								+item()
+							+e.search-btn.btn.btn-dark(href='#') Показать все
 		+b.catalog-menu--js
 			+b.catalog-toggle--js
 				+e.line-wrap

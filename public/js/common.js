@@ -430,6 +430,27 @@ function eventHandler() {
 		}
 	}
 
+	let searchContents = document.querySelectorAll('.top-nav__search-wrap--js');
+	if(searchContents) {
+		for (const searchContent of searchContents) {
+			let searchContentInput = searchContent.querySelector('input');
+			searchContentInput.addEventListener('focus', () => {
+				searchContent.classList.add('active');
+			})
+			searchContentInput.addEventListener('blur', () => {
+				searchContent.classList.remove('active');
+			})
+			searchContentInput.addEventListener('input', function() {
+				if(String(searchContentInput.value).split('').length > 0) {
+					searchContent.classList.add('shown');
+				} 
+				if(searchContentInput.value.split('') == 0) {
+					searchContent.classList.remove('shown');
+				}
+			})
+		}
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
