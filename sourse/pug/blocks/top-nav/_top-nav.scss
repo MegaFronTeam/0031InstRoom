@@ -28,6 +28,10 @@
 			pointer-events: none;
 		}
 		&.active {
+			@include media-breakpoint-down(lg) {
+				opacity: 1;
+				pointer-events: all;
+			}
 			@include media-breakpoint-up(lg) {
 				margin-left: rem(-160);
 			}
@@ -36,12 +40,6 @@
 			}
 			@include media-breakpoint-up(xxl) {
 				margin-left: rem(-229);
-			}
-		}
-		&.active2 {
-			@include media-breakpoint-down(lg) {
-				opacity: 1;
-				pointer-events: all;
 			}
 		}
 		&.shown {

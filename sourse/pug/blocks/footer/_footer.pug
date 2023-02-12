@@ -1,9 +1,27 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col-md-5.col-lg-3.order-md-2
+					+e.wrap
+						+e.logo(href='/'): +img('img/svg/logo.svg')
+						+e.tel-wrap
+							+e.tel-link(href='tel:+74951203214') +7 495 120-32-14
+							+e.tel-link(href='tel:+74951203215') +7 495 120-32-15
+						+soc
+						+e.privacy(href='#') Соглашение пользователя
+						+e.copyright &laquo;Copyright &copy;&nbsp;Название #[span ]&raquo;
+				.col-md-7.col-lg-8.ms-auto.order-md-1
+					+e.nav
+						ul
+							li: a(href="#") Малярные товары
+							li: a(href="#") Электрооборудование
+							li: a(href="#") Спецодежда
+							li: a(href="#") Для дома и дачи
+							li: a(href="#") Сезонное
+							li: a(href="#") Инструмент
+							li: a(href="#") О компании
+							li: a(href="#") Контакты
+							li: a(href="#") Новинки
+							li: a(href="#") Хиты сезона
+							li: a(href="#") Распродажи

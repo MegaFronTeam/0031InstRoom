@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Prosto+One&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class="main-page" data-bg="main.jpg">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -839,16 +839,62 @@
 			</main>
 			<footer class="footer section">
 				<div class="container">
-					<div class="row">
-						<div class="col"></div>
-						<div class="col">Footer</div>
-						<div class="col"></div>
-						<div class="col-auto"></div>
+					<div class="footer__row row">
+						<div class="col-md-5 col-lg-3 order-md-2">
+							<div class="footer__wrap">
+								<a class="footer__logo" href="/"><img src="img/svg/logo.svg" alt="" loading="lazy"/>
+								</a>
+								<div class="footer__tel-wrap">
+									<a class="footer__tel-link" href="tel:+74951203214">+7 495 120-32-14
+									</a>
+									<a class="footer__tel-link" href="tel:+74951203215">+7 495 120-32-15
+									</a>
+								</div>
+								<div class="soc">
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-instagram ">
+											<use xlink:href="img/svg/sprite.svg#instagram"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-vk ">
+											<use xlink:href="img/svg/sprite.svg#vk"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-fb ">
+											<use xlink:href="img/svg/sprite.svg#fb"></use>
+										</svg>
+									</a>
+								</div>
+								<a class="footer__privacy" href="#">Соглашение пользователя
+								</a>
+								<div class="footer__copyright">&laquo;Copyright &copy;&nbsp;Название <span></span>&raquo;
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7 col-lg-8 ms-auto order-md-1">
+							<div class="footer__nav">
+								<ul>
+									<li><a href="#">Малярные товары</a></li>
+									<li><a href="#">Электрооборудование</a></li>
+									<li><a href="#">Спецодежда</a></li>
+									<li><a href="#">Для дома и дачи</a></li>
+									<li><a href="#">Сезонное</a></li>
+									<li><a href="#">Инструмент</a></li>
+									<li><a href="#">О компании</a></li>
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#">Новинки</a></li>
+									<li><a href="#">Хиты сезона</a></li>
+									<li><a href="#">Распродажи</a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
+		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
 				<div class="form-wrap">
