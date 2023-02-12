@@ -3,18 +3,18 @@ mixin topLine()
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
 			+e.row.row
-				.col.col-sm-auto.col-lg-1.col-xxl-2
+				.col.col-sm-auto.col-lg-1.col-xxl-2.order-1
 					+e.logo(href='/'): +img('img/svg/logo.svg')
-				.col-auto.col-lg-2.col-xxl-3.d-none.d-md-block
+				.col-auto.col-lg-2.col-xxl-3.d-none.d-md-block.order-2
 					+e.work-time Время работы: 
 						span 10:00–20:00
-				.col.d-none.d-md-block
+				.col-auto.col-md.ms-auto.ms-md-0.order-3
 					+e.phone-link(href='tel:+74951203214') +7 495 120-32-14
 					+e.phone-btn(href='#') Заказать звонок
-				.col-12.col-sm.col-md-auto.order-last.order-sm-5
+				.col-12.col-lg-auto.order-5.order-lg-4
 					+e.links
 						mixin link(icon, count='0')
-							+e.link(href='#')
+							+e.link(href='#')&attributes(attributes)
 								+e.icon-wrap
 									+icon(icon)
 									if count
@@ -23,7 +23,9 @@ mixin topLine()
 						+link('chart')
 						+link('person', '')
 						+link('cart', '99')
-				.col-auto.order-sm-last
+						+link('search', '').--search-js.d-lg-none
+						+menu-toggle()
+				.col-auto.d-none.d-md-block.order-4.order-lg-5
 					+e.price Товаров на сумму
 						span 2 000 ₽
 	// end topLine

@@ -1,9 +1,13 @@
 .top-nav {
-	padding-top: rem(18);
-	padding-bottom: rem(18);
+	padding-top: 0;
+	padding-bottom: 0;
 	// --sTPB: #{rem()};
 	background-color: #000;
 	position: relative;
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(18);
+		padding-bottom: rem(18);
+	}
 	&__row{
 		align-items: center;
 	}
@@ -15,6 +19,14 @@
 	&__search-wrap {
 		@include mt;
 		position: relative;
+		@include media-breakpoint-down(lg) {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			opacity: 0;
+			pointer-events: none;
+		}
 		&.active {
 			@include media-breakpoint-up(lg) {
 				margin-left: rem(-160);
@@ -26,15 +38,30 @@
 				margin-left: rem(-229);
 			}
 		}
-		&.shown {
-			.search-block {
-				input {
-					border-radius: 5px 5px 0 0;
-				}
-			}
-			.top-nav__search-content {
+		&.active2 {
+			@include media-breakpoint-down(lg) {
 				opacity: 1;
 				pointer-events: all;
+			}
+		}
+		&.shown {
+			&.active {
+				.search-block {
+					input {
+						border-radius: 5px 5px 0 0;
+					}
+				}
+				.top-nav__search-content {
+					opacity: 1;
+					pointer-events: all;
+				}
+			}
+		}
+	}
+	.search-block {
+		input {
+			@include media-breakpoint-down(lg) {
+				border-radius: 0 0 5px 5px;
 			}
 		}
 	}

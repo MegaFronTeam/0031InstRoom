@@ -1,7 +1,9 @@
 
 	// start .header
-	.header {
-		 
+.header {
+	@include media-breakpoint-down(lg) {
+		padding-bottom: rem(52);
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -21,21 +21,21 @@
 				<div class="topLine section" id="topLine">
 					<div class="container">
 						<div class="topLine__row row">
-							<div class="col col-sm-auto col-lg-1 col-xxl-2">
+							<div class="col col-sm-auto col-lg-1 col-xxl-2 order-1">
 								<a class="topLine__logo" href="/"><img src="img/svg/logo.svg" alt="" loading="lazy"/>
 								</a>
 							</div>
-							<div class="col-auto col-lg-2 col-xxl-3 d-none d-md-block">
+							<div class="col-auto col-lg-2 col-xxl-3 d-none d-md-block order-2">
 								<div class="topLine__work-time">Время работы: <span>10:00–20:00</span>
 								</div>
 							</div>
-							<div class="col d-none d-md-block">
+							<div class="col-auto col-md ms-auto ms-md-0 order-3">
 								<a class="topLine__phone-link" href="tel:+74951203214">+7 495 120-32-14
 								</a>
 								<a class="topLine__phone-btn" href="#">Заказать звонок
 								</a>
 							</div>
-							<div class="col-12 col-sm col-md-auto order-last order-sm-5">
+							<div class="col-12 col-lg-auto order-5 order-lg-4">
 								<div class="topLine__links">
 									<a class="topLine__link" href="#">
 										<div class="topLine__icon-wrap">
@@ -65,9 +65,18 @@
 											</svg><span>99</span>
 										</div>
 									</a>
+									<a class="topLine__link topLine__link--search-js d-lg-none" href="#">
+										<div class="topLine__icon-wrap">
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</div>
+									</a>
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+									</div>
 								</div>
 							</div>
-							<div class="col-auto order-sm-last">
+							<div class="col-auto d-none d-md-block order-4 order-lg-5">
 								<div class="topLine__price">Товаров на сумму<span>2 000 ₽</span>
 								</div>
 							</div>
@@ -79,7 +88,7 @@
 				<div class="top-nav block-with-lazy">
 					<div class="container">
 						<div class="top-nav__row row">
-							<div class="col col-lg-auto col-xxl-2">
+							<div class="col col-lg-auto col-xxl-2 d-none d-lg-block">
 								<div class="catalog-toggle catalog-toggle--js">
 									<div class="catalog-toggle__line-wrap"><span></span>
 									</div>Каталог товаров
@@ -88,217 +97,19 @@
 							<div class="col-auto col-lg order-lg-0 order-last">
 								<div class="menu-mobile menu-mobile--js">
 									<div class="menu-mobile__inner">
-										<div class="top-nav__search-wrap top-nav__search-wrap--js d-lg-none">
-											<div class="search-block">
-												<form>
-													<input type="text" placeholder="Поиск по каталогу"/>
-													<button> 
-														<svg class="icon icon-search ">
-															<use xlink:href="img/svg/sprite.svg#search"></use>
-														</svg>
-													</button>
-												</form>
-											</div>
-											<div class="top-nav__search-content">
-												<div class="top-nav__search-inner">
-													<a class="top-nav__search-item" href="#">
-														<div class="row">
-															<div class="col-auto">
-																<div class="top-nav__search-img-wrap">
-																	<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
-																	</div>
-																</div>
-															</div>
-															<div class="col">
-																<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
-															</div>
-															<div class="col-auto">
-																<div class="h4">500 ₽</div>
-															</div>
-														</div>
-													</a>
-													<a class="top-nav__search-item" href="#">
-														<div class="row">
-															<div class="col-auto">
-																<div class="top-nav__search-img-wrap">
-																	<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
-																	</div>
-																</div>
-															</div>
-															<div class="col">
-																<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
-															</div>
-															<div class="col-auto">
-																<div class="h4">500 ₽</div>
-															</div>
-														</div>
-													</a>
-													<a class="top-nav__search-item" href="#">
-														<div class="row">
-															<div class="col-auto">
-																<div class="top-nav__search-img-wrap">
-																	<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
-																	</div>
-																</div>
-															</div>
-															<div class="col">
-																<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
-															</div>
-															<div class="col-auto">
-																<div class="h4">500 ₽</div>
-															</div>
-														</div>
-													</a>
-													<a class="top-nav__search-item" href="#">
-														<div class="row">
-															<div class="col-auto">
-																<div class="top-nav__search-img-wrap">
-																	<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
-																	</div>
-																</div>
-															</div>
-															<div class="col">
-																<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
-															</div>
-															<div class="col-auto">
-																<div class="h4">500 ₽</div>
-															</div>
-														</div>
-													</a>
-													<a class="top-nav__search-item" href="#">
-														<div class="row">
-															<div class="col-auto">
-																<div class="top-nav__search-img-wrap">
-																	<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
-																	</div>
-																</div>
-															</div>
-															<div class="col">
-																<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
-															</div>
-															<div class="col-auto">
-																<div class="h4">500 ₽</div>
-															</div>
-														</div>
-													</a>
-													<a class="top-nav__search-item" href="#">
-														<div class="row">
-															<div class="col-auto">
-																<div class="top-nav__search-img-wrap">
-																	<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
-																	</div>
-																</div>
-															</div>
-															<div class="col">
-																<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
-															</div>
-															<div class="col-auto">
-																<div class="h4">500 ₽</div>
-															</div>
-														</div>
-													</a>
-													<a class="top-nav__search-item" href="#">
-														<div class="row">
-															<div class="col-auto">
-																<div class="top-nav__search-img-wrap">
-																	<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
-																	</div>
-																</div>
-															</div>
-															<div class="col">
-																<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
-															</div>
-															<div class="col-auto">
-																<div class="h4">500 ₽</div>
-															</div>
-														</div>
-													</a>
-													<a class="top-nav__search-item" href="#">
-														<div class="row">
-															<div class="col-auto">
-																<div class="top-nav__search-img-wrap">
-																	<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
-																	</div>
-																</div>
-															</div>
-															<div class="col">
-																<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
-															</div>
-															<div class="col-auto">
-																<div class="h4">500 ₽</div>
-															</div>
-														</div>
-													</a>
-													<a class="top-nav__search-item" href="#">
-														<div class="row">
-															<div class="col-auto">
-																<div class="top-nav__search-img-wrap">
-																	<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
-																	</div>
-																</div>
-															</div>
-															<div class="col">
-																<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
-															</div>
-															<div class="col-auto">
-																<div class="h4">500 ₽</div>
-															</div>
-														</div>
-													</a>
-													<a class="top-nav__search-item" href="#">
-														<div class="row">
-															<div class="col-auto">
-																<div class="top-nav__search-img-wrap">
-																	<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
-																	</div>
-																</div>
-															</div>
-															<div class="col">
-																<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
-															</div>
-															<div class="col-auto">
-																<div class="h4">500 ₽</div>
-															</div>
-														</div>
-													</a>
-													<a class="top-nav__search-item" href="#">
-														<div class="row">
-															<div class="col-auto">
-																<div class="top-nav__search-img-wrap">
-																	<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
-																	</div>
-																</div>
-															</div>
-															<div class="col">
-																<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
-															</div>
-															<div class="col-auto">
-																<div class="h4">500 ₽</div>
-															</div>
-														</div>
-													</a>
-													<a class="top-nav__search-item" href="#">
-														<div class="row">
-															<div class="col-auto">
-																<div class="top-nav__search-img-wrap">
-																	<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
-																	</div>
-																</div>
-															</div>
-															<div class="col">
-																<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
-															</div>
-															<div class="col-auto">
-																<div class="h4">500 ₽</div>
-															</div>
-														</div>
-													</a>
+										<div class="top-nav__head-wrap d-lg-none">
+											<div class="row">
+												<div class="col">
+													<div class="catalog-toggle catalog-toggle--js d-lg-none">
+														<div class="catalog-toggle__line-wrap"><span></span>
+														</div>Каталог товаров
+													</div>
 												</div>
-												<a class="top-nav__search-btn btn btn-dark" href="#">Показать все
-												</a>
+												<div class="col-auto">
+													<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+													</div>
+												</div>
 											</div>
-										</div>
-										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 										</div>
 										<nav>
 											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
@@ -308,11 +119,38 @@
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новинки</a></li>
 											</ul>
 										</nav>
+										<div class="topLine d-lg-none">
+											<div class="topLine__bottom-wrap">
+												<div class="row">
+													<div class="col">
+														<div class="topLine__work-time">Время работы: <span>10:00–20:00</span>
+														</div>
+													</div>
+													<div class="col">
+														<div class="topLine__price">Товаров на сумму<span>2 000 ₽</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="soc">
+												<a class="soc__item" href="#" target="_blank">
+													<svg class="icon icon-instagram ">
+														<use xlink:href="img/svg/sprite.svg#instagram"></use>
+													</svg>
+												</a>
+												<a class="soc__item" href="#" target="_blank">
+													<svg class="icon icon-vk ">
+														<use xlink:href="img/svg/sprite.svg#vk"></use>
+													</svg>
+												</a>
+												<a class="soc__item" href="#" target="_blank">
+													<svg class="icon icon-fb ">
+														<use xlink:href="img/svg/sprite.svg#fb"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
 									</div>
-								</div>
-							</div>
-							<div class="col-auto d-lg-none">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 								</div>
 							</div>
 							<div class="col-lg-auto col-xl-2 d-none d-lg-block">
@@ -334,7 +172,7 @@
 									</a>
 								</div>
 							</div>
-							<div class="col-lg-3 d-none d-lg-block">
+							<div class="col-lg-3">
 								<div class="top-nav__search-wrap top-nav__search-wrap--js">
 									<div class="search-block">
 										<form>

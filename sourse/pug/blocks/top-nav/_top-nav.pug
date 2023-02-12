@@ -22,7 +22,7 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col.col-lg-auto.col-xxl-2
+				.col.col-lg-auto.col-xxl-2.d-none.d-lg-block
 					+b.catalog-toggle--js
 						+e.line-wrap
 							span
@@ -30,42 +30,29 @@ mixin top-nav()
 				.col-auto.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
-							+e.search-wrap--js.d-lg-none
-								+search
-								+e.search-content
-									mixin item()
-										+e.search-item(href='#')
-											.row
-												.col-auto
-													+e.search-img-wrap
-														.img-wrap-center
-															+img(`img/search-product-img.png`)
-												.col
-													p Эмаль Condor ПФ-115 жёлтая 1,8 кг
-												.col-auto
-													.h4 500 ₽
-									+e.search-inner
-										+item()
-										+item()
-										+item()
-										+item()
-										+item()
-										+item()
-										+item()
-										+item()
-										+item()
-										+item()
-										+item()
-										+item()
-									+e.search-btn.btn.btn-dark(href='#') Показать все
-							+menu-toggle()
+							+e.head-wrap.d-lg-none
+								.row
+									.col
+										+b.catalog-toggle--js.d-lg-none
+											+e.line-wrap
+												span
+											| Каталог товаров
+									.col-auto
+										+menu-toggle()
 							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+							+b.topLine.d-lg-none
+								+e.bottom-wrap
+									.row
+										.col
+											+e.work-time Время работы: 
+												span 10:00–20:00
+										.col
+											+e.price Товаров на сумму
+												span 2 000 ₽
+								+soc
 				.col-lg-auto.col-xl-2.d-none.d-lg-block
 					+soc()
-				.col-lg-3.d-none.d-lg-block
+				.col-lg-3
 					+e.search-wrap--js
 						+search
 						+e.search-content

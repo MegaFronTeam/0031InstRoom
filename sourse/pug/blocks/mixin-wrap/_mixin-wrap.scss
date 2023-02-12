@@ -233,6 +233,7 @@
 		transform: translateX(-100%);
 		padding-top: rem(44.400);
 		padding-bottom: rem(30);
+		z-index: 1000;
 		&.active {
 			transform: translateX(0);
 		}

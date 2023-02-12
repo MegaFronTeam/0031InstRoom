@@ -60,7 +60,7 @@
 		@include media-breakpoint-up(lg) {
 			--bs-gutter-x: #{rem(1)};
 		}
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			justify-content: flex-start;
 		}
 		@include media-breakpoint-up(sm) {
@@ -74,6 +74,11 @@
 			padding: rem(32);
 			&:hover {
 				background-color: $primary;
+			}
+		}
+		&:hover, &.active {
+			@include media-breakpoint-down(lg) {
+				color: $primary;
 			}
 		}
 	}
@@ -104,6 +109,7 @@
 			min-width: rem(22);
 			min-height: rem(22);
 			padding: 1px 3px 0;
+			color: #fff;
 		}
 	}
 	&__price {
