@@ -16,13 +16,13 @@
 
 
 	--fancybox-content-color: var(--bs-body-color);
-		--swiperArrowSize: #{rem(68)};
-		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
-		--swiperBorderColorDef: var(--bs-primary);
-		--swiperColorDef: var(--bs-primary);
+		--swiperArrowSize: #{rem(40)};
+		--swiperArrowPosition: calc(-1 * 81px);
+		--swiperBorderColorDef: transparent;
+		--swiperColorDef: #000;
 		--swiperBgDef: #ffffff;
 	
-		--swiperBorderColorDefHover: var(--bs-primary);
+		--swiperBorderColorDefHover: transparent;
 		--swiperColorDefHover: var(--bs-primary);
 		--swiperBgDefHover: #ffffff;
 

@@ -325,7 +325,7 @@ ul {
 	background-image: none;
 	margin: 0;
 	@include a-cent(y);
-	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
+	box-shadow: none;
 	@include mt;
 	user-select: none;
 
@@ -336,7 +336,10 @@ ul {
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(24);
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 2px;
 	}
 
 	&::after {
@@ -349,6 +352,11 @@ ul {
 	&-prev {
 		left: var(--swiperArrowPosition);
 	}
+}
+
+.swiper-button-prev.swiper-button-disabled {
+	--swiperColorDef: #{$gray-300};
+	opacity: 1;
 }
 
 .swiper-pagination {

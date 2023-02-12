@@ -1,0 +1,24 @@
+mixin sOurBrands(data)
+	// start sOurBrands
+	+b.SECTION.sOurBrands.section#sOurBrands&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Наши бренды
+			.controls-wrap-js
+				+e.slider.swiper.default-slider-js
+					.swiper-wrapper
+						mixin slide(img)
+							+e.slide.swiper-slide
+								+e.img-wrap
+									.img-wrap-center
+										+img(`img/${img}`)
+						+slide('sOurBrands-img-1.jpg')
+						+slide('sOurBrands-img-2.jpg')
+						+slide('sOurBrands-img-3.jpg')
+						+slide('sOurBrands-img-4.jpg')
+						+slide('sOurBrands-img-1.jpg')
+						+slide('sOurBrands-img-2.jpg')
+						+slide('sOurBrands-img-3.jpg')
+						+slide('sOurBrands-img-4.jpg')
+				+arrow
+	// end sOurBrands

@@ -371,18 +371,25 @@ function eventHandler() {
 		watchOverflow: true
 	});
 	
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-
-	});
-
+	let defaultSliders = document.querySelectorAll('.default-slider-js');
+	if(defaultSliders) {
+		for (const defaultSlider of defaultSliders) {
+			const defaultSwiper = new Swiper(defaultSlider, {
+				slidesPerView: 'auto',
+				observer: true,
+				navigation: {
+					nextEl: defaultSlider.closest('.controls-wrap-js').querySelector('.swiper-button-next'),
+					prevEl: defaultSlider.closest('.controls-wrap-js').querySelector('.swiper-button-prev'),
+				},
+				pagination: {
+					el: defaultSlider.closest('.controls-wrap-js').querySelector('.swiper-pagination'),
+					type: 'bullets',
+					clickable: true,
+				},
+			});
+		}
+	}
+	
 	// modal window
 
 	let catalogMainBtns = document.querySelectorAll('.catalog-toggle--js');
