@@ -7,6 +7,7 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
  
+include ../blocks/sSliders/_sSliders.pug
 include ../blocks/sOurBrands/_sOurBrands.pug
 include ../blocks/sAboutUs/_sAboutUs.pug
 include ../blocks/footer/_footer.pug
@@ -26,7 +27,8 @@ block pagecontent
 		+topLine
 		+top-nav()
 	main
-		+headerBlock 
+		+headerBlock
+		+sSliders 
 		+sOurBrands
 		+sAboutUs
 	+footer()

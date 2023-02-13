@@ -43,4 +43,39 @@ mixin page-head(t,...items)
 		- let l = items.length
 		.container
 			+breadcrumb('Главная',...items)
+
 			h1= t
+
+mixin card(data)
+	+b.card
+		if data.label
+			+e.label(class=(data.label=='Акция' ? '--sale' : ''))!= data.label
+		+e.control-wrap
+			+e.link(href='#' class=data.linkActiveClass): +icon('bar-chart')
+			+e.link(href='#' class=data.linkActiveClass): +icon('like')
+		+e.slider--js.swiper
+			.swiper-wrapper
+				-for(let i = 0; i < 4; i++)
+					+e.slide.swiper-slide
+						+e.img-wrap(href='#')
+							.img-wrap-center
+								+img(`img/${data.img}`)
+			.swiper-pagination
+		+e.content
+			+e.title!= data.title
+			+e.inner-row.row
+				.col-auto
+						+e.price!= data.price
+				.col-auto
+						+e.old-price!= data.oldPrice
+				.col-auto.ms-auto
+					+e.info-wrap
+						+e.info
+							if data.inStock == 'в наличии'
+								+icon('check')
+								span!= data.inStock
+							if data.inStock == 'под заказ'
+								span.on-order!= data.inStock
+						+e.add-to-cart-btn(class=data.addToCartBtnClass href='#')
+							+icon('shopping-cart')
+							+icon('check-circle')

@@ -351,9 +351,9 @@ ul {
 	}
 }
 
-.swiper-button-prev.swiper-button-disabled {
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
 	--swiperColorDef: #{$gray-300};
-	opacity: 1;
+	opacity: 1 ;
 }
 
 .swiper-pagination {
