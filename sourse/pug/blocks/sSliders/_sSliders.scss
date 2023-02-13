@@ -2,10 +2,10 @@
 .sSliders {
 	--sPT: #{rem(40)};
 	--sPB: #{rem(40)};
-	--sTPB: #{rem(24)};
+	--sTPB: #{rem(17.600)};
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(80)};
-		--sPB: #{rem(80)};	
+		--sPT: #{rem(81.600)};
+		--sPB: #{rem(81.600)};	
 	}
 	&__row {
 		--bs-gutter-x: #{rem(20)};
@@ -15,8 +15,18 @@
 		}
 	}
 	.section-title {
+		h2 {
+			margin-bottom: 0;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(24);
+			}
+			@include media-breakpoint-up(xl) {
+				font-size: rem(30);
+			}
+		}
 		.row {
 			--bs-gutter-x: #{rem(60)};
+			--bs-gutter-y: #{rem(20)};
 		}
 		&__arrow-wrap {
 			display: flex;
@@ -42,6 +52,7 @@
 	}
 	&__slide {
 		width: calc((100% / var(--sliderCount)) - var(--sliderGutter));
+		height: auto;
 		margin-right: var(--sliderGutter);
 	}
 	@include media-breakpoint-up(xl) {}
