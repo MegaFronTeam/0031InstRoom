@@ -1,0 +1,48 @@
+mixin sNewCards(data)
+	// start sNewCards
+	+b.sNewCards.section#sNewCards&attributes(attributes)
+		.container
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Новинки
+					.tabs__btn Акции
+					.tabs__btn Хиты продаж
+				.tabs__content.active
+					.controls-wrap-js
+						+e.arrow-wrap
+							+arrow
+							+e.slider.swiper.default-slider-js
+								.swiper-wrapper
+									mixin slide(img)
+										+e.slide.swiper-slide
+											+card({
+												label: 'Новинка',
+												img: img,
+												title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
+
+												price: '500 ₽',
+												oldPrice: '720 ₽',
+
+												inStock: 'в наличии',
+											})
+									+slide('product-img-13.png')
+									+slide('product-img-1.png')
+									+slide('product-img-9.png')
+									+slide('product-img-14.png')
+									+slide('product-img-13.png')
+									+slide('product-img-1.png')
+									+slide('product-img-9.png')
+									+slide('product-img-14.png')
+									+slide('product-img-13.png')
+									+slide('product-img-1.png')
+									+slide('product-img-9.png')
+									+slide('product-img-14.png')
+									+slide('product-img-13.png')
+									+slide('product-img-1.png')
+									+slide('product-img-9.png')
+									+slide('product-img-14.png')
+						+e.footer-wrap
+							.deafult-swiper-pagination
+							+e.link(href='#') Смотреть все
+				.tabs__content
+	// end sNewCards

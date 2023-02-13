@@ -39,7 +39,7 @@
 	}
 	&__slide {
 		width: calc((100% / var(--sliderCount)) - var(--sliderGutter));
-		margin-right: var(--sliderGutter);
+		margin-right: calc(var(--sliderGutter) + 1px);
 	}
 	&__img-wrap {
 		@include block(200, 78);
@@ -51,8 +51,11 @@
 		@include media-breakpoint-down(md) {
 			--swiperArrowSize: #{rem(30)};
 		}
-		@include media-breakpoint-down(sm) {
-			--swiperArrowPosition: 0px;
+		// @include media-breakpoint-down(sm) {
+		// 	--swiperArrowPosition: 0px;
+		// }
+		@include media-breakpoint-down(xl) {
+			
 		}
 		.icon {
 			@include media-breakpoint-down(md) {

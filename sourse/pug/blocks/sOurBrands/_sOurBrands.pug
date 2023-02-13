@@ -5,6 +5,7 @@ mixin sOurBrands(data)
 			+b.section-title
 				h2 Наши бренды
 			.controls-wrap-js
+				+arrow
 				+e.slider.swiper.default-slider-js
 					.swiper-wrapper
 						mixin slide(img)
@@ -20,5 +21,4 @@ mixin sOurBrands(data)
 						+slide('sOurBrands-img-2.jpg')
 						+slide('sOurBrands-img-3.jpg')
 						+slide('sOurBrands-img-4.jpg')
-				+arrow
 	// end sOurBrands

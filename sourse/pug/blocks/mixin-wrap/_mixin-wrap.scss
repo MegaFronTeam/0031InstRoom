@@ -482,7 +482,7 @@
 		width: 100%;
 		margin-bottom: rem(2);
 		.swiper-pagination {
-			bottom: 6px;
+			bottom: 12px;
 			width: calc(100% - rem(24));
 			left: 50%;
 			transform: translateX(-50%);
@@ -559,6 +559,9 @@
 		// padding-right: rem(12);
 		max-width: rem(230);
 		margin-bottom: auto;
+		&:not(:hover) {
+			color: #000;
+		}
 		@include media-breakpoint-up(xxl) {
 			margin-bottom: -8px;
 		}

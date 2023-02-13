@@ -1,0 +1,118 @@
+// start .sNewCards
+.sNewCards {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(44)};
+	--sliderGutter: #{rem(10)};
+	--sliderCount: 1;
+	// --sTPB: #{rem()};
+	background-color: $gray-900;
+	@include media-breakpoint-up(sm) {
+		--sliderCount: 2;
+	}
+	@include media-breakpoint-up(md) {
+		--sliderGutter: #{rem(20)};
+		--sliderCount: 3;
+	}
+	@include media-breakpoint-up(xl) {
+		--sliderCount: 4;
+	}
+	.tabs {
+		&__caption {
+			@include roww('10px', 'm');
+			display: flex;
+			position: relative;
+			padding: rem(16) 0;
+			z-index: 1;
+			@include media-breakpoint-up(sm) {
+				padding: rem(22) 0;
+				--bs-gutter-x: #{rem(60)};
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				height: 100%;
+				width: 200vw;
+				left: -50vw;
+				background-color: #000;
+				z-index: -1;
+			}
+		}
+		&__btn {
+			@include mt;
+			font-size: rem(16);
+			font-family: $font-family-monospace;
+			line-height: 1.2em;
+			color: $gray-900;
+			@include media-breakpoint-up(sm) {
+				font-size: rem(20);
+			}
+			&:hover, &.active {
+				color: #fff;
+			}
+		}
+		&__content {
+			padding-top: rem(53);
+		}
+	}
+	&__arrow-wrap {
+		position: relative;
+		margin-bottom: rem(40);
+	}
+	&__slider {
+		margin-right: calc(var(--sliderGutter) * -1);
+		@include media-breakpoint-down(sm) {
+			overflow: visible;
+		}
+	}
+	&__slide {
+		width: calc((100% / var(--sliderCount)) - var(--sliderGutter));
+		margin-right: calc(var(--sliderGutter) + 1px);
+	}
+	&__footer-wrap {
+		display: flex;
+		// justify-content: center;
+		flex-direction: column;
+		@include media-breakpoint-up(md) {
+			margin-left: rem(135);
+			align-items: center;
+			flex-direction: row;
+		}
+	}
+	.deafult-swiper-pagination {
+		width: auto;
+		margin-bottom: rem(10);
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+			text-align: left;
+			margin-left: auto;
+		}
+	}
+	&__link {
+		width: 100%;
+		max-width: rem(135);
+		font-size: rem(18);
+		font-weight: 600;
+		line-height: 1.2em;
+		order: 1;
+		@include media-breakpoint-up(md) {
+			order: unset;
+			margin-left: auto;
+			font-size: rem(20);
+		}
+	}
+	.card {
+		&:hover {
+			box-shadow: 0 15px 20px #ffffff0d;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sNewCards

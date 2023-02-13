@@ -62,7 +62,7 @@ mixin card(data)
 								+img(`img/${data.img}`)
 			.swiper-pagination
 		+e.content
-			+e.title!= data.title
+			+e.title(href="#")!= data.title
 			+e.inner-row.row
 				.col-auto
 						+e.price!= data.price

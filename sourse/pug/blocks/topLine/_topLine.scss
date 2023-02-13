@@ -74,6 +74,9 @@
 			padding: rem(32);
 			&:hover {
 				background-color: $primary;
+				span {
+					background-color: $gray-800;
+				}
 			}
 		}
 		&:hover, &.active {
@@ -94,6 +97,7 @@
 			}
 		}
 		span {
+			@include mt;
 			position: absolute;
 			right: -9px;
 			top: -6px;	

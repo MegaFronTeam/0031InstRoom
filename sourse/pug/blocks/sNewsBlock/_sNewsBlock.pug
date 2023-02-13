@@ -1,0 +1,28 @@
+mixin sNewsBlock(data)
+	// start sNewsBlock
+	+b.SECTION.sNewsBlock.section#sNewsBlock&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-4
+					+b.section-title
+						h2 Новости
+						p Торговое или промышленное предприятие, торгово-промышленное объединение предпринимателей, форма организации предприятия, при которой его правосубъектность отличается от&nbsp;правосубъектности лиц, в&nbsp;нем участвующих. Компании имеют статус юридического лица.
+						+e.btn.btn.btn-primary(href='#') ПЕРЕЙТИ К НОВОСТЯМ
+				mixin item(img, title='Название новости', text='12 января 2023')
+					+e.item(href='#')
+						+e.img-wrap
+							.img-wrap-center
+								+img(`img/${img}`, 'bg')
+						h4!= title
+						p!= text
+				.col-lg-8
+					+e.inner-row.row
+						.col-sm-6
+							+item('sNewsBlock-img-1.jpg')
+						.col-sm-6
+							+item('sNewsBlock-img-2.jpg')
+						.col-sm-6
+							+item('sNewsBlock-img-2.jpg')
+						.col-sm-6
+							+item('sNewsBlock-img-1.jpg')
+	// end sNewsBlock
