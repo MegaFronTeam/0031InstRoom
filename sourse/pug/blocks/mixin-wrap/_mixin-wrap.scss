@@ -134,11 +134,20 @@
 	}
 
 	a {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: -10%;
+			width: 100%;
+			height: 120%;
+		}
 		&:not(:hover) {
 			color: inherit;
 		}
 	}
-	.active {
+	&.active {
 		a {
 			color: $breadcrumb-active-color;
 			pointer-events: none;
