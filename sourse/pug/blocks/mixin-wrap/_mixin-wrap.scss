@@ -580,6 +580,10 @@
 			fill: none;
 			stroke: currentColor;
 			stroke-width: 1px;
+			margin-right: rem(4);
+		}
+		.on-order {
+			color: $primary;
 		}
 	}
 	&__add-to-cart-btn {

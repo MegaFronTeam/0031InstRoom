@@ -7,6 +7,13 @@
 		--sPT: #{rem(80)};
 		--sPB: #{rem(80)};	
 	}
+	&__row {
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(30)};
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-y: #{rem(70)};
+		}
+	}
 	.section-title {
 		.row {
 			--bs-gutter-x: #{rem(60)};

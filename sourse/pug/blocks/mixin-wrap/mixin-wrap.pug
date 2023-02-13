@@ -74,7 +74,7 @@ mixin card(data)
 							if data.inStock == 'в наличии'
 								+icon('check')
 								span!= data.inStock
-							else 
+							if data.inStock == 'под заказ'
 								span.on-order!= data.inStock
 						+e.add-to-cart-btn(class=data.addToCartBtnClass href='#')
 							+icon('shopping-cart')
