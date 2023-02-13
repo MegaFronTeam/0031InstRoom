@@ -1,10 +1,8 @@
- 
-	  
-.soc{
+.soc {
 	@include roww(12px, m);
 	display: flex;
-	&__item{
-		text-decoration: none !important; 
+	&__item {
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
 		display: grid;
@@ -15,25 +13,21 @@
 		background-color: #fff;
 		border-radius: 50%;
 		flex: 0 0 auto;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		&:hover {
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 			background-color: $primary;
 		}
-		
 	}
-	.icon{
+	.icon {
 		font-size: rem(24);
 	}
-
-
 }
 
-
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -41,23 +35,20 @@
 	}
 }
 
-
-
-
-.addBlock{
+.addBlock {
 	color: var(--color, #{$primary});
 	border: 1px solid;
 	border-radius: 23px;
 	display: flex;
 	position: relative;
 	overflow: hidden;
-	input{
+	input {
 		color: inherit;
 		text-align: center;
 		border: none;
 		height: rem(45);
 	}
-	&__btn{
+	&__btn {
 		color: inherit;
 		height: rem(45);
 		position: relative;
@@ -71,25 +62,24 @@
 		// padding-right: rem(8);
 		width: rem(26);
 		&::before,
-		&::after{
-			content: '';
+		&::after {
+			content: "";
 			width: 10px;
-			height: 2px; 
+			height: 2px;
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;
 		}
-		&--plus::after{
+		&--plus::after {
 			transform: rotate(90deg);
 		}
 	}
 }
 
-
-.search-block{
+.search-block {
 	position: relative;
 	color: $gray-500;
-	input{
+	input {
 		font-size: rem(16);
 		width: 100%;
 		border: none !important;
@@ -109,7 +99,7 @@
 		stroke: currentColor;
 		stroke-width: 2px;
 	}
-	button{
+	button {
 		position: absolute;
 		left: rem(15);
 		top: 0;
@@ -121,10 +111,48 @@
 		border: none !important;
 	}
 }
+.breadcrumb-slider {
+	overflow: visible;
+}
+.breadcrumb {
+	flex-wrap: nowrap;
+	// overflow: visible;
+	line-height: calc(16 / 14);
+	a,
+	span {
+		display: inline-block;
+	}
+}
 
-.breadcrumb-item{
+.breadcrumb-item {
 	width: auto;
-	margin-right: rem(32);
+	// margin-right: rem(32);
+
+	color: $gray-500;
+	&::before {
+		font-weight: 500;
+	}
+
+	a {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: -10%;
+			width: 100%;
+			height: 120%;
+		}
+		&:not(:hover) {
+			color: inherit;
+		}
+	}
+	&.active {
+		a {
+			color: $breadcrumb-active-color;
+			pointer-events: none;
+		}
+	}
 }
 
 .catalog-toggle {
@@ -148,8 +176,8 @@
 		--color: #{$white};
 		--position: calc(var(--h) * 4);
 
-		height: calc(var(--h)* 9);
-		position: relative; 
+		height: calc(var(--h) * 9);
+		position: relative;
 		font-size: rem(24);
 		width: 1em;
 		flex: 0 0 auto;
@@ -167,29 +195,29 @@
 			height: var(--h);
 			background-color: var(--color);
 			transition: all 0.3s;
-			backface-visibility: hidden; 
+			backface-visibility: hidden;
 			transform-origin: 50% 50%;
-		} 
-		
+		}
+
 		span:after,
 		span:before {
 			content: "";
 			position: absolute;
 			left: 0;
-		} 
-		span:before { 
+		}
+		span:before {
 			top: var(--position);
-			transform: rotate3d(0,0,1, var(--rotate, 0));
+			transform: rotate3d(0, 0, 1, var(--rotate, 0));
 			width: calc(100% - 8px);
 		}
-	
+
 		span:after {
 			bottom: var(--position);
-			transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
+			transform: rotate3d(0, 0, 1, calc(-1 * var(--rotate, 0)));
 		}
-
 	}
-	&.active, &:hover {
+	&.active,
+	&:hover {
 		background-color: $primary;
 
 		span {
@@ -200,7 +228,7 @@
 	}
 	&.active {
 		.catalog-toggle__line-wrap {
-			--position: 0; 
+			--position: 0;
 			--rotate: 45deg;
 			span {
 				background-color: transparent;
@@ -219,6 +247,7 @@
 		width: 100%;
 		opacity: 0;
 		pointer-events: none;
+		z-index: 2;
 		&.active {
 			opacity: 1;
 			pointer-events: all;
@@ -231,7 +260,7 @@
 		width: 100%;
 		background-color: #fff;
 		transform: translateX(-100%);
-		padding-top: rem(44.400);
+		padding-top: rem(44.4);
 		padding-bottom: rem(30);
 		z-index: 1000;
 		&.active {
@@ -254,7 +283,7 @@
 		&:first-child {
 			&:before {
 				@include media-breakpoint-down(lg) {
-					content: '';
+					content: "";
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -276,7 +305,8 @@
 				.catalog-menu__item {
 					color: $white;
 					background-color: $gray-900;
-					&::before, &:after {
+					&::before,
+					&:after {
 						display: block;
 					}
 				}
@@ -298,8 +328,9 @@
 		cursor: pointer;
 		@include media-breakpoint-up(lg) {
 			max-width: var(--itemWidth);
-			&::before, &:after {
-				content: '';
+			&::before,
+			&:after {
+				content: "";
 				display: none;
 				position: absolute;
 				width: 50%;
@@ -393,7 +424,7 @@
 		padding: 0;
 		position: absolute;
 		left: 15px;
-    top: 14px;
+		top: 14px;
 		background-color: #fff;
 		@include media-breakpoint-up(lg) {
 			display: none;
@@ -405,8 +436,8 @@
 	}
 	&__back-btn {
 		position: absolute;
-    top: 11px;
-    left: 15px;
+		top: 11px;
+		left: 15px;
 		cursor: pointer;
 		.icon {
 			font-size: rem(24);
@@ -588,6 +619,25 @@
 			&-check-circle {
 				opacity: 0;
 			}
+		}
+	}
+}
+.page-head {
+	padding-top: rem(16);
+	padding-bottom: rem(24);
+	@include media-breakpoint-up(md) {
+		padding-top: rem(24);
+		padding-bottom: rem(32);
+	}
+	.breadcrumb-slider {
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(32);
+		}
+	}
+	h1 {
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }

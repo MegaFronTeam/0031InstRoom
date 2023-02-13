@@ -1,6 +1,6 @@
 //- breadcrumb
 mixin breadcrumb(...items)
-	nav(aria-label="breadcrumb" ).swiper.breadcrumb-slider--js
+	nav(aria-label="breadcrumb" ).swiper.breadcrumb-slider.breadcrumb-slider--js
 		ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList").swiper-wrapper
 			-for (var i = 0; i < items.length; i++)
 				li.breadcrumb-item( class=(i == items.length - 1 ? "active" : '')   itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem").swiper-slide

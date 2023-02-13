@@ -1,0 +1,37 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sOurBrands/_sOurBrands.pug
+//- include ../blocks/sAboutUs/_sAboutUs.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= 'categories.jpg'
+
+block title
+	- let  title = 'Категории товаров'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+topLine
+		+top-nav()
+	main
+		+page-head(`Каталог`, `Каталог`)
+		//- +headerBlock 
+		//- +sOurBrands
+		//- +sAboutUs
+	+footer()
+      
+
+
+
