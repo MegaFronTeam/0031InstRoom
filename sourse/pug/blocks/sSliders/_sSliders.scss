@@ -1,0 +1,47 @@
+// start .sSliders
+.sSliders {
+	--sPT: #{rem(40)};
+	--sPB: #{rem(40)};
+	--sTPB: #{rem(24)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(80)};
+		--sPB: #{rem(80)};	
+	}
+	.section-title {
+		.row {
+			--bs-gutter-x: #{rem(60)};
+		}
+		&__arrow-wrap {
+			display: flex;
+			.swiper-button-hand {
+				position: static;
+				&:not(:last-child) {
+					margin-right: rem(10);
+				}
+			}
+		}
+	}
+	--sliderGutter: #{rem(10)};
+	--sliderCount: 1;
+	@include media-breakpoint-up(sm) {
+		--sliderGutter: #{rem(20)};
+		--sliderCount: 2;
+	}
+	&__slider {
+		margin-right: calc(var(--sliderGutter) * -1);
+		@include media-breakpoint-down(lg) {
+			overflow: visible;
+		}
+	}
+	&__slide {
+		width: calc((100% / var(--sliderCount)) - var(--sliderGutter));
+		margin-right: var(--sliderGutter);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSliders

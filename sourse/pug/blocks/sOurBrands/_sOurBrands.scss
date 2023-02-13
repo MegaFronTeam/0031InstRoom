@@ -33,6 +33,9 @@
 	}
 	&__slider {
 		margin-right: calc(var(--sliderGutter) * -1);
+		@include media-breakpoint-down(sm) {
+			overflow: visible;
+		}
 	}
 	&__slide {
 		width: calc((100% / var(--sliderCount)) - var(--sliderGutter));

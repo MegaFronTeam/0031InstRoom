@@ -1,0 +1,70 @@
+mixin sSliders(data)
+	// start sSliders
+	+b.SECTION.sSliders.section#sSliders&attributes(attributes)
+		.container
+			+e.row.row
+					mixin slider(title, customClass='col-lg-6')
+						div(class=customClass)
+							.controls-wrap-js
+								+b.section-title
+									.row
+										.col-auto
+											h2!= title
+										.col-auto
+											+e.arrow-wrap
+												+arrow
+								+e.slider.swiper.default-slider-js
+									.swiper-wrapper
+										block
+					+slider('Малярные товары')
+						+e.slide.swiper-slide
+							+card({
+								label: 'Новинка',
+								img: 'product-img-1.png',
+								title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
+
+								price: '500 ₽',
+								oldPrice: '720 ₽',
+
+								inStock: 'в наличии',
+
+								
+							})
+						+e.slide.swiper-slide
+							+card({
+								label: 'Новинка',
+								linkActiveClass: 'active',
+								img: 'product-img-1.png',
+								title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
+
+								price: '500 ₽',
+								oldPrice: '720 ₽',
+
+								inStock: 'в наличии',
+								addToCartBtnClass: 'active'
+							})
+						+e.slide.swiper-slide
+							+card({
+								label: 'Новинка',
+								img: 'product-img-1.png',
+								title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
+
+								price: '500 ₽',
+								oldPrice: '720 ₽',
+
+								inStock: 'в наличии',
+
+								
+							})
+						+e.slide.swiper-slide
+							+card({
+								label: 'Новинка',
+								img: 'product-img-1.png',
+								title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
+
+								price: '500 ₽',
+								oldPrice: '720 ₽',
+
+								inStock: 'в наличии',
+							})
+	// end sSliders
