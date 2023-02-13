@@ -1,0 +1,49 @@
+mixin sCategories(data)
+	// start sCategories
+	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
+		.container
+			+e.btn-wrap
+				.row
+					.col-sm-6.col-md-4
+						+e.btn.btn(href="#") Малярные товары
+					.col-sm-6.col-md-4
+						+e.btn.btn(href="#") Электрооборудование
+					.col-sm-6.col-md-4
+						+e.btn.btn(href="#") Спецодежда
+					.col-sm-6.col-md-4
+						+e.btn.btn(href="#") Сезонное
+					.col-sm-6.col-md-4
+						+e.btn.btn(href="#").active Для дома и&nbsp;дачи
+					.col-sm-6.col-md-4
+						+e.btn.btn(href="#") Инструменты
+			+e.wrapper
+				+e.content
+					+e.row.row
+						mixin categoryItem(img, btn)
+							+e.col.col-6.col-md-4
+								+b.categoryItem(href="#")
+									+e.img-wrap
+										.img-wrap-center
+											+img(`img/category-item-${img}.png`)
+									+e.btn.btn!= btn
+						+categoryItem(1, `Поливочный инвентарь`)
+						+categoryItem(2, `Насосы`)
+						+categoryItem(3, `Поликарбонат`)
+						+categoryItem(4, `Садово-огородный инвентарь`)
+						+categoryItem(5, `Грунт`)
+						+categoryItem(6, `Сетка Рабица`)
+						+categoryItem(7, `Летний душ`)
+						+categoryItem(4, `Умывальники, рукомойники`)
+						+categoryItem(3, `Побелка`)
+						+categoryItem(5, `Краска садовая`)
+						+categoryItem(2, `Удобрения`)
+						+categoryItem(6, `Печное литьё и&nbsp;аксессуары`)
+						.col-12
+							+e.BUTTON.btn-more Показать ещё
+
+
+
+
+
+
+	// end sCategories
