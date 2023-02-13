@@ -2,9 +2,26 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				a(href="#").btn.btn-primary ПЕРЕЙТИ К НОВОСТЯМ
-			.row
-					
+			+e.grid
+				+e.item(href='#').bg-wrap
+					+img("img/headerBlock-img-1.jpg", 'bg').picture-bg
+					+e.content--main-gutter
+						h1 DeWALT&nbsp;- Инструмент с&nbsp;настоящим характером
+						+e.inner-btn.btn.btn-primary ПЕРЕЙТИ В КАТАЛОГ
+					+e.btn: +icon('arrow-right')
+				+e.item(href='#').bg-wrap
+					+img("img/headerBlock-img-2.jpg", 'bg').picture-bg
+					+e.content
+						h4 Акции
+					+e.btn: +icon('arrow-right')
+				+e.item(href='#').bg-wrap
+					+img("img/headerBlock-img-3.jpg", 'bg').picture-bg
+					+e.content
+						h4 Новое поступление
+					+e.btn: +icon('arrow-right')
+				+e.item(href='#').bg-wrap
+					+img("img/headerBlock-img-4.jpg", 'bg').picture-bg
+					+e.content
+						h4 Акции на сверла
+					+e.btn: +icon('arrow-right')
 	// end headerBlock
