@@ -1,0 +1,126 @@
+// start .sCategories
+.sCategories {
+	--sPT: 0;
+	--sPB: 0;
+	// --sTPB: #{rem()};
+	&__row {
+		--bs-gutter-y: var(--bs-gutter-x);
+		margin-top: 0;
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: #{rem(10)};
+		}
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+	&__wrapper {
+		background-color: $white;
+		border-radius: 5px 5px 0px 0px;
+		padding-left: var(--bs-gutter-x);
+		padding-right: var(--bs-gutter-x);
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: #{rem(10)};
+		}
+	}
+	&__content {
+		max-width: rem(970);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__btn-wrap {
+		margin-bottom: 2px;
+		.row {
+			--bs-gutter-x: 2px;
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+		.sCategories__btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			--bs-btn-color: #000;
+			--bs-btn-bg: #{$white};
+			--bs-btn-border-color: #{$white};
+			--bs-btn-border-radius: 5px;
+			--bs-btn-hover-border-color: #{$primary};
+			--bs-btn-hover-bg: #{$primary};
+			--bs-btn-hover-border-color: #{$primary};
+			--bs-btn-hover-color: #{$white};
+			--bs-btn-active-bg: #{$primary};
+			--bs-btn-active-border-color: #{$primary};
+			--bs-btn-active-color: #{$white};
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sCategories
+
+.categoryItem {
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	height: 100%;
+	&:hover {
+		.categoryItem__img-wrap {
+			// img {
+			// 	transform: scale(1.05);
+			// }
+		}
+		.categoryItem__btn {
+			background-color: $primary;
+			border-color: $primary;
+		}
+	}
+	&__img-wrap {
+		@include block(310, 288);
+		background-color: $light;
+		img {
+			// @include mt(0.2s);
+			max-width: 85%;
+			max-height: 85%;
+		}
+	}
+	&__btn {
+		@include mt(0.2s);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-grow: 1;
+		width: 100%;
+		// padding: rem(19);
+		border-radius: 0px 0px 5px 5px;
+		background-color: $dark;
+		border-color: $dark;
+		color: $white;
+		pointer-events: none;
+		@include media-breakpoint-up(sm) {
+			padding: rem(19);
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: rem(14);
+		}
+		// &:active {
+		// 	--bs-btn-active-bg: #{$primary};
+		// 	--bs-btn-active-border-color: #{$primary};
+		// }
+	}
+}

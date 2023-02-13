@@ -3,6 +3,7 @@ extends ../layout/main.pug
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sCategories/_sCategories.pug 
 //- include ../blocks/headerBlock/_headerBlock.pug
 //- include ../blocks/sForm/_sForm.pug
 //- include ../blocks/sContent/_sContent.pug
@@ -27,6 +28,7 @@ block pagecontent
 		+top-nav()
 	main
 		+page-head(`Каталог`, `Каталог`)
+		+sCategories()
 		//- +headerBlock 
 		//- +sOurBrands
 		//- +sAboutUs
