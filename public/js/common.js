@@ -382,7 +382,7 @@ function eventHandler() {
 					prevEl: defaultSlider.closest('.controls-wrap-js').querySelector('.swiper-button-prev'),
 				},
 				pagination: {
-					el: defaultSlider.closest('.controls-wrap-js').querySelector('.swiper-pagination'),
+					el: defaultSlider.closest('.controls-wrap-js').querySelector('.deafult-swiper-pagination'),
 					type: 'bullets',
 					clickable: true,
 				},
@@ -402,31 +402,10 @@ function eventHandler() {
 					clickable: true,
 				},
 			});
-			let pagination = innerCardSlider.querySelector('.swiper-pagination');
-			innerCardSlider.addEventListener('mousemove', function () {
-				let slidesAmount = 0;
-	
-				for (let slide of innerCardSwiper.slides) {
-					if (!slide.classList.contains('swiper-slide-duplicate')) {
-						slidesAmount++;
-					}
-				} //-
-	
-	
-				let rect = this.getBoundingClientRect();
-				let x = event.clientX - rect.left;
-				innerCardSwiper.slideTo(Math.floor(x * slidesAmount / this.offsetWidth));
-			}, {
-				passive: true
-			});
-			innerCardSlider.addEventListener('mouseenter', function () {
-				pagination.classList.add('active');
-			});
-			innerCardSlider.addEventListener('mouseleave', function () {
-				pagination.classList.remove('active');
-				innerCardSwiper.slideTo(0);
-			});
 		};
+		$('.card__slider--js .swiper-pagination-bullet').hover(function() {
+			$( this ).trigger( "click" );
+		});
 	}
 
 	// modal window
