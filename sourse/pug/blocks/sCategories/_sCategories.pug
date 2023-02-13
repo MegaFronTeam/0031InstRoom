@@ -2,25 +2,29 @@ mixin sCategories(data)
 	// start sCategories
 	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
 		.container
-			+e.btn-wrap
-				.row
-					.col-sm-6.col-md-4
-						+e.btn.btn(href="#") Малярные товары
-					.col-sm-6.col-md-4
-						+e.btn.btn(href="#") Электрооборудование
-					.col-sm-6.col-md-4
-						+e.btn.btn(href="#") Спецодежда
-					.col-sm-6.col-md-4
-						+e.btn.btn(href="#") Сезонное
-					.col-sm-6.col-md-4
-						+e.btn.btn(href="#").active Для дома и&nbsp;дачи
-					.col-sm-6.col-md-4
-						+e.btn.btn(href="#") Инструменты
+			+e.btn-wrap.active.dd-group-js
+				+e.dropdown-btn.btn.dd-head-js
+					span Категории товаров
+					+icon('chevron-down')
+				+e.dropdown-content.active.dd-content-js
+					.row
+						.col-md-6.col-lg-4
+							+e.btn.btn(href="#") Малярные товары
+						.col-md-6.col-lg-4
+							+e.btn.btn(href="#") Электрооборудование
+						.col-md-6.col-lg-4
+							+e.btn.btn(href="#") Спецодежда
+						.col-md-6.col-lg-4
+							+e.btn.btn(href="#") Сезонное
+						.col-md-6.col-lg-4
+							+e.btn.btn(href="#").active Для дома и&nbsp;дачи
+						.col-md-6.col-lg-4
+							+e.btn.btn(href="#") Инструменты
 			+e.wrapper
 				+e.content
 					+e.row.row
 						mixin categoryItem(img, btn)
-							+e.col.col-6.col-md-4
+							+e.col.col-md-6.col-lg-4
 								+b.categoryItem(href="#")
 									+e.img-wrap
 										.img-wrap-center
@@ -39,7 +43,10 @@ mixin sCategories(data)
 						+categoryItem(2, `Удобрения`)
 						+categoryItem(6, `Печное литьё и&nbsp;аксессуары`)
 						.col-12
-							+e.BUTTON.btn-more Показать ещё
+							+e.BUTTON.btn-more.btn
+								+icon('rotate')
+								span Показать ещё
+					
 
 
 
