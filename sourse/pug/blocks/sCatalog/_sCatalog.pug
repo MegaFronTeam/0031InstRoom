@@ -15,27 +15,23 @@ mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
+			.row
+				.col-lg-3
+				.col-lg-9
+					+e.inner-row.row
+						-for(let i = 0; i < 21; i++)
+							.col-lg-4
+								+card({
+									label: 'Новинка',
+									img: 'product-img-1.png',
+									title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
 
-			+e.row.row
-				- const wrapClass="col-3"
-				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`2`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`5`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`6`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`7`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`8`,``,``,``) 
+									price: '500 ₽',
+									oldPrice: '720 ₽',
 
+									inStock: 'в наличии',
+								})
+						.col-12
+							+btnMoreLg()
+					+pugin
 	// end sCatalog

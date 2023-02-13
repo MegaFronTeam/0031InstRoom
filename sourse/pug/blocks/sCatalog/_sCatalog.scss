@@ -1,26 +1,25 @@
 // start .sCatalog
 .sCatalog {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(40)};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(80)};
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
-	.section-title{
-		
-	}
-	&__col{
+	&__inner-row {
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(20)};
 
+		margin-bottom: rem(32);
 	}
-	&__item{
-
+	.btn-more-lg {
+		--bs-btn-border-color: transparent;
 	}
-	&__slide{
-		height: auto;
-	}
-
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
