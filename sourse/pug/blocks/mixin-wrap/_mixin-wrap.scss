@@ -673,6 +673,9 @@
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(32);
 		}
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 	h1 {
 		&:last-child {
