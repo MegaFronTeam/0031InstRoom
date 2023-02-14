@@ -34,6 +34,7 @@
 		max-width: rem(970);
 		margin-left: auto;
 		margin-right: auto;
+		margin-bottom: rem(32);
 	}
 	&__dropdown-content {
 		@include media-breakpoint-up(md) {
@@ -78,6 +79,10 @@
 				}
 			}
 		}
+	}
+
+	.btn-more-lg {
+		--bs-btn-border-color: #{$border-color};
 	}
 
 	&__dropdown-btn {
@@ -139,6 +144,7 @@
 	flex-direction: column;
 	border-radius: 5px;
 	height: 100%;
+	overflow: hidden;
 	&:hover {
 		.categoryItem__img-wrap {
 			// img {
