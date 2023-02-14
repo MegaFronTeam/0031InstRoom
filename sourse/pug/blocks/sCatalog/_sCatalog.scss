@@ -17,9 +17,46 @@
 
 		margin-bottom: rem(32);
 	}
+
 	// .btn-more-lg {
 	// 	--bs-btn-border-color: transparent;
 	// }
+	&__head-row {
+		--bs-gutter-y: #{rem(8)};
+
+		margin-bottom: rem(18);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(24);
+		}
+	}
+	&__sort {
+		font-family: $font-family-monospace;
+		color: #000;
+	}
+	&__sort-item {
+		@include mt;
+		display: inline-block;
+		font-family: $font-family-sans-serif;
+		font-weight: 500;
+		cursor: pointer;
+		&:hover {
+			color: $primary;
+		}
+	}
+	&__view {
+		font-family: $font-family-monospace;
+		color: #000;
+	}
+	&__view-link {
+		color: $gray-300;
+		margin-left: rem(8);
+		&.active, &:hover {
+			color: $gray-900;
+		}
+		.icon {
+			font-size: rem(22);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
