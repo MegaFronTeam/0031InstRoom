@@ -14,18 +14,34 @@ mixin product-item(i, t, p ,pr)
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
-		.container
+		+e.container.container
 			.row
-				.col-lg-3
-					+catalogDropdown()
-					//- +ddGroup()
-					//- 	+ddGroupItem('Цена, ₽')
-					//- 	+ddGroupItem('Бренд')
-					//- 		+e.custom-inputs-wrap
-					//- 			+in-c('checkbox', '')
-					//- 				+e.name Asko
-					//- 					span.num 15
-				.col-lg-9
+				.col-lg-4.col-xl-3
+					+b.filter--js
+						+e.btn.btn.btn-dark Фильтр
+						+e.body
+							+e.close--js
+							+catalogDropdown()
+							//- +ddGroup()
+							//- 	+ddGroupItem('Цена, ₽')
+							//- 	+ddGroupItem('Бренд')
+							//- 		+e.custom-inputs-wrap
+							//- 			+in-c('checkbox', '')
+							//- 				+e.name Asko
+							//- 					span.num 15
+					+e.news-items
+						.row
+							mixin newsItem(i, title, text)
+								+e.news-item.bg-wrap(href='#')
+									+img(`img/news-img-${i}.jpg`, 'bg').picture-bg
+									+e.news-content
+										h5!= title
+										p!= text
+							.col-sm-6.col-lg-12
+								+newsItem(1, 'Новое поступление', 'Успей покататься')
+							.col-sm-6.col-lg-12
+								+newsItem(2, 'Печи со скидкой', 'до 30%')
+				.col-lg-8.col-xl-9
 					+e.head-row.row
 						.col-sm
 							+e.sort
@@ -47,7 +63,7 @@ mixin sCatalog(data)
 								+e.view-link(href='#'): +icon('lines')
 					+e.inner-row.row
 						-for(let i = 0; i < 21; i++)
-							.col-sm-6.col-md-4
+							.col-sm-6.col-md-4.col-lg-6.col-xl-4
 								+card({
 									label: 'Новинка',
 									img: 'product-img-1.png',
