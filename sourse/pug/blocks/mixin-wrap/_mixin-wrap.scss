@@ -247,7 +247,7 @@
 		width: 100%;
 		opacity: 0;
 		pointer-events: none;
-		z-index: 2;
+		z-index: 10;
 		&.active {
 			opacity: 1;
 			pointer-events: all;
@@ -755,5 +755,28 @@
 				}
 			}
 		}
+	}
+}
+
+.dd-group {
+	border-radius: 5px;
+	background-color: $gray-900;
+	&__item {
+		padding: rem(24) 0;
+	}
+	&__head {
+		padding: 0 rem(24) 0 rem(24);
+		font-family: $font-family-monospace;
+		color: #fff;
+	}
+	&__content {
+		padding: 0 rem(24);
+
+	}
+	&__custom-inputs-wrap {
+		@extend .custom-scroll;
+		max-height: rem(245);
+		overflow-x: hidden;
+		overflow-y: auto;
 	}
 }

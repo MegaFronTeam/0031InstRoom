@@ -82,45 +82,90 @@ mixin top-nav()
 								+item()
 							+e.search-btn.btn.btn-dark(href='#') Показать все
 							+e.nothing-found Нет результатов
-		+b.catalog-menu--js
+		+catalogDropdown
 			+b.catalog-toggle--js
 				+e.line-wrap
 					span
-			+e.container.container-fluid.container-lg
-				mixin item(title)
-					+e.wrap
-						+e.item
-							!= title
-							+icon('chevron-right')
-						+e.content
-							+e.back-btn: +icon('chevron-left')
-							ul
-								li: a(href="#") Садово огородный инвентарь
-								li: a(href="#") Поливочный инвентарь
-								li: a(href="#") Поликарбонат
-								li: a(href="#") Грунт
-								li: a(href="#") Насосы
-								li: a(href="#") Сетка Рабица
-								li: a(href="#") Летний душ, умывальники, рукомойники
-								li: a(href="#") Побелка, краска садовая
-								li: a(href="#") Садовый декор
-								li: a(href="#") Товары для отдыха
-								li: a(href="#") Печное литьё и аксессуары
-								li: a(href="#") Садово огородный инвентарь
-								li: a(href="#") Поливочный инвентарь
-								li: a(href="#") Поликарбонат
-								li: a(href="#") Грунт
-								li: a(href="#") Насосы
-								li: a(href="#") Сетка Рабица
-								li: a(href="#") Летний душ, умывальники, рукомойники
-								li: a(href="#") Побелка, краска садовая
-								li: a(href="#") Садовый декор
-								li: a(href="#") Товары для отдыха
-								li: a(href="#") Печное литьё и аксессуары
-				+item('Малярные товары')
-				+item('Электроинструмент')
-				+item('Спецодежда')
-				+item('Сезонное')
-				+item('Для дома и дачи')
-				+item('Инструменты')
+		//- +b.catalog-menu--js
+		//- 	+b.catalog-toggle--js
+		//- 		+e.line-wrap
+		//- 			span
+		//- 	+e.container.container-fluid.container-lg
+		//- 		mixin item(title)
+		//- 			+e.wrap
+		//- 				+e.item
+		//- 					!= title
+		//- 					+icon('chevron-right')
+		//- 				+e.content
+		//- 					+e.back-btn: +icon('chevron-left')
+		//- 					ul
+		//- 						li: a(href="#") Садово огородный инвентарь
+		//- 						li: a(href="#") Поливочный инвентарь
+		//- 						li: a(href="#") Поликарбонат
+		//- 						li: a(href="#") Грунт
+		//- 						li: a(href="#") Насосы
+		//- 						li: a(href="#") Сетка Рабица
+		//- 						li: a(href="#") Летний душ, умывальники, рукомойники
+		//- 						li: a(href="#") Побелка, краска садовая
+		//- 						li: a(href="#") Садовый декор
+		//- 						li: a(href="#") Товары для отдыха
+		//- 						li: a(href="#") Печное литьё и аксессуары
+		//- 						li: a(href="#") Садово огородный инвентарь
+		//- 						li: a(href="#") Поливочный инвентарь
+		//- 						li: a(href="#") Поликарбонат
+		//- 						li: a(href="#") Грунт
+		//- 						li: a(href="#") Насосы
+		//- 						li: a(href="#") Сетка Рабица
+		//- 						li: a(href="#") Летний душ, умывальники, рукомойники
+		//- 						li: a(href="#") Побелка, краска садовая
+		//- 						li: a(href="#") Садовый декор
+		//- 						li: a(href="#") Товары для отдыха
+		//- 						li: a(href="#") Печное литьё и аксессуары
+		//- 		+item('Малярные товары')
+		//- 		+item('Электроинструмент')
+		//- 		+item('Спецодежда')
+		//- 		+item('Сезонное')
+		//- 		+item('Для дома и дачи')
+		//- 		+item('Инструменты')
 	// end top-nav
+
+mixin catalogDropdown()
+	+b.catalog-menu--js
+		block
+		+e.container.container-fluid.container-lg
+			mixin item(title)
+				+e.wrap
+					+e.item
+						!= title
+						+icon('chevron-right')
+					+e.content
+						+e.back-btn: +icon('chevron-left')
+						ul
+							li: a(href="#") Садово огородный инвентарь
+							li: a(href="#") Поливочный инвентарь
+							li: a(href="#") Поликарбонат
+							li: a(href="#") Грунт
+							li: a(href="#") Насосы
+							li: a(href="#") Сетка Рабица
+							li: a(href="#") Летний душ, умывальники, рукомойники
+							li: a(href="#") Побелка, краска садовая
+							li: a(href="#") Садовый декор
+							li: a(href="#") Товары для отдыха
+							li: a(href="#") Печное литьё и аксессуары
+							li: a(href="#") Садово огородный инвентарь
+							li: a(href="#") Поливочный инвентарь
+							li: a(href="#") Поликарбонат
+							li: a(href="#") Грунт
+							li: a(href="#") Насосы
+							li: a(href="#") Сетка Рабица
+							li: a(href="#") Летний душ, умывальники, рукомойники
+							li: a(href="#") Побелка, краска садовая
+							li: a(href="#") Садовый декор
+							li: a(href="#") Товары для отдыха
+							li: a(href="#") Печное литьё и аксессуары
+			+item('Малярные товары')
+			+item('Электроинструмент')
+			+item('Спецодежда')
+			+item('Сезонное')
+			+item('Для дома и дачи')
+			+item('Инструменты')
