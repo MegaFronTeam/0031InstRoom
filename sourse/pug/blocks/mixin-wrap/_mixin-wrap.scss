@@ -720,3 +720,39 @@
 		margin-right: rem(12);
 	}
 }
+
+
+.pagination-wrapper {
+	ul {
+		justify-content: center;
+		li {
+			.page-numbers {
+				--bs-pagination-color: #000;
+				--bs-pagination-hover-color: #fff;
+				--bs-pagination-hover-bg: #{$primary};
+
+				border: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: rem(32);
+				height: rem(32);
+				font-weight: 500;
+				border-radius: 2px;
+				&.current {
+					background-color: $primary;
+					color: #fff;
+				}
+				&.next, &.prev {
+					padding: 0;
+					.icon {
+						font-size: rem(24);
+						fill: none;
+						stroke: currentColor;
+						stroke-width: 2px;
+					}
+				}
+			}
+		}
+	}
+}
