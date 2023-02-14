@@ -1,5 +1,4 @@
 import { getWindow } from 'ssr-window';
-import { elementParents } from '../../../shared/utils.js';
 export default function Observer({
   swiper,
   extendParams,
@@ -8,6 +7,7 @@ export default function Observer({
 }) {
   const observers = [];
   const window = getWindow();
+
   const attach = (target, options = {}) => {
     const ObserverFunc = window.MutationObserver || window.WebkitMutationObserver;
     const observer = new ObserverFunc(mutations => {
@@ -18,9 +18,11 @@ export default function Observer({
         emit('observerUpdate', mutations[0]);
         return;
       }
+
       const observerUpdate = function observerUpdate() {
         emit('observerUpdate', mutations[0]);
       };
+
       if (window.requestAnimationFrame) {
         window.requestAnimationFrame(observerUpdate);
       } else {
@@ -34,30 +36,35 @@ export default function Observer({
     });
     observers.push(observer);
   };
+
   const init = () => {
     if (!swiper.params.observer) return;
+
     if (swiper.params.observeParents) {
-      const containerParents = elementParents(swiper.el);
+      const containerParents = swiper.$el.parents();
+
       for (let i = 0; i < containerParents.length; i += 1) {
         attach(containerParents[i]);
       }
-    }
-    // Observe container
-    attach(swiper.el, {
-      childList: swiper.params.observeSlideChildren
-    });
+    } // Observe container
 
-    // Observe wrapper
-    attach(swiper.wrapperEl, {
+
+    attach(swiper.$el[0], {
+      childList: swiper.params.observeSlideChildren
+    }); // Observe wrapper
+
+    attach(swiper.$wrapperEl[0], {
       attributes: false
     });
   };
+
   const destroy = () => {
     observers.forEach(observer => {
       observer.disconnect();
     });
     observers.splice(0, observers.length);
   };
+
   extendParams({
     observer: false,
     observeParents: false,

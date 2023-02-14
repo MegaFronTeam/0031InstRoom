@@ -17,12 +17,29 @@ mixin sCatalog(data)
 		.container
 			.row
 				.col-lg-3
+					+catalogDropdown()
+					//- +ddGroup()
+					//- 	+ddGroupItem('Цена, ₽')
+					//- 	+ddGroupItem('Бренд')
+					//- 		+e.custom-inputs-wrap
+					//- 			+in-c('checkbox', '')
+					//- 				+e.name Asko
+					//- 					span.num 15
 				.col-lg-9
 					+e.head-row.row
 						.col-sm
 							+e.sort
-								| Сортировать:
-								+e.sort-item Сначала новые
+								span Сортировать:
+								+e.sort-dropdown-wrap--js
+									+e.sort-item Сначала новые
+									+e.sort-dropdown
+										ul
+											li: a(href="#") По популярности
+											li: a(href="#") По возрастанию цены
+											li: a(href="#") По убыванию цены
+											li: a(href="#") Сначала новые
+											li: a(href="#") От А до Я
+											li: a(href="#") От Я до А
 						.col-sm-auto
 							+e.view
 								| Вид:

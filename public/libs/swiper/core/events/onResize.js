@@ -1,50 +1,42 @@
-let timeout;
 export default function onResize() {
   const swiper = this;
   const {
     params,
     el
   } = swiper;
-  if (el && el.offsetWidth === 0) return;
+  if (el && el.offsetWidth === 0) return; // Breakpoints
 
-  // Breakpoints
   if (params.breakpoints) {
     swiper.setBreakpoint();
-  }
+  } // Save locks
 
-  // Save locks
+
   const {
     allowSlideNext,
     allowSlidePrev,
     snapGrid
-  } = swiper;
-  const isVirtual = swiper.virtual && swiper.params.virtual.enabled;
+  } = swiper; // Disable locks on resize
 
-  // Disable locks on resize
   swiper.allowSlideNext = true;
   swiper.allowSlidePrev = true;
   swiper.updateSize();
   swiper.updateSlides();
   swiper.updateSlidesClasses();
-  const isVirtualLoop = isVirtual && params.loop;
-  if ((params.slidesPerView === 'auto' || params.slidesPerView > 1) && swiper.isEnd && !swiper.isBeginning && !swiper.params.centeredSlides && !isVirtualLoop) {
+
+  if ((params.slidesPerView === 'auto' || params.slidesPerView > 1) && swiper.isEnd && !swiper.isBeginning && !swiper.params.centeredSlides) {
     swiper.slideTo(swiper.slides.length - 1, 0, false, true);
   } else {
-    if (swiper.params.loop && !isVirtual) {
-      swiper.slideToLoop(swiper.realIndex, 0, false, true);
-    } else {
-      swiper.slideTo(swiper.activeIndex, 0, false, true);
-    }
+    swiper.slideTo(swiper.activeIndex, 0, false, true);
   }
+
   if (swiper.autoplay && swiper.autoplay.running && swiper.autoplay.paused) {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      swiper.autoplay.resume();
-    }, 500);
-  }
-  // Return locks after resize
+    swiper.autoplay.run();
+  } // Return locks after resize
+
+
   swiper.allowSlidePrev = allowSlidePrev;
   swiper.allowSlideNext = allowSlideNext;
+
   if (swiper.params.watchOverflow && snapGrid !== swiper.snapGrid) {
     swiper.checkOverflow();
   }

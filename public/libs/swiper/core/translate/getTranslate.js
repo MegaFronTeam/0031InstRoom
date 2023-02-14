@@ -5,15 +5,18 @@ export default function getSwiperTranslate(axis = this.isHorizontal() ? 'x' : 'y
     params,
     rtlTranslate: rtl,
     translate,
-    wrapperEl
+    $wrapperEl
   } = swiper;
+
   if (params.virtualTranslate) {
     return rtl ? -translate : translate;
   }
+
   if (params.cssMode) {
     return translate;
   }
-  let currentTranslate = getTranslate(wrapperEl, axis);
+
+  let currentTranslate = getTranslate($wrapperEl[0], axis);
   if (rtl) currentTranslate = -currentTranslate;
   return currentTranslate || 0;
 }

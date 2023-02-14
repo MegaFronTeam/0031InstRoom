@@ -2,37 +2,33 @@ export default function prependSlide(slides) {
   const swiper = this;
   const {
     params,
-    activeIndex,
-    slidesEl
+    $wrapperEl,
+    activeIndex
   } = swiper;
+
   if (params.loop) {
     swiper.loopDestroy();
   }
+
   let newActiveIndex = activeIndex + 1;
-  const prependElement = slideEl => {
-    if (typeof slideEl === 'string') {
-      const tempDOM = document.createElement('div');
-      tempDOM.innerHTML = slideEl;
-      slidesEl.prepend(tempDOM.children[0]);
-      tempDOM.innerHTML = '';
-    } else {
-      slidesEl.prepend(slideEl);
-    }
-  };
+
   if (typeof slides === 'object' && 'length' in slides) {
     for (let i = 0; i < slides.length; i += 1) {
-      if (slides[i]) prependElement(slides[i]);
+      if (slides[i]) $wrapperEl.prepend(slides[i]);
     }
+
     newActiveIndex = activeIndex + slides.length;
   } else {
-    prependElement(slides);
+    $wrapperEl.prepend(slides);
   }
-  swiper.recalcSlides();
+
   if (params.loop) {
     swiper.loopCreate();
   }
-  if (!params.observer || swiper.isElement) {
+
+  if (!params.observer) {
     swiper.update();
   }
+
   swiper.slideTo(newActiveIndex, 0, false);
 }

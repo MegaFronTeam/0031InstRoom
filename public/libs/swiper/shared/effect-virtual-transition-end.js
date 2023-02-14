@@ -1,44 +1,35 @@
-import { elementIndex, elementTransitionEnd } from './utils.js';
 export default function effectVirtualTransitionEnd({
   swiper,
   duration,
-  transformElements,
+  transformEl,
   allSlides
 }) {
   const {
-    activeIndex
+    slides,
+    activeIndex,
+    $wrapperEl
   } = swiper;
-  const getSlide = el => {
-    if (!el.parentElement) {
-      // assume shadow root
-      const slide = swiper.slides.filter(slideEl => slideEl.shadowEl && slideEl.shadowEl === el.parentNode)[0];
-      return slide;
-    }
-    return el.parentElement;
-  };
+
   if (swiper.params.virtualTranslate && duration !== 0) {
     let eventTriggered = false;
-    let transitionEndTarget;
+    let $transitionEndTarget;
+
     if (allSlides) {
-      transitionEndTarget = transformElements;
+      $transitionEndTarget = transformEl ? slides.find(transformEl) : slides;
     } else {
-      transitionEndTarget = transformElements.filter(transformEl => {
-        const el = transformEl.classList.contains('swiper-slide-transform') ? getSlide(transformEl) : transformEl;
-        return elementIndex(el) === activeIndex;
-      });
+      $transitionEndTarget = transformEl ? slides.eq(activeIndex).find(transformEl) : slides.eq(activeIndex);
     }
-    transitionEndTarget.forEach(el => {
-      elementTransitionEnd(el, () => {
-        if (eventTriggered) return;
-        if (!swiper || swiper.destroyed) return;
-        eventTriggered = true;
-        swiper.animating = false;
-        const evt = new window.CustomEvent('transitionend', {
-          bubbles: true,
-          cancelable: true
-        });
-        swiper.wrapperEl.dispatchEvent(evt);
-      });
+
+    $transitionEndTarget.transitionEnd(() => {
+      if (eventTriggered) return;
+      if (!swiper || swiper.destroyed) return;
+      eventTriggered = true;
+      swiper.animating = false;
+      const triggerEvents = ['webkitTransitionEnd', 'transitionend'];
+
+      for (let i = 0; i < triggerEvents.length; i += 1) {
+        $wrapperEl.trigger(triggerEvents[i]);
+      }
     });
   }
 }

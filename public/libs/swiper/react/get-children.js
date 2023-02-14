@@ -1,7 +1,9 @@
 import React from 'react';
+
 function isChildSwiperSlide(child) {
   return child.type && child.type.displayName && child.type.displayName.includes('SwiperSlide');
 }
+
 function processChildren(c) {
   const slides = [];
   React.Children.toArray(c).forEach(child => {
@@ -13,6 +15,7 @@ function processChildren(c) {
   });
   return slides;
 }
+
 function getChildren(c) {
   const slides = [];
   const slots = {
@@ -28,6 +31,7 @@ function getChildren(c) {
       slots[child.props.slot].push(child);
     } else if (child.props && child.props.children) {
       const foundSlides = processChildren(child.props.children);
+
       if (foundSlides.length > 0) {
         foundSlides.forEach(slide => slides.push(slide));
       } else {
@@ -42,4 +46,5 @@ function getChildren(c) {
     slots
   };
 }
+
 export { getChildren };

@@ -1,5 +1,5 @@
 /**
- * Swiper 9.0.5
+ * Swiper 8.4.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: February 13, 2023
+ * Released on: January 30, 2023
  */
 
 import Swiper from './core/core.js';
@@ -20,6 +20,7 @@ import Pagination from './modules/pagination/pagination.js';
 import Scrollbar from './modules/scrollbar/scrollbar.js';
 import Parallax from './modules/parallax/parallax.js';
 import Zoom from './modules/zoom/zoom.js';
+import Lazy from './modules/lazy/lazy.js';
 import Controller from './modules/controller/controller.js';
 import A11y from './modules/a11y/a11y.js';
 import History from './modules/history/history.js';
@@ -37,5 +38,5 @@ import EffectCreative from './modules/effect-creative/effect-creative.js';
 import EffectCards from './modules/effect-cards/effect-cards.js';
 
 // Swiper Class
-const modules = [Virtual, Keyboard, Mousewheel, Navigation, Pagination, Scrollbar, Parallax, Zoom, Controller, A11y, History, HashNavigation, Autoplay, Thumbs, FreeMode, Grid, Manipulation, EffectFade, EffectCube, EffectFlip, EffectCoverflow, EffectCreative, EffectCards];
+const modules = [Virtual, Keyboard, Mousewheel, Navigation, Pagination, Scrollbar, Parallax, Zoom, Lazy, Controller, A11y, History, HashNavigation, Autoplay, Thumbs, FreeMode, Grid, Manipulation, EffectFade, EffectCube, EffectFlip, EffectCoverflow, EffectCreative, EffectCards];
 Swiper.use(modules);
