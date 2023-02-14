@@ -1,28 +1,169 @@
 // start .sProductCard
 .sProductCard {
-	// --sPT: #{rem()};
+	--sPT: 0;
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
+	--wrapSpace: #{rem(30)} #{rem(16)};
+	@include media-breakpoint-up(sm) {
+		--wrapSpace: #{rem(40)} #{rem(30)};
+	}
+	@include media-breakpoint-up(md) {
+		--wrapSpace: #{rem(40)};
+	}
+	@include media-breakpoint-up(xl) {
+		--wrapSpace: #{rem(60)};
+	}
+	h1 {
+		@include rfs(1.875rem, font-size);
+		// font-size: rem(30);
+		line-height: calc(32 / 30);
+		margin-bottom: rem(20);
+	}
+	&__row {
 		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+		--bs-gutter-y: #{rem(32)};
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-y: 0;
+			--bs-gutter-x: #{rem(60)};
+		}
 
+		@include media-breakpoint-up(xxl) {
+			--bs-gutter-x: #{rem(80)};
+		}
 	}
-	.section-title{
-		
+	.section-title {
 	}
-	&__col{
+	&__col {
+	}
+	&__item {
+	}
+	&__wrapper {
+		background-color: $white;
+		border-radius: 5px;
+		padding: var(--wrapSpace);
+	}
+	&__slide {
+		height: auto;
+	}
+	&__slider {
+		margin-bottom: rem(20);
+		.sProductCard__slide {
+			cursor: pointer;
+		}
+		.sProductCard__img-wrap {
+			@include block(514, 390);
+			img {
+				padding: rem(20);
+			}
+		}
+	}
+	&__thumb-slider {
+		padding: rem(8) rem(8) rem(25);
+		margin: rem(-8) rem(-8) rem(-25);
+		// overflow: visible;
+		.sProductCard__slide {
+			background-color: $white;
+			box-shadow: 0 rem(15) rem(20) rgba(0, 0, 0, 0.05);
+			border-radius: 5px;
+			cursor: pointer;
+			&:hover,
+			&.swiper-slide-thumb-active {
+				box-shadow: 0px rem(5) rem(20) rgba(240, 90, 0, 0.2);
+			}
+		}
+		.sProductCard__img-wrap {
+			@include block(90, 90);
+			img {
+				padding: 16.67%;
+				border-radius: 5px;
+			}
+		}
+	}
+	&__caption {
+		@include rfs(3.75rem, margin-bottom);
+		p {
+			font-size: rem(16);
+			line-height: calc(20 / 16);
+			max-width: 25em;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__info {
+		font-size: rem(16);
+		line-height: calc(20 / 16);
+		margin-bottom: rem(20);
+	}
+	&__price-wrap {
+		@include roww(#{rem(16)}, m);
+		@include rfs(2.5rem, margin-bottom);
+		display: flex;
+		align-items: flex-start;
+		span {
+			@include rfs(1.875rem, font-size);
+			display: block;
+			line-height: calc(32 / 30);
+			font-weight: 400;
+			font-family: $font-family-monospace;
+		}
+		small {
+			display: block;
+			font-weight: 500;
+			font-size: rem(16);
+			line-height: calc(20 / 16);
+			text-decoration-line: line-through;
+			color: $gray-500;
+		}
+	}
+	&__btn-wrap {
+		@include roww(#{rem(16)}, m);
+		display: flex;
+		align-items: center;
+		.sProductCard__btn {
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&:hover {
+				.icon {
+					// fill: $primary;
+					stroke: $primary;
+				}
+			}
+			&.active,
+			&:active {
+				.icon {
+					fill: $primary;
+					stroke: $primary;
+				}
+			}
+			.icon {
+				@include mt(0.15s);
+				fill: none;
+				stroke: $body-color;
+				stroke-width: 2px;
+				font-size: rem(50);
+				stroke-linecap: round;
+			}
+		}
+	}
+	&__btn-addCart {
+		width: rem(154);
+	}
 
+	@include media-breakpoint-up(xl) {
 	}
-	&__item{
-
+	@include media-breakpoint-up(lg) {
 	}
-
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sProductCard

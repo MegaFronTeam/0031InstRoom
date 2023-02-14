@@ -2,7 +2,40 @@ mixin sProductCard(data)
 	// start sProductCard
 	+b.SECTION.sProductCard.section#sProductCard&attributes(attributes)
 		.container
-			
-				
-			+e.row.row
+			+e.wrapper
+				+e.row.row
+					.col-lg-6
+						+e.slider-wrap
+							+e.slider--js.swiper
+								.swiper-wrapper
+									mixin slide()
+										+e.slide.swiper-slide
+											+e.A.img-wrap(data-fancybox="sProductCard" data-src="img/sProductCard-1.jpg")
+												.img-wrap-center
+													+img('img/sProductCard-1.jpg')
+									- for (var x = 0; x < 6; x++)
+										+slide()
+							+e.thumb-slider--js.swiper
+								.swiper-wrapper
+									mixin thumb-slide()
+										+e.slide.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProductCard-sm-1.jpg')
+									- for (var x = 0; x < 6; x++)
+										+thumb-slide()
+					.col-lg-6
+						+e.caption
+							h1 Краска Farbitex Для садовых деревьев
+							+e.info.text-success В&nbsp;наличии
+							p Быстросохнущая, высокоукрывистая, защита от&nbsp;водорослей, мха, лишайника, защита от&nbsp;грибка, светостойкая, термостойкая, защита от&nbsp;вредителей
+						+e.price-wrap
+							span 500&nbsp;₽
+							small 720&nbsp;₽
+						+e.btn-wrap
+							+e.btn-addCart.btn.btn-primary(href="#") В&nbsp;корзину
+							+e.btn(href="#")
+								+icon('compare')
+							+e.btn(href="#")
+								+icon('favorites')
 	// end sProductCard

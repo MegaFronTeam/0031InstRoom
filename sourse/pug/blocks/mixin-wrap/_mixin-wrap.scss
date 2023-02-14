@@ -541,6 +541,7 @@
 			stroke: currentColor;
 			stroke-width: 2px;
 			font-size: rem(24);
+			stroke-linecap: round
 		}
 	}
 	&__img-wrap {
