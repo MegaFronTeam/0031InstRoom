@@ -18,6 +18,16 @@ mixin sCatalog(data)
 			.row
 				.col-lg-3
 				.col-lg-9
+					+e.head-row.row
+						.col-sm
+							+e.sort
+								| Сортировать:
+								+e.sort-item Сначала новые
+						.col-sm-auto
+							+e.view
+								| Вид:
+								+e.view-link.active(href='#'): +icon('grid')
+								+e.view-link(href='#'): +icon('lines')
 					+e.inner-row.row
 						-for(let i = 0; i < 21; i++)
 							.col-sm-6.col-md-4
