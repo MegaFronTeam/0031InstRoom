@@ -17,9 +17,9 @@
 
 		margin-bottom: rem(32);
 	}
-	.btn-more-lg {
-		--bs-btn-border-color: transparent;
-	}
+	// .btn-more-lg {
+	// 	--bs-btn-border-color: transparent;
+	// }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
