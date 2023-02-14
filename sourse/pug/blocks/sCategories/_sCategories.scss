@@ -144,6 +144,7 @@
 	flex-direction: column;
 	border-radius: 5px;
 	height: 100%;
+	overflow: hidden;
 	&:hover {
 		.categoryItem__img-wrap {
 			// img {
