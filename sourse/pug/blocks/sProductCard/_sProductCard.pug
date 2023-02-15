@@ -83,11 +83,11 @@ mixin sProductCard(data)
 											+e.name Анна Фёдорова
 											small 08.11.2022
 											p Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.
-											a(href="#") Далее
+												a(href="#") Далее
 								+e.col-more.col-12
 									+btnMoreLg()
 							+e.btnWrap
-								+e.review-btn.btn.btn-primary(href="#") ОСТАВИТЬ ОТЗЫВ
+								+e.review-btn.btn.btn-primary(href="#" data-src="#modal-review" data-fancybox="modal") ОСТАВИТЬ ОТЗЫВ
 
 
 	// end sProductCard
