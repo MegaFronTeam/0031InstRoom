@@ -3,6 +3,7 @@ mixin sProductCard(data)
 	+b.SECTION.sProductCard.section#sProductCard&attributes(attributes)
 		.container
 			+e.wrapper
+				+img('img/sProductCard-logo-1.png')
 				+e.row.row
 					.col-lg-6
 						+e.slider-wrap
@@ -38,4 +39,42 @@ mixin sProductCard(data)
 								+icon('compare')
 							+e.btn(href="#")
 								+icon('favorites')
+			+e.details-wrap
+				.tabs
+					.swiper.tabs-swiper
+						.tabs__caption.swiper-wrapper
+							.tabs__btn.active.swiper-slide Описание
+							.tabs__btn.swiper-slide Характеристики
+							.tabs__btn.swiper-slide Доставка
+							.tabs__btn.swiper-slide Отзывы
+					.tabs__content.active
+						+e.description
+							p Farbitex Для садовых деревьев&nbsp;&mdash; высококачественная водно-дисперсионнная краска. Изготовлена на&nbsp;оборудовании &laquo;NETZSCH&raquo; по&nbsp;специальным рецептурам, разработанным компанией &laquo;ABC FARBEN&raquo;. Предназначена для защиты коры деревьев и&nbsp;кустарников от&nbsp;резких перепадов температур, грибка и&nbsp;плесени, вредителей, придаёт декоративный вид.
+							h6 Подзаголовок:
+							p &mdash;&nbsp;Заполненное и&nbsp;подписанное заявление о&nbsp;государственной регистрации прекращения деятельности физических лиц в&nbsp;качестве ИП&nbsp;&mdash; форма &#8470;&nbsp;R26001.;
+							p &mdash;&nbsp;Документ об&nbsp;уплате госпошлины в&nbsp;размере 160&nbsp;₽;
+							p &mdash;&nbsp;Документ, подтверждающий предоставление информации в&nbsp;территориальный орган ПФР.;
+					.tabs__content
+						+e.features
+							.row
+								mixin li(title, value)
+									li
+										span!= title
+										small!= value
+								- for (var x = 0; x < 3; x++)
+									.col-md-6.col-lg-4
+										ul
+											+li(`Расход:`, `от&nbsp;0,15 до&nbsp;0,18&nbsp;кг/м2`)
+											+li(`Назначение:`, `Для деревьев`)
+											+li(`Тип работ:`, `Наружное`)
+											+li(`Упаковка:`, `Ведро`)
+											+li(`Время высыхания:`, `1ч`)
+								
+
+					.tabs__content
+						+e.delivery
+						p Lorem e, dolore, corrupti error inventore iure veniam praesentium quisquam?
+					.tabs__content
+						+e.reviews
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias voluptate blanditiis delectus porro eos ipsa minus eaque fugasquam?
 	// end sProductCard

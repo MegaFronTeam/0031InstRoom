@@ -424,7 +424,7 @@ function eventHandler() {
 			1200: {
 				spaceBetween: 16
 			},
-			
+
 		}
 	});
 	var sProductCardSlider = new Swiper(".sProductCard__slider--js", {
@@ -432,6 +432,13 @@ function eventHandler() {
 		thumbs: {
 			swiper: sProductCardThumbSlider,
 		},
+	});
+
+	const swiperTabsb = new Swiper('.tabs-swiper', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true,
+		slideToClickedSlide: true
 	});
 
 	// modal window
