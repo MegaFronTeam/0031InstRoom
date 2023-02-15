@@ -114,16 +114,17 @@ mixin sCatalog(data)
 						.col-sm
 							+e.sort
 								span Сортировать:
-								+e.sort-dropdown-wrap--js
-									+e.sort-item Сначала новые
-									+e.sort-dropdown
-										ul
-											li: a(href="#") По популярности
-											li: a(href="#") По возрастанию цены
-											li: a(href="#") По убыванию цены
-											li: a(href="#") Сначала новые
-											li: a(href="#") От А до Я
-											li: a(href="#") От Я до А
+								+sortDropdown
+								//- +b.sort-dropdown-wrap.sort-dropdown--js
+								//- 	+e.sort-item Сначала новые
+								//- 	+e.sort-dropdown
+								//- 		ul
+								//- 			li: a(href="#") По популярности
+								//- 			li: a(href="#") По возрастанию цены
+								//- 			li: a(href="#") По убыванию цены
+								//- 			li: a(href="#") Сначала новые
+								//- 			li: a(href="#") От А до Я
+								//- 			li: a(href="#") От Я до А
 						.col-sm-auto
 							+e.view
 								| Вид:
