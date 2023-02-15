@@ -73,8 +73,19 @@ mixin sProductCard(data)
 
 					.tabs__content
 						+e.delivery
-						p Lorem e, dolore, corrupti error inventore iure veniam praesentium quisquam?
+							p Lorem e, dolore, corrupti error inventore iure veniam praesentium quisquam?
 					.tabs__content
 						+e.reviews
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias voluptate blanditiis delectus porro eos ipsa minus eaque fugasquam?
+							.row
+								- for (var x = 0; x < 10; x++)
+									+e.review-col.col-lg-6
+										+b.reviews-item
+											+e.name Анна Фёдорова
+											small 08.11.2022
+											p Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.
+											a(href="#") Далее
+							+e.btnWrap
+								+e.review-btn.btn.btn-primary(href="#") ОСТАВИТЬ ОТЗЫВ
+
+
 	// end sProductCard

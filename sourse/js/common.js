@@ -140,7 +140,6 @@ const JSCCommon = {
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
 				.eq($(this).index()).fadeIn().addClass('active');
-
 		});
 
 	},

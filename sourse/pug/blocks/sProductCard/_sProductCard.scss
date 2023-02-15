@@ -257,6 +257,21 @@
 			}
 		}
 	}
+	&__reviews {
+		.row {
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+	}
+	&__btnWrap {
+		@include rfs(2rem, margin-top);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__review-btn {
+		width: rem(210);
+		max-width: 100%;
+	}
 
 	@include media-breakpoint-up(xl) {
 	}
@@ -273,3 +288,39 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sProductCard
+
+.reviews-item {
+	display: flex;
+	flex-direction: column;
+	background-color: $white;
+	border: 1px solid $gray-300;
+	border-radius: 5px;
+	padding: rem(23);
+	height: 100%;
+	&__name {
+		margin-bottom: 2px;
+		font-weight: 500;
+		font-size: rem(16);
+		line-height: calc(20 / 16);
+	}
+	small {
+		display: block;
+		line-height: calc(16 / 14);
+		margin-bottom: rem(8);
+		color: $dark;
+	}
+	p {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+		margin-bottom: 0;
+	}
+	a {
+		display: inline-block;
+		align-self: flex-end;
+		font-size: rem(14);
+		line-height: calc(16 / 14);
+		margin-top: rem(5);
+	}
+}
