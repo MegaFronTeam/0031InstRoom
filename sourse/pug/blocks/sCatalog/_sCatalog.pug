@@ -22,13 +22,81 @@ mixin sCatalog(data)
 						+e.body
 							+e.close--js
 							+catalogDropdown()
-							//- +ddGroup()
-							//- 	+ddGroupItem('Цена, ₽')
-							//- 	+ddGroupItem('Бренд')
-							//- 		+e.custom-inputs-wrap
-							//- 			+in-c('checkbox', '')
-							//- 				+e.name Asko
-							//- 					span.num 15
+							+ddGroup()
+								+ddGroupItem('Цена, ₽')
+									.range-slider
+										input.js-range-slider(type='text' value='')
+									.extra-controls
+										label
+											input.js-input-from(type='text' value='0')
+										| -
+										label
+											input.js-input-to(type='text' value='0')
+								+ddGroupItem('Бренд')
+									+e.custom-inputs-wrap
+										-for(let i = 0; i < 4; i++)
+											+in-c('checkbox', '', 'brend')
+												+e.text Asko
+													span.num 15
+											+in-c('checkbox', '', 'brend')
+												+e.text Alpicool
+													span.num 12
+											+in-c('checkbox', '', 'brend')
+												+e.text Bertazzoni
+													span.num 8
+											+in-c('checkbox', '', 'brend')
+												+e.text Cold Vine
+													span.num 42
+											+in-c('checkbox', '', 'brend')
+												+e.text Dunavox
+													span.num 74
+											+in-c('checkbox', '', 'brend')
+												+e.text Neff
+													span.num 2
+											+in-c('checkbox', '', 'brend')
+												+e.text Кнауф
+													span.num 150
+											+in-c('checkbox', '', 'brend')
+												+e.text Новолукомль
+													span.num 14
+								+ddGroupItem('Страна производитель')
+									+e.custom-inputs-wrap
+										-for(let i = 0; i < 4; i++)
+											+in-c('checkbox', '', 'city')
+												+e.text Англия
+													span.num 15
+											+in-c('checkbox', '', 'city')
+												+e.text Болгария
+													span.num 12
+											+in-c('checkbox', '', 'city')
+												+e.text Венесуэлла
+													span.num 8
+											+in-c('checkbox', '', 'city')
+												+e.text Испания
+													span.num 42
+											+in-c('checkbox', '', 'city')
+												+e.text Италия
+													span.num 42
+											+in-c('checkbox', '', 'city')
+												+e.text Португалия
+													span.num 42
+											+in-c('checkbox', '', 'city')
+												+e.text Россия
+													span.num 74
+											+in-c('checkbox', '', 'city')
+												+e.text Словения
+													span.num 2
+								+ddGroupItem('Цвет')
+									+e.custom-inputs-wrap
+										-for(let i = 0; i < 4; i++)
+											+in-c('checkbox', '', 'color')
+												+e.name Англия
+													span.num 15
+								+ddGroupItem('Способ доставки')
+									+e.custom-inputs-wrap
+										+in-c('radio', 'Самовывоз', 'type')
+										+in-c('radio', 'Доставка курьером', 'type')
+										+in-c('radio', 'Любой', 'type')
 					+e.news-items
 						.row
 							mixin newsItem(i, title, text)
@@ -61,20 +129,6 @@ mixin sCatalog(data)
 								| Вид:
 								+e.view-link.active(href='#'): +icon('grid')
 								+e.view-link(href='#'): +icon('lines')
-					+e.inner-row.row
-						-for(let i = 0; i < 21; i++)
-							.col-sm-6.col-md-4.col-lg-6.col-xl-4
-								+card({
-									label: 'Новинка',
-									img: 'product-img-1.png',
-									title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
-
-									price: '500 ₽',
-									oldPrice: '720 ₽',
-
-									inStock: 'в наличии',
-								})
-						.col-12
-							+btnMoreLg()
+					block
 					+pugin
 	// end sCatalog

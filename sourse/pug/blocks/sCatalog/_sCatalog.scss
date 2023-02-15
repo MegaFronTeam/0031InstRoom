@@ -4,7 +4,7 @@
 	--sPB: #{rem(40)};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(lg) {
-		--sPB: #{rem(80)};
+		--sPB: #{rem(62.400)};
 	}
 	&__container {
 		position: relative;
@@ -25,6 +25,14 @@
 		--bs-gutter-y: #{rem(20)};
 
 		margin-bottom: rem(32);
+		&--in-row {
+			@include media-breakpoint-up(md) {
+				--bs-gutter-y: #{rem(2)};
+				.btn {
+					margin-top: rem(18);
+				}
+			}
+		}
 	}
 
 	// .btn-more-lg {
@@ -59,7 +67,7 @@
 	}
 	&__view-link {
 		color: $gray-300;
-		margin-left: rem(8);
+		margin-left: rem(4.773);
 		&.active, &:hover {
 			color: $gray-900;
 		}
@@ -71,6 +79,9 @@
 		position: relative;
 		margin-left: rem(16);
 		font-family: $font-family-sans-serif;
+		@include media-breakpoint-down(sm) {
+			margin-left: auto;
+		}
 	}
 	&__sort-dropdown {
 		@include mt;
@@ -120,9 +131,14 @@
 		position: static;
     opacity: 1;
     pointer-events: all;
-		margin-bottom: rem(20);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(20);
+		}
 		&__container {
 			padding: 0;
+			@include media-breakpoint-down(lg) {
+				height: auto;
+			}
 		}
 		&__wrap {
 			&:hover {
@@ -140,6 +156,11 @@
 					border-radius: 0 0 5px 5px;
 				}
 			}
+			@include media-breakpoint-down(lg) {
+				&:before {
+					content: unset;
+				}
+			}
 		}
 		&__item {
 			background-color: $gray-900;
@@ -147,14 +168,14 @@
 			border-bottom-color: $gray-800;
 		}
 		&__content {
-			width: 100vw;
 			z-index: 10;
-			left: 100%;
 			@include media-breakpoint-up(lg) {
-				max-width: rem(639);
+				max-width: rem(642);
+				width: 100vw;
+				left: 100%;
 			}
 			@include media-breakpoint-up(xl) {
-				max-width: rem(854);
+				max-width: rem(856);
 			}
 			@include media-breakpoint-up(xxl) {
 				max-width: rem(900);
@@ -216,6 +237,98 @@
 		flex-direction: column;
 		width: 100%;
 		height: 100%;
+	}
+	.dd-group {
+		margin-bottom: rem(20);
+		&__custom-inputs-wrap {
+			--bs-gutter-y: #{rem(12)};
+			max-height: rem(244);
+			overflow-y: auto;
+			overflow-x: hidden;
+			@extend .custom-scroll;
+			margin-top: calc(var(--bs-gutter-y) * -1);
+			margin-right: rem(11);
+			& > * {
+				margin-top: var(--bs-gutter-y);
+			}
+			&::-webkit-scrollbar {
+				width: 2px;
+			}
+			&::-webkit-scrollbar-track {
+				background: #fff;
+			}
+		}
+		.irs {
+			&-from, &-to, &-single, &-min, &-max {
+				visibility: hidden !important;
+				display: none;
+				position: absolute !important;
+			}
+			&-line {
+				position: sticky;
+				background-color: #fff;
+				border-radius: 0;
+				height: 2px;
+			}
+			&-handle {
+				top: -6.7px;
+				border-color: $primary;
+				background-color: $primary;
+				border-width: 5px;
+				width: rem(16);
+				height: rem(16);
+			}
+			&-bar {
+				top: 0;
+				background-color: $primary;
+				height: 2px;
+			}
+			&--round {
+				height: 30px;
+			}
+		}
+		.extra-controls {
+			// display: flex;
+			@extend .row;
+			--bs-gutter-x: #{rem(16)};
+			font-size: rem(16);
+			line-height: 1.5;
+			color: #fff;
+			label {
+				// @include roww(5px, m);
+				position: relative;
+				display: flex;
+				align-items: center;
+				// padding-bottom: rem(10);
+				width: 100%;
+				max-width: rem(84);
+			}
+			input {
+				@include mt;
+				width: 100%;
+				border-color: transparent;
+				border-width: 1px;
+				background-color: #fff;
+				color: #000;
+				text-align: center;
+				font-weight: 500;
+				border-radius: 5px;
+				&:focus {
+					border-color: $body-color;
+					outline: none;
+				}
+			}
+		}
+	}
+	.filter {
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(53);
+		}
+	}
+	.card {
+		&:hover {
+			transform: scale(1.04);
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

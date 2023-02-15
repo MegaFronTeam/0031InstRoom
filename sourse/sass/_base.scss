@@ -563,3 +563,10 @@ iframe {
 }
 
 
+.catalog-page {
+	.page-head {
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(20.800);
+		}
+	}
+}
