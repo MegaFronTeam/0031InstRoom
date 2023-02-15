@@ -1,0 +1,34 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sFavorites/_sFavorites.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '04-favorites.jpg'
+
+block title
+	- let  title = 'Избранное'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+topLine
+		+top-nav()
+	main
+		+page-head('Избранное', 'Избранное')
+		+sFavorites
+	+footer()
+      
+
+
+

@@ -1,0 +1,29 @@
+mixin sFavorites(data)
+	// start sFavorites
+	+b.SECTION.sFavorites.section#sFavorites&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col-sm-3
+						h5 15 товаров
+					.col-auto
+						+e.sort
+							span Сортировать:
+							+sortDropdown
+			+e.row.row
+				-for(let i = 0; i < 15; i++)
+					.col-sm-6.col-md-4.col-lg-6.col-xl-3
+						+card({
+							label: 'Новинка',
+							img: 'product-img-1.png',
+							title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
+
+							price: '500 ₽',
+							oldPrice: '720 ₽',
+
+							inStock: 'в наличии',
+						})
+				.col-12
+					+btnMoreLg()
+			+pugin
+	// end sFavorites

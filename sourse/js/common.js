@@ -521,10 +521,10 @@ function eventHandler() {
 		})
 	}
 
-	let sortDropDown = document.querySelector('.sCatalog__sort-dropdown-wrap--js');
+	let sortDropDown = document.querySelector('.sort-dropdown-wrap--js');
 	if (sortDropDown) {
-		let sortBtn = sortDropDown.querySelector('.sCatalog__sort-item');
-		let sortDropDownContainer = sortDropDown.querySelector('.sCatalog__sort-dropdown');
+		let sortBtn = sortDropDown.querySelector('.sort-dropdown-wrap__sort-item');
+		let sortDropDownContainer = sortDropDown.querySelector('.sort-dropdown-wrap__sort-dropdown');
 		let sortDropDownElements = sortDropDown.querySelectorAll('ul li a');
 
 		sortBtn.addEventListener('click', () => {
@@ -540,8 +540,8 @@ function eventHandler() {
 		})
 
 		document.addEventListener('click', (event) => {
-			let sortTargetBtn = event.target.closest('.sCatalog__sort-item');
-			let sortDropDownTargetContainer = event.target.closest('.sCatalog__sort-dropdown.active');
+			let sortTargetBtn = event.target.closest('.sort-dropdown-wrap__sort-item');
+			let sortDropDownTargetContainer = event.target.closest('.sort-dropdown-wrap__sort-dropdown.active');
 			if (!sortTargetBtn && !sortDropDownTargetContainer) {
 				sortDropDownContainer.classList.remove('active');
 			}

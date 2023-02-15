@@ -87,3 +87,15 @@ mixin btnMoreLg()
 	+b.BUTTON.btn.btn-more-lg
 		+icon('rotate')
 		span Показать ещё
+
+mixin sortDropdown
+	+b.sort-dropdown-wrap--js
+		+e.sort-item Сначала новые
+		+e.sort-dropdown
+			ul
+				li: a(href="#") По популярности
+				li: a(href="#") По возрастанию цены
+				li: a(href="#") По убыванию цены
+				li: a(href="#") Сначала новые
+				li: a(href="#") От А до Я
+				li: a(href="#") От Я до А

@@ -4,7 +4,7 @@
 	--sPB: #{rem(40)};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(lg) {
-		--sPB: #{rem(62.400)};
+		--sPB: #{rem(80)};
 	}
 	&__container {
 		position: relative;
@@ -49,18 +49,14 @@
 	&__sort {
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
 		font-family: $font-family-monospace;
 		color: #000;
-	}
-	&__sort-item {
-		@include mt;
-		font-family: $font-family-sans-serif;
-		font-weight: 500;
-		cursor: pointer;
-		&:hover {
-			color: $primary;
+		span {
+			margin-left: rem(16);
 		}
 	}
+	// &__
 	&__view {
 		font-family: $font-family-monospace;
 		color: #000;
@@ -73,58 +69,6 @@
 		}
 		.icon {
 			font-size: rem(22);
-		}
-	}
-	&__sort-dropdown-wrap {
-		position: relative;
-		margin-left: rem(16);
-		font-family: $font-family-sans-serif;
-		@include media-breakpoint-down(sm) {
-			margin-left: auto;
-		}
-	}
-	&__sort-dropdown {
-		@include mt;
-		position: absolute;
-		top: 0;
-		right: 0;
-		background-color: #fff;
-		z-index: 10;
-		box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
-		border-radius: 5px;
-		padding: rem(16) rem(24);
-		font-size: rem(14);
-		width: 100%;
-		min-width: max-content;
-		opacity: 0;
-		pointer-events: none;
-		&.active {
-			opacity: 1;
-			pointer-events: all;
-		}
-		@include media-breakpoint-up(sm) {
-			left: 0;
-			right: unset;
-		}
-		@include media-breakpoint-up(md) {
-			min-width: rem(219);
-			font-size: rem(16);
-		}
-		ul {
-			list-style-type: none;
-			margin-bottom: 0;
-			li {
-				&:not(:last-child) {
-					margin-bottom: rem(10);
-				}
-			}
-		}
-		a {
-			font-weight: 500;
-			color: #000;
-			&:hover {
-				color: $primary;
-			}
 		}
 	}
 	.catalog-menu {
@@ -328,6 +272,11 @@
 	.card {
 		&:hover {
 			transform: scale(1.04);
+		}
+		&--horizontal {
+			&:hover {
+				transform: scale(1);
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}
