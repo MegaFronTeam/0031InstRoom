@@ -262,12 +262,12 @@ const JSCCommon = {
 								$(this).toggleClass('active');
 							});
 						}
-						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
+						// else {
+						// 	$(this.parentElement).removeClass('active');
+						// 	$(this.parentElement).find('.dd-content-js').slideUp(function () {
+						// 		$(this).removeClass('active');
+						// 	});
+						// }
 					});
 
 				});
@@ -547,6 +547,95 @@ function eventHandler() {
 			}
 		})
 	}
+
+	let filterWrap = document.querySelector('.filter--js');
+	if(filterWrap) {
+		filterWrap.querySelector('.filter__btn').addEventListener('click', function() {
+			// filterWrap.querySelector('.filter__close--js').classList.add('hidden');
+			filterWrap.querySelector('.filter__body').classList.toggle('active');
+			document.querySelector('body').classList.toggle('fixed2');
+		})
+		filterWrap.querySelector('.filter__close--js').addEventListener('click', function() {
+			filterWrap.querySelector('.filter__body').classList.remove('active');
+			document.querySelector('body').classList.remove('fixed2');
+		})
+		let catalogItems = document.querySelectorAll('.catalog-menu__wrap');
+		if(catalogItems) {
+			catalogItems.forEach(catalogItem => {
+				catalogItem.querySelector('.catalog-menu__item').addEventListener('click', () => {
+					filterWrap.querySelector('.filter__close--js').classList.add('hidden');
+				});
+				catalogItem.querySelector('.catalog-menu__back-btn').addEventListener('click', function() {
+					filterWrap.querySelector('.filter__close--js').classList.remove('hidden');
+				})
+			})
+		};
+		window.addEventListener('resize', () => {
+			if (window.matchMedia("(min-width: 992px)").matches) {
+				filterWrap.querySelector('.filter__close--js').classList.remove('hidden');
+			};
+		}, { passive: true });
+	}
+
+	// Range Slider
+	var $range = $(".js-range-slider");
+	var $inputFrom = $(".js-input-from");
+	var $inputTo = $(".js-input-to");
+	var instance;
+	var min = 0;
+	var max = 20000;
+	var from = 0;
+	var to = 0;
+	
+	$range.ionRangeSlider({
+			skin: "round",
+			type: "double",
+			min: min,
+			max: max,
+			from: 890,
+			to: 18090,
+			onStart: updateInputs,
+			onChange: updateInputs,
+			onFinish: updateInputs
+	});
+	instance = $range.data("ionRangeSlider");
+	
+	function updateInputs (data) {
+			from = data.from;
+			to = data.to;
+	
+			$inputFrom.prop("value", from);
+			$inputTo.prop("value", to);
+	}
+	
+	$inputFrom.on("change", function () {
+			var val = $(this).prop("value");
+			console.log(val);
+			// validate
+			if (val < min) {
+				val = min;
+			} else if (val > to) {
+				val = to;
+			}
+			instance.update({
+				from: val
+			});
+			$(this).prop("value", val);
+		});
+	
+	$inputTo.on("change", function () {
+		var val = $(this).prop("value");
+		// validate
+		if (val < from) {
+				val = from;
+		} else if (val > max) {
+				val = max;
+		}
+		instance.update({
+				to: val
+		});
+		$(this).prop("value", val);
+	});
 
 };
 if (document.readyState !== 'loading') {
