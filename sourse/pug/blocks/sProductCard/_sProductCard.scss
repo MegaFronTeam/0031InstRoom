@@ -261,6 +261,18 @@
 		.row {
 			--bs-gutter-y: var(--bs-gutter-x);
 		}
+		.btn-more-lg {
+			--bs-btn-border-color: #{$gray-300};
+		}
+	}
+	&__col-more {
+		display: none;
+	}
+	&__review-col {
+		display: none;
+		&.is-visible {
+			display: block;
+		}
 	}
 	&__btnWrap {
 		@include rfs(2rem, margin-top);

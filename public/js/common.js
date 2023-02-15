@@ -293,8 +293,29 @@ const JSCCommon = {
 					.catch(error => console.error(error))
 			});
 		};
+		
 
 		convertImages('.img-svg-js');
+	},
+	reviewsMore: function reviewsMore() {
+		// const reviewsParent = document.querySelector('.sProductCard__reviews-row');
+		const reviewsLength = document.querySelectorAll('.sProductCard__review-col').length;
+		let shownItems = 10; // количество нескрываемых элементов
+		$(`.sProductCard__review-col:nth-child(-n + ${shownItems})`).addClass('is-visible')
+		if (shownItems < reviewsLength) {
+			const buttonMoreWrap = document.querySelector('.sProductCard__col-more');
+			const buttonMore = document.querySelector('.sProductCard__col-more .btn-more-lg');
+			buttonMoreWrap.style.display = 'block';
+			buttonMore.addEventListener('click', function () {
+				shownItems += 6; // количество добавляемых элементов за клик по кнопке
+				const array = Array.from(document.querySelector('.sProductCard__reviews-row').children);
+				const visibleItems = array.slice(0, shownItems);
+				visibleItems.forEach(el => el.classList.add('is-visible'));
+				if (visibleItems.length >= reviewsLength) {
+					buttonMoreWrap.style.display = 'none';
+				}
+			});
+		};
 	},
 };
 const $ = jQuery;
@@ -308,6 +329,7 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	JSCCommon.getCurrentYear('.footer__copyright span');
+	JSCCommon.reviewsMore();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
 
@@ -555,23 +577,23 @@ function eventHandler() {
 	}
 
 	let filterWrap = document.querySelector('.filter--js');
-	if(filterWrap) {
-		filterWrap.querySelector('.filter__btn').addEventListener('click', function() {
+	if (filterWrap) {
+		filterWrap.querySelector('.filter__btn').addEventListener('click', function () {
 			// filterWrap.querySelector('.filter__close--js').classList.add('hidden');
 			filterWrap.querySelector('.filter__body').classList.toggle('active');
 			document.querySelector('body').classList.toggle('fixed2');
 		})
-		filterWrap.querySelector('.filter__close--js').addEventListener('click', function() {
+		filterWrap.querySelector('.filter__close--js').addEventListener('click', function () {
 			filterWrap.querySelector('.filter__body').classList.remove('active');
 			document.querySelector('body').classList.remove('fixed2');
 		})
 		let catalogItems = document.querySelectorAll('.catalog-menu__wrap');
-		if(catalogItems) {
+		if (catalogItems) {
 			catalogItems.forEach(catalogItem => {
 				catalogItem.querySelector('.catalog-menu__item').addEventListener('click', () => {
 					filterWrap.querySelector('.filter__close--js').classList.add('hidden');
 				});
-				catalogItem.querySelector('.catalog-menu__back-btn').addEventListener('click', function() {
+				catalogItem.querySelector('.catalog-menu__back-btn').addEventListener('click', function () {
 					filterWrap.querySelector('.filter__close--js').classList.remove('hidden');
 				})
 			})
@@ -592,53 +614,53 @@ function eventHandler() {
 	var max = 20000;
 	var from = 0;
 	var to = 0;
-	
+
 	$range.ionRangeSlider({
-			skin: "round",
-			type: "double",
-			min: min,
-			max: max,
-			from: 890,
-			to: 18090,
-			onStart: updateInputs,
-			onChange: updateInputs,
-			onFinish: updateInputs
+		skin: "round",
+		type: "double",
+		min: min,
+		max: max,
+		from: 890,
+		to: 18090,
+		onStart: updateInputs,
+		onChange: updateInputs,
+		onFinish: updateInputs
 	});
 	instance = $range.data("ionRangeSlider");
-	
-	function updateInputs (data) {
-			from = data.from;
-			to = data.to;
-	
-			$inputFrom.prop("value", from);
-			$inputTo.prop("value", to);
+
+	function updateInputs(data) {
+		from = data.from;
+		to = data.to;
+
+		$inputFrom.prop("value", from);
+		$inputTo.prop("value", to);
 	}
-	
+
 	$inputFrom.on("change", function () {
-			var val = $(this).prop("value");
-			console.log(val);
-			// validate
-			if (val < min) {
-				val = min;
-			} else if (val > to) {
-				val = to;
-			}
-			instance.update({
-				from: val
-			});
-			$(this).prop("value", val);
+		var val = $(this).prop("value");
+		console.log(val);
+		// validate
+		if (val < min) {
+			val = min;
+		} else if (val > to) {
+			val = to;
+		}
+		instance.update({
+			from: val
 		});
-	
+		$(this).prop("value", val);
+	});
+
 	$inputTo.on("change", function () {
 		var val = $(this).prop("value");
 		// validate
 		if (val < from) {
-				val = from;
+			val = from;
 		} else if (val > max) {
-				val = max;
+			val = max;
 		}
 		instance.update({
-				to: val
+			to: val
 		});
 		$(this).prop("value", val);
 	});
