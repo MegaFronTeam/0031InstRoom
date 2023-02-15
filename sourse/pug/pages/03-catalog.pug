@@ -12,11 +12,11 @@ include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'main-page' 
-	- let  bg= ''
+	- let  mainPage= 'catalog-page' 
+	- let  bg= '03-catalog.jpg'
 
 block title
-	- let  title = 'Главная'
+	- let  title = 'Каталог'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -28,6 +28,21 @@ block pagecontent
 	main
 		+page-head('Садово-огородный инвентарь', 'Каталог', 'Для дома и дачи', 'Садово-огородный инвентарь')
 		+sCatalog
+			+e.inner-row.row
+				-for(let i = 0; i < 21; i++)
+					.col-sm-6.col-md-4.col-lg-6.col-xl-4
+						+card({
+							label: 'Новинка',
+							img: 'product-img-1.png',
+							title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
+
+							price: '500 ₽',
+							oldPrice: '720 ₽',
+
+							inStock: 'в наличии',
+						})
+				.col-12
+					+btnMoreLg()
 	+footer()
       
 

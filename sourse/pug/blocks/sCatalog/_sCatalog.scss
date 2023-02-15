@@ -4,7 +4,7 @@
 	--sPB: #{rem(40)};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(lg) {
-		--sPB: #{rem(80)};
+		--sPB: #{rem(62.400)};
 	}
 	&__container {
 		position: relative;
@@ -25,6 +25,14 @@
 		--bs-gutter-y: #{rem(20)};
 
 		margin-bottom: rem(32);
+		&--in-row {
+			@include media-breakpoint-up(md) {
+				--bs-gutter-y: #{rem(2)};
+				.btn {
+					margin-top: rem(18);
+				}
+			}
+		}
 	}
 
 	// .btn-more-lg {
@@ -59,7 +67,7 @@
 	}
 	&__view-link {
 		color: $gray-300;
-		margin-left: rem(8);
+		margin-left: rem(4.773);
 		&.active, &:hover {
 			color: $gray-900;
 		}
@@ -162,12 +170,12 @@
 		&__content {
 			z-index: 10;
 			@include media-breakpoint-up(lg) {
-				max-width: rem(639);
+				max-width: rem(642);
 				width: 100vw;
 				left: 100%;
 			}
 			@include media-breakpoint-up(xl) {
-				max-width: rem(854);
+				max-width: rem(856);
 			}
 			@include media-breakpoint-up(xxl) {
 				max-width: rem(900);
@@ -294,26 +302,6 @@
 				// padding-bottom: rem(10);
 				width: 100%;
 				max-width: rem(84);
-				// border-bottom: 1px solid $body-color;
-				// &::before {
-				// 	content: '';
-				// 	display: block;
-				// 	position: absolute;
-				// 	width: calc(100% - var(--bs-gutter-x));
-				// 	height: 1px;
-				// 	left: calc(var(--bs-gutter-x) / 2);
-				// 	background-color:  $body-color;
-				// 	bottom: 0;
-				// }
-				// span {
-				// 	display: block;
-				// 	&:first-child {
-				// 		margin-right: 5px;
-				// 	}
-				// 	&:last-child {
-				// 		margin-left: 5px;
-				// 	}
-				// }
 			}
 			input {
 				@include mt;
@@ -330,6 +318,16 @@
 					outline: none;
 				}
 			}
+		}
+	}
+	.filter {
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(53);
+		}
+	}
+	.card {
+		&:hover {
+			transform: scale(1.04);
 		}
 	}
 	@include media-breakpoint-up(xl) {}
