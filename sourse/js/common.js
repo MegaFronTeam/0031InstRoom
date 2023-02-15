@@ -664,6 +664,13 @@ function eventHandler() {
 		});
 		$(this).prop("value", val);
 	});
+	
+	$(".custom-select-js").select2({
+		// tags: true,
+		// tokenSeparators: [',', ' ']
+		dropdownParent: $('.custom-select'),
+		dropdownCssClass: 'custom-select__dropdown',
+	});
 
 };
 if (document.readyState !== 'loading') {

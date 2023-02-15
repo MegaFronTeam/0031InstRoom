@@ -47,6 +47,7 @@
     "inputmask": "^5.0.7",
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.3",
+    "select2": "^4.1.0-rc.0",
     "swiper": "^9.0.5"
   }
 }

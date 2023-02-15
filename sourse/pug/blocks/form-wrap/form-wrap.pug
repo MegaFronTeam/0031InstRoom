@@ -6,10 +6,11 @@ mixin form-head()
 mixin input(placeholder,  t='text', label, name= t)
 	mixin t(t='text',placeholder, name= t)
 		if t== "textarea"
-			+e.TEXTAREA.input.form-control(name=name placeholder=placeholder)
+			+e.TEXTAREA.input.form-control(name=name placeholder=placeholder)&attributes(attributes)
 		else if t== "select"
 			+e.SELECT.input.form-select( name= name)&attributes(attributes)
-				option(value= placeholder)= placeholder
+				if placeholder
+					option(value= placeholder selected)= placeholder
 				- for (var x = 1; x < 5; x++)
 					option(value=` placeholder ${x}`)= `placeholder ${x}`
 		else if t=='file'
@@ -24,8 +25,8 @@ mixin input(placeholder,  t='text', label, name= t)
 	+e.input-wrap.form-group
 		if label
 			label
-				+e.SPAN.input-title= label
 				+t(t,placeholder, name)&attributes(attributes)
+				+e.SPAN.input-title= label
 				block
 		else
 			+t(t,placeholder, name)&attributes(attributes)
@@ -77,3 +78,5 @@ mixin policy()
 	+e.policy
 		+in-c()(checked)
 			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+
+			

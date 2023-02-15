@@ -497,7 +497,7 @@
 				background-color: transparent;
 				position: relative;
 				&:before {
-					content: '';
+					content: "";
 					position: absolute;
 					display: block;
 					left: 0;
@@ -510,7 +510,7 @@
 					background-color: #ffb78b;
 					background-color: transparent;
 					&:before {
-						background-color: #FFB78B;
+						background-color: #ffb78b;
 					}
 				}
 			}
@@ -541,7 +541,7 @@
 			stroke: currentColor;
 			stroke-width: 2px;
 			font-size: rem(24);
-			stroke-linecap: round
+			stroke-linecap: round;
 		}
 	}
 	&__img-wrap {
@@ -724,7 +724,8 @@
 				&__text {
 					// max-width: rem(200);
 				}
-				&__price, &__old-price {
+				&__price,
+				&__old-price {
 					padding-bottom: 0;
 				}
 				&__old-price {
@@ -818,7 +819,6 @@
 	}
 }
 
-
 .pagination-wrapper {
 	ul {
 		justify-content: center;
@@ -837,12 +837,13 @@
 				font-weight: 500;
 				border-radius: 2px;
 				font-size: rem(18);
-				font-feature-settings: "pnum" on,"lnum" on;
+				font-feature-settings: "pnum" on, "lnum" on;
 				&.current {
 					background-color: $primary;
 					color: #fff;
 				}
-				&.next, &.prev {
+				&.next,
+				&.prev {
 					padding: 0;
 					.icon {
 						font-size: rem(24);
@@ -878,7 +879,7 @@
 		cursor: pointer;
 		&:after {
 			@include mt;
-			content: '';
+			content: "";
 			position: absolute;
 			display: block;
 			width: rem(24);
@@ -955,8 +956,9 @@
 		&:hover {
 			color: $primary;
 		}
-		&::before, &::after {
-			content: '';
+		&::before,
+		&::after {
+			content: "";
 			position: absolute;
 			display: block;
 			width: 100%;
@@ -976,6 +978,100 @@
 		}
 		@include media-breakpoint-up(lg) {
 			display: none;
+		}
+	}
+}
+.custom-select {
+	& > .select2-container {
+		width: 100% !important;
+	}
+	.custom-select__dropdown {
+		border: 1px solid $gray-300;
+		border-radius: 5px;
+		margin-top: 2px;
+		z-index: 998;
+		.select2-search--dropdown {
+			.select2-search__field {
+				border-color: $gray-300;
+				outline: none !important;
+				border-radius: 5px;
+				&:focus {
+					border-color: $primary;
+				}
+			}
+		}
+	}
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+		color: inherit;
+		line-height: inherit;
+	}
+	.select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
+	.select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+	.select2-container--default .select2-selection--single {
+		--bs-form-select-bg-img: url(
+			data:image/svg + xml;charset=utf-8,
+			%3Csvgxmlns="http://www.w3.org/2000/svg"viewBox="0 0 16 16"%3E%3Cpathfill="none"stroke="%233B3B3B"stroke-linecap="round"stroke-linejoin="round"stroke-width="2"d="m2 5 6 6 6-6"/%3E%3C/svg%3E
+		);
+		appearance: none;
+		--bs-form-control-bg: #ffffff;
+		--bs-border-width: 1px;
+		--bs-border-color: #{$gray-300};
+		background-position: right 28px center;
+		background-size: 16px 12px;
+		border-radius: 5px;
+		color: $black;
+		font-size: rem(16);
+		font-weight: 400;
+		line-height: calc(20 / 16);
+		font-family: $font-family-monospace;
+		padding: rem(9) rem(60) rem(9) rem(10);
+		&:focus {
+			border-color: $gray-300;
+		}
+	}
+	.select2-results {
+		padding: rem(10);
+
+		.select2-results__options {
+			@extend .custom-scroll;
+			margin-right: rem(26);
+			max-height: rem(224);
+			&::-webkit-scrollbar {
+				width: 2px;
+			}
+			&::-webkit-scrollbar-track {
+				background-color: $gray-300;
+			}
+		}
+		.select2-results__option {
+			@include mt(0.2s);
+			position: relative;
+			font-weight: 500;
+			font-size: rem(16);
+			line-height: calc(20 / 16);
+			padding: rem(6);
+			color: $dark;
+			&--selected {
+				color: $primary;
+				background-color: transparent;
+				padding-left: rem(28);
+				&::before {
+					content: "";
+					@include a-cent(y);
+					width: rem(10);
+					height: rem(10);
+					background-color: $primary;
+					border-radius: 3px;
+					left: rem(6);
+				}
+			}
+			&--highlighted {
+				color: $primary;
+				background-color: transparent;
+			}
 		}
 	}
 }

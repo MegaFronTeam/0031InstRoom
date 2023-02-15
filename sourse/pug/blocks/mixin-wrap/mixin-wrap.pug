@@ -20,7 +20,7 @@ mixin arrow()
 
 mixin ie11()
 	//- modernizer and for ie11
-	 
+
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 
 mixin addblock()
@@ -67,9 +67,9 @@ mixin card(data)
 				+e.text!= data.text
 			+e.inner-row.row
 				+e.price-col.col-auto
-						+e.price!= data.price
+					+e.price!= data.price
 				+e.old-price-col.col-auto
-						+e.old-price!= data.oldPrice
+					+e.old-price!= data.oldPrice
 				+e.info-col.col-auto.ms-auto
 					+e.info-wrap
 						+e.info
@@ -87,3 +87,10 @@ mixin btnMoreLg()
 	+b.BUTTON.btn.btn-more-lg
 		+icon('rotate')
 		span Показать ещё
+
+
+mixin customSelect(...items)
+	+b.custom-select
+		select.custom-select__input.form-select.custom-select-js&attributes(attributes)
+			each  item in items
+				option(value=`${item}`)!= item
