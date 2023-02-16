@@ -670,6 +670,7 @@ function eventHandler() {
 		// tokenSeparators: [',', ' ']
 		dropdownParent: $('.custom-select'),
 		dropdownCssClass: 'custom-select__dropdown',
+		closeOnSelect: false
 		// placeholder: "Select a state",
     // allowClear: true
 	});
