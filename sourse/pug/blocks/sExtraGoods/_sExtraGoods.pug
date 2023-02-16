@@ -1,0 +1,68 @@
+mixin sExtraGoods(title)
+	// start sExtraGoods
+	+b.SECTION.sExtraGoods.section#sExtraGoods&attributes(attributes)
+		.container
+			.controls-wrap-js
+				+b.section-title
+					.row
+						.col-auto
+							h2!= title
+						.col-auto
+							+e.arrow-wrap
+								+arrow
+				+e.slider.swiper.default-slider-js
+					.swiper-wrapper
+						+e.slide.swiper-slide
+							+card({
+								label: 'Акция',
+								img: 'product-img-1.png',
+								title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
+								price: '500 ₽',
+								oldPrice: '720 ₽',
+								inStock: 'в наличии',
+								linkActiveClass: 'active',
+								addToCartBtnClass: 'active',
+							})
+						+e.slide.swiper-slide
+							+card({
+								img: 'product-img-2.png',
+								title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
+								price: '500 ₽',
+								oldPrice: '720 ₽',
+								inStock: 'под заказ',
+							})
+						+e.slide.swiper-slide
+							+card({
+								label: 'Новинка',
+								img: 'product-img-1.png',
+								title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
+								price: '500 ₽',
+								oldPrice: '720 ₽',
+								inStock: 'в наличии',
+							})
+						+e.slide.swiper-slide
+							+card({
+								img: 'product-img-2.png',
+								title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
+								price: '500 ₽',
+								oldPrice: '720 ₽',
+								inStock: 'под заказ',
+							})
+						+e.slide.swiper-slide
+							+card({
+								label: 'Новинка',
+								img: 'product-img-1.png',
+								title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
+								price: '500 ₽',
+								oldPrice: '720 ₽',
+								inStock: 'в наличии',
+							})
+						+e.slide.swiper-slide
+							+card({
+								img: 'product-img-2.png',
+								title: 'Эмаль Condor ПФ-115 жёлтая 1,8 кг',
+								price: '500 ₽',
+								oldPrice: '720 ₽',
+								inStock: 'в наличии',
+							})
+	// end sExtraGoods

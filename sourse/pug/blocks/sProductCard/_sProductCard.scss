@@ -1,8 +1,11 @@
 // start .sProductCard
 .sProductCard {
 	--sPT: 0;
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sPB: #{rem(45)};
+	@include media-breakpoint-up(lg) {
+		--sPT: 0;
+		--sPB: #{rem(80)};
+	}
 
 	// @include media-breakpoint-up(lg) {
 	// 	--wrapSpace: #{rem(60)} #{rem(40)};
@@ -420,7 +423,7 @@
 		@include roww(32px, m);
 		display: flex;
 		flex-wrap: wrap;
-		
+		margin-top: rem(-10);
 	}
 	&__btn {
 		font-weight: 500;
@@ -429,6 +432,7 @@
 		color: $dark;
 		display: flex;
 		align-items: center;
+		margin-top: rem(10);
 		&::before {
 			@include mt(0.2s);
 			content: "";

@@ -3,7 +3,9 @@ extends ../layout/main.pug
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
-include ../blocks/sProductCard/_sProductCard.pug 
+include ../blocks/sProductCard/_sProductCard.pug
+include ../blocks/sExtraGoods/_sExtraGoods.pug
+
 //- include ../blocks/headerBlock/_headerBlock.pug
 //- include ../blocks/sForm/_sForm.pug
 //- include ../blocks/sContent/_sContent.pug
@@ -29,6 +31,8 @@ block pagecontent
 	main
 		+page-head(``, `Каталог`, `Для дома и дачи`, `Садово-огородный инвентарь`, `Farbitex`)
 		+sProductCard()
+		+sExtraGoods(`Похожие товары`)
+		+sExtraGoods(`С&nbsp;этим товаром покупают`)
 		//- +headerBlock 
 		//- +sOurBrands
 		//- +sAboutUs
