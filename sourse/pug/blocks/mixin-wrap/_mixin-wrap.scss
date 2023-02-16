@@ -983,6 +983,13 @@
 	}
 }
 .custom-select {
+	&__title {
+		font-family: $font-family-monospace;
+		font-weight: 400;
+		font-size: rem(16);
+		line-height: calc(20 / 16);
+		margin-bottom: rem(18);
+	}
 	& > .select2-container {
 		width: 100% !important;
 	}

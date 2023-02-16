@@ -293,7 +293,7 @@ const JSCCommon = {
 					.catch(error => console.error(error))
 			});
 		};
-		
+
 
 		convertImages('.img-svg-js');
 	},
@@ -323,6 +323,7 @@ const $ = jQuery;
 function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('deliveryTabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -455,7 +456,7 @@ function eventHandler() {
 		},
 	});
 
-	const swiperTabsb = new Swiper('.tabs-swiper', {
+	const swiperTabs = new Swiper('.tabs-swiper', {
 		slidesPerView: 'auto',
 		freeMode: true,
 		watchOverflow: true,
@@ -664,16 +665,19 @@ function eventHandler() {
 		});
 		$(this).prop("value", val);
 	});
-	
-	$(".custom-select-js").select2({
-		// tags: true,
-		// tokenSeparators: [',', ' ']
-		dropdownParent: $('.custom-select'),
-		dropdownCssClass: 'custom-select__dropdown',
-		closeOnSelect: false
-		// placeholder: "Select a state",
-    // allowClear: true
-	});
+
+	let customSelects = document.querySelectorAll('.custom-select');
+	for (let customSelect of customSelects) {
+		$(customSelect.querySelector('.custom-select-js')).select2({
+			// tags: true,
+			// tokenSeparators: [',', ' ']
+			language: "ru",
+			dropdownParent: customSelect,
+			dropdownCssClass: 'custom-select__dropdown',
+			// closeOnSelect: false
+			// allowClear: true
+		});
+	}
 
 };
 if (document.readyState !== 'loading') {

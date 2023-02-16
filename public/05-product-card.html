@@ -818,22 +818,72 @@
 								</div>
 								<div class="tabs__content">
 									<div class="sProductCard__delivery">
-										<div class="custom-select">
-											<select class="custom-select__input form-select custom-select-js" data-placeholder="Москва">
-												<option></option>
-												<option value="Москва">Москва</option>
-												<option value="Санкт-Петербург">Санкт-Петербург</option>
-												<option value="Мурманск">Мурманск</option>
-												<option value="Владивосток">Владивосток</option>
-												<option value="Иркутск">Иркутск</option>
-												<option value="Тверь">Тверь</option>
-												<option value="Ростов на Дону">Ростов на Дону</option>
-												<option value="Калининград">Калининград</option>
-												<option value="Мурманск">Мурманск</option>
-												<option value="Владивосток">Владивосток</option>
-												<option value="Иркутск">Иркутск</option>
-												<option value="Тверь">Тверь</option>
-											</select>
+										<div class="sProductCard__infoBlock">
+											<div class="sProductCard__info-item">
+												<svg class="icon icon-check-circle ">
+													<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+												</svg><span>Доставка курьером</span>
+											</div>
+											<div class="sProductCard__info-item">
+												<svg class="icon icon-check-circle ">
+													<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+												</svg><span>Самовывоз</span>
+											</div>
+										</div>
+										<p>Мы&nbsp;доставим вашу покупку в&nbsp;любую точку Российской Федерации. Чтобы узнать подробности доставки, выберите один из&nbsp;пунктов. Приведённый ниже расчёт стоимости доставки носит информационный характер. Точную информацию о&nbsp;стоимости товара или заказа в&nbsp;целом можно увидеть при оформлении заказа.</p>
+										<div class="deliveryTabs">
+											<div class="deliveryTabs__caption">
+												<div class="deliveryTabs__btn">Доставка курьером</div>
+												<div class="deliveryTabs__btn">Самовывоз</div>
+											</div>
+											<div class="deliveryTabs__content">
+												<div class="custom-select">
+													<div class="custom-select__title">Выберите населённый пункт
+													</div>
+													<select class="custom-select__input form-select custom-select-js" data-placeholder="Москва">
+														<option></option>
+														<option value="Москва">Москва</option>
+														<option value="Санкт-Петербург">Санкт-Петербург</option>
+														<option value="Мурманск">Мурманск</option>
+														<option value="Владивосток">Владивосток</option>
+														<option value="Иркутск">Иркутск</option>
+														<option value="Тверь">Тверь</option>
+														<option value="Ростов на Дону">Ростов на Дону</option>
+														<option value="Калининград">Калининград</option>
+														<option value="Мурманск">Мурманск</option>
+														<option value="Владивосток">Владивосток</option>
+														<option value="Иркутск">Иркутск</option>
+														<option value="Тверь">Тверь</option>
+													</select>
+												</div>
+												<p>Курьером до&nbsp;клиента</p>
+												<ul>
+													<li>&mdash;&nbsp;В&nbsp;заказе только мелкие товары&nbsp;&mdash; 500&nbsp;₽.;</li>
+													<li>&mdash;&nbsp;В&nbsp;заказе есть крупные товары&nbsp;&mdash; 1&nbsp;500&nbsp;₽.;</li>
+													<li>&mdash;&nbsp;В&nbsp;заказе есть габаритный товар&nbsp;&mdash; 3&nbsp;000&nbsp;₽;</li>
+													<li>&mdash;&nbsp;Общая стоимость товаров менее 2000 - + 100&nbsp;₽;</li>
+												</ul>
+											</div>
+											<div class="deliveryTabs__content">
+												<div class="custom-select">
+													<div class="custom-select__title">Выберите пункт доставки
+													</div>
+													<select class="custom-select__input form-select custom-select-js" data-placeholder="Москва, ул Первомайская 14">
+														<option></option>
+														<option value="Москва, ул Первомайская 15">Москва, ул Первомайская 15</option>
+														<option value="Москва, ул Первомайская 16">Москва, ул Первомайская 16</option>
+														<option value="Москва, ул Первомайская 17">Москва, ул Первомайская 17</option>
+														<option value="Москва, ул Первомайская 18">Москва, ул Первомайская 18</option>
+														<option value="Москва, ул Первомайская 19">Москва, ул Первомайская 19</option>
+														<option value="Москва, ул Первомайская 20">Москва, ул Первомайская 20</option>
+														<option value="Москва, ул Первомайская 18">Москва, ул Первомайская 18</option>
+														<option value="Москва, ул Первомайская 19">Москва, ул Первомайская 19</option>
+														<option value="Москва, ул Первомайская 20">Москва, ул Первомайская 20</option>
+													</select>
+												</div>
+												<p>Доставка бесплатно до&nbsp;пункта выдачи</p>
+												<p>Ближайшая дата доставки&nbsp;&mdash; 10&nbsp;февраля. Срок хранения заказа 14&nbsp;дней</p>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -1125,6 +1175,7 @@
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="libs/select2/js/select2.full.min.js"></script>
+		<script src="libs/select2/js/i18n/ru.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

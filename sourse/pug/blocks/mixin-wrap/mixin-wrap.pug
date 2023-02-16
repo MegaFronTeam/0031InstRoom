@@ -89,9 +89,11 @@ mixin btnMoreLg()
 		span Показать ещё
 
 
-mixin customSelect(placeholder, ...items)
+mixin customSelect(t, ...items)
 	+b.custom-select
-		select.custom-select__input.form-select.custom-select-js(data-placeholder=`${placeholder}`)&attributes(attributes)
+		if t
+			+e.title!= t
+		select.custom-select__input.form-select.custom-select-js&attributes(attributes)
 			option
 			each  item in items
 				option(value=`${item}`)!= item
