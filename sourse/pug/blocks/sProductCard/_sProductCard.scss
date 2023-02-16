@@ -420,7 +420,7 @@
 		@include roww(32px, m);
 		display: flex;
 		flex-wrap: wrap;
-		@include rfs(1.5rem, margin-bottom);
+		
 	}
 	&__btn {
 		font-weight: 500;
@@ -452,6 +452,7 @@
 
 	&__content {
 		display: none;
+		@include rfs(1.5rem, margin-top);
 		&.active {
 			display: block;
 		}

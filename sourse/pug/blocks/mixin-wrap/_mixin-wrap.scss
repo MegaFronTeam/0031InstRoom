@@ -1016,6 +1016,7 @@
 	& > .select2-container {
 		width: 100% !important;
 	}
+	
 
 	.custom-select__dropdown {
 		border: 1px solid $gray-300;
@@ -1044,10 +1045,11 @@
 		border-bottom-right-radius: 5px;
 	}
 	.select2-container--default .select2-selection--single {
-		--bs-form-select-bg-img: url(
-			data:image/svg + xml;charset=utf-8,
-			%3Csvgxmlns="http://www.w3.org/2000/svg"viewBox="0 0 16 16"%3E%3Cpathfill="none"stroke="%233B3B3B"stroke-linecap="round"stroke-linejoin="round"stroke-width="2"d="m2 5 6 6 6-6"/%3E%3C/svg%3E
-		);
+		--bs-form-select-bg-img: none;
+		// --bs-form-select-bg-img: url(
+		// 	data:image/svg + xml;charset=utf-8,
+		// 	%3Csvgxmlns="http://www.w3.org/2000/svg"viewBox="0 0 16 16"%3E%3Cpathfill="none"stroke="%233B3B3B"stroke-linecap="round"stroke-linejoin="round"stroke-width="2"d="m2 5 6 6 6-6"/%3E%3C/svg%3E
+		// );
 		appearance: none;
 		--bs-form-control-bg: #ffffff;
 		--bs-border-width: 1px;
@@ -1063,6 +1065,21 @@
 		padding: rem(9) rem(60) rem(9) rem(10);
 		&:focus {
 			border-color: $gray-300;
+		}
+		.select2-selection__arrow {
+			@include a-cent(y);
+			display: block;
+			width: rem(24);
+			height: rem(24);
+			right: rem(24);
+			left: auto;
+			background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 9L12 16L19 9' stroke='#{$dark}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			background-size: 100%;
+			// pointer-events: none;
+			b {
+				display: none;
+			}
 		}
 		.select2-selection__placeholder {
 			color: $gray-300;
