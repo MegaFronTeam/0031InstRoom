@@ -73,7 +73,7 @@ mixin sProductCard(data)
 
 					.tabs__content
 						+e.delivery
-							+customSelect(`Москва`, `Санкт-Петербург`, `Мурманск`, `Владивосток`, `Иркутск`, `Тверь`, `Ростов на Дону`, `Калининград`, `Мурманск`, `Владивосток`, `Иркутск`, `Тверь`)
+							+customSelect(`Москва`, `Москва`, `Санкт-Петербург`, `Мурманск`, `Владивосток`, `Иркутск`, `Тверь`, `Ростов на Дону`, `Калининград`, `Мурманск`, `Владивосток`, `Иркутск`, `Тверь`)
 					.tabs__content
 						+e.reviews
 							+e.reviews-row.row
@@ -88,6 +88,5 @@ mixin sProductCard(data)
 									+btnMoreLg()
 							+e.btnWrap
 								+e.review-btn.btn.btn-primary(href="#" data-src="#modal-review" data-fancybox="modal") ОСТАВИТЬ ОТЗЫВ
-
 
 	// end sProductCard

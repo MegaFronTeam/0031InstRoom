@@ -1009,10 +1009,12 @@
 	& > .select2-container {
 		width: 100% !important;
 	}
+
 	.custom-select__dropdown {
 		border: 1px solid $gray-300;
 		border-radius: 5px;
-		margin-top: 2px;
+		// margin-top: 2px;
+		// margin-bottom: 2px;
 		z-index: 998;
 		.select2-search--dropdown {
 			.select2-search__field {
@@ -1054,6 +1056,9 @@
 		padding: rem(9) rem(60) rem(9) rem(10);
 		&:focus {
 			border-color: $gray-300;
+		}
+		.select2-selection__placeholder {
+			color: $gray-300;
 		}
 	}
 	.select2-results {
