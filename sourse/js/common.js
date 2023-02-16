@@ -593,9 +593,11 @@ function eventHandler() {
 			catalogItems.forEach(catalogItem => {
 				catalogItem.querySelector('.catalog-menu__item').addEventListener('click', () => {
 					filterWrap.querySelector('.filter__close--js').classList.add('hidden');
+					// $('.filter__body').addClass('fixed');
 				});
 				catalogItem.querySelector('.catalog-menu__back-btn').addEventListener('click', function () {
 					filterWrap.querySelector('.filter__close--js').classList.remove('hidden');
+					// $('.filter__body').removeClass('fixed');
 				})
 			})
 		};

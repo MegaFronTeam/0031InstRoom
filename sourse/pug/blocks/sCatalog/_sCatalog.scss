@@ -9,10 +9,10 @@
 	&__container {
 		position: relative;
 		@include media-breakpoint-down(sm) {
-			padding-bottom: rem(425);
+			padding-bottom: rem(450);
 		}
 		@include media-breakpoint-down(lg) {
-			padding-bottom: rem(200);
+			padding-bottom: rem(220);
 		}
 	}
 	&__row{
@@ -38,6 +38,12 @@
 	// .btn-more-lg {
 	// 	--bs-btn-border-color: transparent;
 	// }
+	&__title {
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(26);
+		}
+	}
 	&__head-row {
 		--bs-gutter-y: #{rem(8)};
 
@@ -53,7 +59,7 @@
 		font-family: $font-family-monospace;
 		color: #000;
 		span {
-			margin-left: rem(16);
+			margin-right: rem(16);
 		}
 	}
 	// &__
