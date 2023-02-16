@@ -670,6 +670,8 @@ function eventHandler() {
 		// tokenSeparators: [',', ' ']
 		dropdownParent: $('.custom-select'),
 		dropdownCssClass: 'custom-select__dropdown',
+		// placeholder: "Select a state",
+    // allowClear: true
 	});
 
 };
