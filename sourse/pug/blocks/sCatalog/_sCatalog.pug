@@ -1,27 +1,30 @@
-mixin product-item(i, t, p ,pr)
-	+b.ARTICLE.product-item
-		+e.img-wrap(href="#")
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
-		+e.caption
-			+e.title!= t
-			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
-	// /.product-item
+//- mixin product-item(i, t, p ,pr)
+//- 	+b.ARTICLE.product-item
+//- 		+e.img-wrap(href="#")
+//- 			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
+//- 			.img-wrap-center 
+//- 				+img(`img/prod-${i}.jpg`)
+//- 		+e.caption
+//- 			+e.title!= t
+//- 			+e.text!= p
+//- 			+e.price!= pr
+//- 			+e.btn(href='#')
+//- 	// /.product-item
 
-mixin sCatalog(data)
+mixin sCatalog(title, isCatalog=true)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		+e.container.container
+			if title
+				+e.title.h2!= title
 			.row
 				.col-lg-4.col-xl-3
 					+b.filter--js
 						+e.btn.btn.btn-dark Фильтр
 						+e.body
 							+e.close--js
-							+catalogDropdown()
+							if isCatalog
+								+catalogDropdown()
 							+ddGroup()
 								+ddGroupItem('Цена, ₽')
 									.range-slider
@@ -90,7 +93,7 @@ mixin sCatalog(data)
 									+e.custom-inputs-wrap
 										-for(let i = 0; i < 4; i++)
 											+in-c('checkbox', '', 'color')
-												+e.name Англия
+												+e.text Цвет
 													span.num 15
 								+ddGroupItem('Способ доставки')
 									+e.custom-inputs-wrap

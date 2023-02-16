@@ -861,6 +861,7 @@
 .dd-group {
 	border-radius: 5px;
 	background-color: $gray-900;
+	margin-bottom: 0;
 	&__item {
 		border-bottom: 1px solid $gray-800;
 		&.active {
@@ -926,19 +927,40 @@
 			transform: translateX(-100%);
 			width: 100%;
 			height: calc(var(--vh) * 100);
+			// height: calc(var(--vh) * 100 + rem(44));
 			z-index: 200;
 			background-color: $gray-900;
+			// padding-top: rem(44);
+			will-change: transform;
 			overflow-x: hidden;
 			overflow-y: auto;
+			// padding: calc(env(safe-area-inset-top, 0px) + #{rem(44)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
 			&.active {
 				transform: translateX(0);
+				@include media-breakpoint-down(lg) {
+					overflow: hidden;
+				}
 			}
 			.catalog-menu {
 				transform: translateX(0);
 				background-color: $gray-900;
+				padding-top: 0;
+				&__content {
+					top: rem(-44);
+				}
 			}
 		}
 	}
+	// &__body-wrap {
+	// 	padding: calc(env(safe-area-inset-top, 0px) + #{rem(44)}) 0 calc(env(safe-area-inset-top, 0px) + #{rem(20)});
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	height: 100%;
+	// 	background-color: $gray-900;
+	// 	overflow-x: hidden;
+	// 	overflow-y: auto;
+	// 	-webkit-overflow-scrolling: touch;
+	// }
 	&__wrap {
 		&:before {
 			pointer-events: none;
@@ -946,9 +968,10 @@
 	}
 	&__close {
 		@include mt;
-		position: absolute;
-		top: 12px;
-		left: 24px;
+		position: relative;
+		margin-top: 12px;
+		margin-bottom: 12px;
+		margin-left: 24px;
 		width: rem(20);
 		height: rem(20);
 		z-index: 2;

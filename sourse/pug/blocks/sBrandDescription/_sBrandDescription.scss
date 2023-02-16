@@ -1,0 +1,42 @@
+// start .sBrandDescription
+.sBrandDescription {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(24)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(32)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem(40)};
+		--bs-gutter-y: #{rem(20)};
+		p {
+			margin-bottom: 0;
+			font-size: rem(16);
+			font-weight: 500;
+			line-height: 1.33em;
+			max-width: rem(860);
+			@include media-breakpoint-up(lg) {
+				font-size: rem(18);
+				margin-left: rem(20.200);
+			}
+		}
+	}
+	&__img-wrap {
+		@include block(310, 160);
+		background-color: #fff;
+		border-radius: 5px;
+		overflow: hidden;
+		max-width: rem(310);
+		img {
+			padding: rem(10);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBrandDescription
