@@ -912,17 +912,17 @@
 							</div>
 						</div>
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/>
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Имя</span>
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="" required="required"/>
+							<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="" required="required"/><span class="form-wrap__input-title">Телефон</span>
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__input-title">Комментарий</span><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea>
+							<label><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea><span class="form-wrap__input-title">Комментарий</span>
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
@@ -935,6 +935,158 @@
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div id="modal-registry" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h4">Заказать звонок
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Фамилия</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Имя</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="" required="required"/><span class="form-wrap__input-title">Телефон</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="" required="required"/><span class="form-wrap__input-title">Электронная почта</span>
+								<div class="invalid-feedback">Пользователь с&nbsp;таким email уже существует</div>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="password" type="password" placeholder="" required="required"/><span class="form-wrap__input-title">Пароль</span>
+								<div class="invalid-feedback">Пароль не&nbsp;менее 6&nbsp;символов, <br> содержит заглавные буквы (A-Z)</div>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="password" type="password" placeholder="" required="required"/><span class="form-wrap__input-title">Подтвердите пароль</span>
+								<div class="invalid-feedback">Пароли не&nbsp;совпадают</div>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn btn-dark" type="submit">Регистрация
+						</button>
+						<div class="form-wrap__agreement">Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь <a href="#">на&nbsp;обработку ваших персональных данных</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-registry-->
+		<div id="modal-registry-invalid" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h4">Заказать звонок
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Фамилия</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Имя</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="" required="required"/><span class="form-wrap__input-title">Телефон</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control is-invalid" name="email" type="email" placeholder="" required="required"/><span class="form-wrap__input-title">Электронная почта</span>
+								<div class="invalid-feedback">Пользователь с&nbsp;таким email уже существует</div>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control is-invalid" name="password" type="password" placeholder="" required="required"/><span class="form-wrap__input-title">Пароль</span>
+								<div class="invalid-feedback">Пароль не&nbsp;менее 6&nbsp;символов, <br> содержит заглавные буквы (A-Z)</div>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control is-invalid" name="password" type="password" placeholder="" required="required"/><span class="form-wrap__input-title">Подтвердите пароль</span>
+								<div class="invalid-feedback">Пароли не&nbsp;совпадают</div>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn btn-dark" type="submit">Регистрация
+						</button>
+						<div class="form-wrap__agreement">Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь <a href="#">на&nbsp;обработку ваших персональных данных</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-registry-invalid-->
+		<div id="modal-enter" style="display: none">
+			<div class="modal-win modal-win--enter modal-win--sm">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h4">Вход
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="" required="required"/><span class="form-wrap__input-title">Телефон</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn btn-dark" type="submit">Регистрация
+						</button>
+						<div class="form-wrap__agreement">Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь <a href="#">на&nbsp;обработку ваших персональных данных</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-enter-->
+		<div id="modal-code" style="display: none">
+			<div class="modal-win modal-win--code modal-win--sm">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h4">Введите код из&nbsp;СМС
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="password" type="password" placeholder="" required="required"/><span class="form-wrap__input-title">4 цифры</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__row row">
+							<div class="col">
+								<p>Код отправлен на номер:</p>
+							</div>
+							<div class="col-auto">
+								<div class="form-wrap__code-tel">*********5612
+								</div>
+							</div>
+							<div class="col-12 text-end"><a href="#">Изменить</a></div>
+						</div>
+						<div class="form-wrap__timer">Отправить код ещё раз можно через <span>00:59</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-code-->
 		<div id="modal-review" style="display: none">
 			<div class="modal-win modal-win--review modal-win--sm">
 				<div class="form-wrap">

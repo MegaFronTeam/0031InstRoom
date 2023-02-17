@@ -124,6 +124,7 @@
 		font-size: rem(16);
 		line-height: calc(20 / 16);
 		margin-bottom: rem(20);
+		color: $success;
 	}
 	&__price-wrap {
 		@include roww(#{rem(16)}, m);

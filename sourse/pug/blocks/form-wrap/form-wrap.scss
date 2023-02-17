@@ -5,11 +5,24 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+		&.form-group {
+			label {
+				display: flex;
+				flex-direction: column;
+			}
+		}
 	}
 	&__input {
 		// @extend .form-control;
 		//  outline: 0 !important;
 		resize: none;
+		&[type="password"] {
+			padding-top: 0;
+			padding-bottom: 0;
+			font-size: rem(22);
+			line-height: 1;
+			letter-spacing: 0.05em;
+		}
 	}
 	&__input-title {
 		font-size: rem(12);
@@ -18,6 +31,7 @@
 		color: $gray-500;
 		display: inline-block;
 		margin-bottom: 3px;
+		order: -1;
 		& + textarea {
 			margin-top: rem(9);
 		}
@@ -33,24 +47,48 @@
 		--bs-form-control-bg: #{$white};
 		--bs-form-control-disabled-bg: #{$white};
 		--bs-border-color: #{$gray-500};
-		border-color: transparent;
-		border-bottom-color: var(--bs-border-color);
+		// border-color: var(--bs-border-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
 		&:not(textarea) {
-			&:focus,
+			// &:focus,
 			&:valid {
-				border-bottom-color: $black;
+				--bs-border-color: #{$black};
 			}
 		}
 	}
 	textarea.form-control {
 		min-height: rem(100);
-		border-color: var(--bs-border-color);
 		border-radius: 5px;
 		padding: rem(10);
+		border: var(--bs-border-width) solid var(--bs-border-color);
 		&:focus {
 			border-color: $black;
 		}
 	}
+}
+
+.invalid-feedback {
+	font-size: rem(12);
+	line-height: calc(16 / 12);
+	letter-spacing: 0.02em;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+	padding-right: 0;
+	color: $danger;
+	& + .form-wrap__input-title {
+		color: $form-feedback-invalid-color;
+	}
+}
+.form-control.is-valid,
+.was-validated .form-control:valid {
+	background-size: calc(1em + 3px) calc(1em + 3px);
+	background-position: right calc(0.1125em + 1.5px) center;
+	// color: $success;
+	// border-color: $black;
 }
 
 .parsley-error {
@@ -145,8 +183,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    transition: background-color 55000s ease-in-out 0s;
-    // -webkit-text-fill-color: $black !important;
+	transition: background-color 55000s ease-in-out 0s;
+	// -webkit-text-fill-color: $black !important;
 }
 
 // .custom-input{
