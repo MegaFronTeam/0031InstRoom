@@ -10,3 +10,4 @@
 8. <https://megafronteam.github.io/0031InstRoom/public/07-brand-detailed.html>
 9. <https://megafronteam.github.io/0031InstRoom/public/08-news-detailed.html>
 10. <https://megafronteam.github.io/0031InstRoom/public/09-content.html>
+11. <https://megafronteam.github.io/0031InstRoom/public/00-modal.html>
