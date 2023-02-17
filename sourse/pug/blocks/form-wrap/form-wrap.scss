@@ -141,6 +141,14 @@
 	}
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 55000s ease-in-out 0s;
+    // -webkit-text-fill-color: $black !important;
+}
+
 // .custom-input{
 // 	display: block;
 // 	margin: auto;
