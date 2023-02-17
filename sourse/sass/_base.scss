@@ -546,6 +546,13 @@ iframe {
 	}
 }
 
+.content-page {
+	.page-head {
+		h1 {
+			@include rfs(30px);
+		}
+	}
+}
 .fancybox__content > .carousel__button.is-close {
 	--carousel-button-width: #{rem(36)};
 	--carousel-button-height: #{rem(36)};
