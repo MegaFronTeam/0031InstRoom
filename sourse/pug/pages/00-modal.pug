@@ -21,5 +21,11 @@ block pagecontent
 				mixin btn(id, name)
 					.col-auto.mb-2
 						a.btn.btn-primary(href=`#` data-src=id data-fancybox="modal")= name
-				+btn("modal-call", "modal-call")
+				+btn("modal-call", "Заказать звонок")
+				+btn("modal-call", "Регистрация")
+				+btn("modal-call", "Регистрация (not-valid)")
+				+btn("modal-call", "Вход")
+				+btn("modal-call", "Введите код из СМС")
+				+btn("modal-call", "Ваш заявка принята")
+				+btn("modal-review", "Оставить отзыв")
 
