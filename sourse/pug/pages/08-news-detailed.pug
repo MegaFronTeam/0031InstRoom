@@ -1,0 +1,33 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= ''
+
+block title
+	- let  title = 'Cпрос на инструменты для домохозяйств вырос на 38% за год'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+topLine
+		+top-nav()
+	main
+		+page-head('Cпрос на инструменты для домохозяйств<br>вырос на 38% за год', 'Спрос на инструменты для домохозяйства вырос на 38% за год')
+	+footer()
+      
+
+
+

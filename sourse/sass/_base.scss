@@ -571,3 +571,11 @@ iframe {
 		}
 	}
 }
+
+.content-page {
+	.page-head {
+		h1 {
+			@include rfs(30px);
+		}
+	}
+}
