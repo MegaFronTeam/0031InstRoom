@@ -248,6 +248,22 @@
 				margin-bottom: 0;
 			}
 		}
+		ul {
+			list-style-type: none;
+			margin-bottom: rem(16);
+			&:last-child {
+				margin-bottom: 0;
+			}
+			li {
+				position: relative;
+				&:not(:last-child) {
+					margin-bottom: rem(13);
+				}
+				&::before {
+					content: "— ";
+				}
+			}
+		}
 	}
 	&__features {
 		.row {
@@ -299,7 +315,7 @@
 		font-weight: 500;
 		font-size: rem(16);
 		line-height: calc(20 / 16);
-		color: $teal;
+		color: $success;
 		margin-top: rem(10);
 		.icon {
 			flex-shrink: 0;
@@ -471,15 +487,19 @@
 				margin-bottom: 0;
 			}
 		}
-		ul {
+		& > ul {
 			list-style: none;
+			margin-bottom: rem(16);
 			&:last-child {
 				margin-bottom: 0;
 			}
 			li {
-				margin-bottom: rem(8);
-				&:last-child {
-					margin-bottom: 0;
+				position: relative;
+				&:not(:last-child) {
+					margin-bottom: rem(8);
+				}
+				&::before {
+					content: "— ";
 				}
 			}
 		}
