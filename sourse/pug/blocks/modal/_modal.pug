@@ -10,6 +10,7 @@ mixin modal()
 
 				+input('', 'text', 'Имя')(required)
 				+input('', 'tel', 'Телефон')(required)
+					span.region +7
 				+input('', 'textarea', 'Комментарий')
 				+e.BUTTON.btn.btn.btn-dark(type="submit") Отправить
 				+e.agreement Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь 
@@ -25,12 +26,13 @@ mixin modal()
 				+input('', 'text', 'Фамилия')(required)
 				+input('', 'text', 'Имя')(required)
 				+input('', 'tel', 'Телефон')(required)
+					span.region +7
 				+input('', 'email', 'Электронная почта')(required)
-					.invalid-feedback Пользователь с&nbsp;таким email уже существует
+					span.invalid-feedback Пользователь с&nbsp;таким email уже существует
 				+input('', 'password', 'Пароль')(required)
-					.invalid-feedback Пароль не&nbsp;менее 6&nbsp;символов, <br> содержит заглавные буквы (A-Z)
+					span.invalid-feedback Пароль не&nbsp;менее 6&nbsp;символов, <br> содержит заглавные буквы (A-Z)
 				+input('', 'password', 'Подтвердите пароль')(required)
-					.invalid-feedback Пароли не&nbsp;совпадают
+					span.invalid-feedback Пароли не&nbsp;совпадают
 				+e.BUTTON.btn.btn.btn-dark(type="submit") Регистрация
 				+e.agreement Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь 
 					a(href="#") на&nbsp;обработку ваших персональных данных
@@ -45,12 +47,13 @@ mixin modal()
 				+input('', 'text', 'Фамилия')(required)
 				+input('', 'text', 'Имя')(required)
 				+input('', 'tel', 'Телефон')(required)
+					span.region +7
 				+input('', 'email', 'Электронная почта')(required).is-invalid
-					.invalid-feedback Пользователь с&nbsp;таким email уже существует
+					span.invalid-feedback Пользователь с&nbsp;таким email уже существует
 				+input('', 'password', 'Пароль')(required).is-invalid
-					.invalid-feedback Пароль не&nbsp;менее 6&nbsp;символов, <br> содержит заглавные буквы (A-Z)
+					span.invalid-feedback Пароль не&nbsp;менее 6&nbsp;символов, <br> содержит заглавные буквы (A-Z)
 				+input('', 'password', 'Подтвердите пароль')(required).is-invalid
-					.invalid-feedback Пароли не&nbsp;совпадают
+					span.invalid-feedback Пароли не&nbsp;совпадают
 				+e.BUTTON.btn.btn.btn-dark(type="submit") Регистрация
 				+e.agreement Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь 
 					a(href="#") на&nbsp;обработку ваших персональных данных
@@ -64,6 +67,7 @@ mixin modal()
 					+e.title.form-data.h4 Вход
 
 				+input('', 'tel', 'Телефон')(required)
+					span.region +7
 				+e.BUTTON.btn.btn.btn-dark(type="submit") Получить код
 				+e.agreement Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь 
 					a(href="#") на&nbsp;обработку ваших персональных данных

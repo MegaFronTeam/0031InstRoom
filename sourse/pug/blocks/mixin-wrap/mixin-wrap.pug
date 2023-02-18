@@ -94,7 +94,7 @@ mixin customSelect(t, ...items)
 		if t
 			+e.title!= t
 		select.custom-select__input.form-select.custom-select-js&attributes(attributes)
-			option
+			option(label=" ")
 			each  item in items
 				option(value=`${item}`)!= item
 				
