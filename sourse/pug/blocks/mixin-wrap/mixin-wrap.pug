@@ -44,7 +44,7 @@ mixin page-head(t,...items)
 		.container
 			+breadcrumb('Главная',...items)
 			if t
-				h1= t
+				h1!= t
 
 mixin card(data)
 	+b.card&attributes(attributes)
