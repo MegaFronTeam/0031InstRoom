@@ -32,9 +32,7 @@
 		display: inline-block;
 		margin-bottom: 3px;
 		order: -1;
-		& + textarea {
-			margin-top: rem(9);
-		}
+		
 	}
 	&__btn {
 		cursor: pointer;
@@ -63,6 +61,7 @@
 		border-radius: 5px;
 		padding: rem(10);
 		border: var(--bs-border-width) solid var(--bs-border-color);
+		margin-top: rem(9);
 		&:focus {
 			border-color: $black;
 		}

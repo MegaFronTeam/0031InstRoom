@@ -2324,11 +2324,25 @@
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
-						<button class="form-wrap__btn btn btn-dark" type="submit">Регистрация
+						<button class="form-wrap__btn btn btn-dark" type="submit">Получить код
 						</button>
 						<div class="form-wrap__agreement">Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь <a href="#">на&nbsp;обработку ваших персональных данных</a>
 						</div>
 					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-enter-->
+		<div id="modal-thanx" style="display: none">
+			<div class="modal-win modal-win--thanx modal-win--sm">
+				<div class="form-wrap">
+					<div class="text-center">
+						<div class="form-wrap__title h4">Ваша заявка принята
+						</div>
+						<p>Спасибо за&nbsp;заявку! Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайщее время</p>
+					</div>
+					<div class="form-wrap__btn btn btn-primary">На главную
+					</div>
 				</div>
 			</div>
 		</div>
@@ -2348,7 +2362,7 @@
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__row row">
 							<div class="col">
-								<p>Код отправлен на номер:</p>
+								<p>Код отправлен на номер:</p>
 							</div>
 							<div class="col-auto">
 								<div class="form-wrap__code-tel">*********5612
@@ -2364,24 +2378,51 @@
 		</div>
 		<!-- #modal-code-->
 		<div id="modal-review" style="display: none">
-			<div class="modal-win modal-win--review modal-win--sm">
+			<div class="modal-win modal-win--review">
 				<div class="form-wrap">
 					<form>
 						<div class="text-center">
-							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+							<div class="form-wrap__title form-data h4">Оставить отзыв
 							</div>
 						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						<div class="form-wrap__row row">
+							<div class="col-sm-4">
+								<div class="form-wrap__input-title">Ваше имя
+								</div>
+							</div>
+							<div class="col-sm-8">
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
 						</div>
-						<!-- +e.input-wrap-->
-						<button class="form-wrap__btn btn" type="submit"> 
-						</button>
-						<!-- #modal-review-->
-						<!-- end modals-->
+						<div class="form-wrap__row row">
+							<div class="col-sm-4">
+								<div class="form-wrap__input-title">Оставьте свой комментарий
+								</div>
+							</div>
+							<div class="col-sm-8">
+								<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваш комментарий"></textarea>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+						<div class="form-wrap__row form-wrap__row--footer row">
+							<div class="col">
+								<div class="form-wrap__agreement">Перед отправкой отзыва, пожалуйста, <br><a href="#">ознакомьтесь с&nbsp;правилами публикации.</a>
+								</div>
+							</div>
+							<div class="col-sm-auto">
+								<button class="form-wrap__btn btn btn-primary" type="submit">Опубликовать
+								</button>
+							</div>
+						</div>
 					</form>
 				</div>
 			</div>
 		</div>
+		<!-- #modal-review-->
+		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
