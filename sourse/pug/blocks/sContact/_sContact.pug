@@ -2,8 +2,24 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
 			+e.row.row
+				.col-lg-6.order-lg-2
+					mixin item(title, city, tel, telHref)
+						+e.item
+							h4!= title
+							+e.city!= city 
+							+e.link.h4(href=`tel:${telHref}`)!= tel
+					+e.inner-row.row
+						.col-sm-6.col-lg-12
+							+item('ул. 1-я Дубравная, 15', 'г.Можайск, Московская область', '+7 495 120-32-15', '+74951203215')
+						.col-sm-6.col-lg-12
+							+item('ул. Маяковского, 120', 'г.Краснодар', '+7 495 110-10-12', '+74951101012')
+						.col-sm-6.col-lg-12
+							+item('ул. Маршака, 2', 'г.Санкт-Петербург', '+7 495 560-12-11', '+74955601211')
+					+e.soc
+						+e.soc-item(href='#') инстаграм
+						+e.soc-item(href='#') вконтакте
+						+e.soc-item(href='#') фейсбук
+				.col-lg-6.order-lg-1
+					img(src="img/map.jpg", alt="")
 	// end sContact

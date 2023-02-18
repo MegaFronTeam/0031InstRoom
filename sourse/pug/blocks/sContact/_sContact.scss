@@ -1,25 +1,92 @@
 
 	// start .sContact
 	.sContact {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(28)};
+	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
-	.section-title{
-		
+	img {
+		width: 100vw;
+		margin-left: calc((100vw - 100%) / -2);
+		@include media-breakpoint-up(lg) {
+			width: calc((100vw + 100%) / 2);
+			max-height: rem(600);
+			object-fit: cover;
+		}
 	}
-	&__col{
-
+	&__inner-row {
+		margin-bottom: rem(44);
 	}
-	&__item{
-
+	&__item {
+		@include mt;
+		padding: rem(20);
+		border-radius: 5px;
+		max-width: max-content;
+		&:hover {
+			background-color: #fff;
+			box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+			h4, .sContact__link {
+				color: #000;
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			padding: rem(24) rem(27);
+			margin-left: rem(88);
+			min-width: rem(350);
+		}
+		h4 {
+			@include mt;
+			margin-bottom: rem(8);
+			color: $gray-500;
+		}
 	}
-	&__slide{
-		height: auto;
+	&__city {
+		line-height: 1.25em;
+		color: $gray-500;
+		margin-bottom: rem(16);
+		font-family: $font-family-monospace;
+		color: $gray-500;
+	}
+	&__link {
+		@include mt;
+		margin-bottom: 0;
+		color: $gray-500;
+		&:hover {
+			color: $primary !important;
+		}
+	}
+	&__soc {
+		display: flex;
+		flex-wrap: wrap;
+		font-family: $font-family-monospace;
+		// padding-left: rem(20);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(20);
+			margin-left: rem(115);
+		}
+	}
+	&__soc-item {
+		position: relative;
+		&:not(:hover) {
+			color: $gray-500;
+		}
+		&:not(:last-child) {
+			margin-right: rem(40);
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				height: 100%;
+				width: 2px;
+				background-color: $gray-500;
+				top: 0;
+				right: rem(-20);
+			}
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
