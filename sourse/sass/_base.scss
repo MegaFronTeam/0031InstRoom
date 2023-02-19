@@ -567,3 +567,10 @@ iframe {
 }
 
 
+.cart-page {
+	.page-head {
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(27.200);
+		}
+	}
+}

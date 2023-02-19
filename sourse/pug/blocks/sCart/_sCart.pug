@@ -2,8 +2,38 @@ mixin sCart(data)
 	// start sCart
 	+b.SECTION.sCart.section#sCart&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCart
-				
-			+e.row.row
+			table
+				tr
+					th Название
+					th Стоимость
+					th Количество
+					th Итого
+				-for(let i = 0; i < 6; i++)
+					tr
+						td
+							+e.content-wrap
+								+img('img/search-product-img.png')
+								+e.content
+									+e.type(href="#") Краски и эмали
+									+e.title(href='#') Эмаль Condor ПФ-115
+						td 
+							+e.price 500 ₽
+								span 620 ₽
+						td 
+							+addblock()
+						td 
+							+e.end-price 1 000 ₽
+							+e.close(href='#')
+			.row
+				.col-lg-4.col-xl-3.ms-auto
+					+e.item
+						span.name Сумма
+						span.num 4 550 ₽
+					+e.item--discount
+						span.name Скидка
+						span.num — 250 ₽
+					+e.item--endPrice
+						span.name К оплате
+						span.num 4 200 ₽
+					+e.btn.btn.btn-primary(href='#') ПЕРЕЙТИ К ОФОРМЛЕНИЮ
 	// end sCart

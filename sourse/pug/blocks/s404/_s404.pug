@@ -1,0 +1,10 @@
+mixin s404(data)
+	// start s404
+	+b.SECTION.s404.section#s404.bg-wrap&attributes(attributes)
+		.container
+			+img('img/error-page-bg.jpg', 'bg').picture-bg
+			h1 К сожалению, страница не найдена
+			p Но мы обязательно всё починим, а пока попробуйте:
+			a(href="#").btn.btn-primary ВЕРНУТЬСЯ НА ГЛАВНУЮ
+			+e.num 404
+	// end s404

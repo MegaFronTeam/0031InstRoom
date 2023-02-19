@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Личный кабинет</title>
+		<title>Корзина</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Prosto+One&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="">
+	<body class="cart-page" data-bg="12-cart.jpg">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -637,13 +637,13 @@
 							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 										<meta itemprop="position" content="1"/></a></li>
-								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Личный кабинет</span>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Корзина</span>
 										<meta itemprop="position" content="2"/></a></li>
 							</ol>
 						</nav>
 						<div class="row">
 							<div class="col-md">
-								<h1>Личный кабинет</h1>
+								<h1>Корзина</h1>
 							</div>
 							<div class="col-auto">
 								<a class="page-head__btn btn btn-outline-dark" href="#">ПРОДОЛЖИТЬ ПОКУПКИ
@@ -655,10 +655,211 @@
 				<!-- start sCart-->
 				<section class="sCart section" id="sCart">
 					<div class="container">
-						<div class="section-title text-center">
-							<h2>sCart</h2>
-						</div>
-						<div class="sCart__row row">
+						<table>
+							<tr>
+								<th>Название</th>
+								<th>Стоимость</th>
+								<th>Количество</th>
+								<th>Итого</th>
+							</tr>
+							<tr>
+								<td>
+									<div class="sCart__content-wrap"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+										<div class="sCart__content">
+											<a class="sCart__type" href="#">Краски и эмали
+											</a>
+											<a class="sCart__title" href="#">Эмаль Condor ПФ-115
+											</a>
+										</div>
+									</div>
+								</td>
+								<td> 
+									<div class="sCart__price">500 ₽<span>620 ₽</span>
+									</div>
+								</td>
+								<td> 
+									<div class="addBlock">
+										<button class="addBlock__btn addBlock__btn--minus" type="button">
+										</button>
+										<input type="text" value="1"/>
+										<button class="addBlock__btn addBlock__btn--plus" type="button">
+										</button>
+									</div>
+								</td>
+								<td> 
+									<div class="sCart__end-price">1 000 ₽
+									</div>
+									<a class="sCart__close" href="#">
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="sCart__content-wrap"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+										<div class="sCart__content">
+											<a class="sCart__type" href="#">Краски и эмали
+											</a>
+											<a class="sCart__title" href="#">Эмаль Condor ПФ-115
+											</a>
+										</div>
+									</div>
+								</td>
+								<td> 
+									<div class="sCart__price">500 ₽<span>620 ₽</span>
+									</div>
+								</td>
+								<td> 
+									<div class="addBlock">
+										<button class="addBlock__btn addBlock__btn--minus" type="button">
+										</button>
+										<input type="text" value="1"/>
+										<button class="addBlock__btn addBlock__btn--plus" type="button">
+										</button>
+									</div>
+								</td>
+								<td> 
+									<div class="sCart__end-price">1 000 ₽
+									</div>
+									<a class="sCart__close" href="#">
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="sCart__content-wrap"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+										<div class="sCart__content">
+											<a class="sCart__type" href="#">Краски и эмали
+											</a>
+											<a class="sCart__title" href="#">Эмаль Condor ПФ-115
+											</a>
+										</div>
+									</div>
+								</td>
+								<td> 
+									<div class="sCart__price">500 ₽<span>620 ₽</span>
+									</div>
+								</td>
+								<td> 
+									<div class="addBlock">
+										<button class="addBlock__btn addBlock__btn--minus" type="button">
+										</button>
+										<input type="text" value="1"/>
+										<button class="addBlock__btn addBlock__btn--plus" type="button">
+										</button>
+									</div>
+								</td>
+								<td> 
+									<div class="sCart__end-price">1 000 ₽
+									</div>
+									<a class="sCart__close" href="#">
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="sCart__content-wrap"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+										<div class="sCart__content">
+											<a class="sCart__type" href="#">Краски и эмали
+											</a>
+											<a class="sCart__title" href="#">Эмаль Condor ПФ-115
+											</a>
+										</div>
+									</div>
+								</td>
+								<td> 
+									<div class="sCart__price">500 ₽<span>620 ₽</span>
+									</div>
+								</td>
+								<td> 
+									<div class="addBlock">
+										<button class="addBlock__btn addBlock__btn--minus" type="button">
+										</button>
+										<input type="text" value="1"/>
+										<button class="addBlock__btn addBlock__btn--plus" type="button">
+										</button>
+									</div>
+								</td>
+								<td> 
+									<div class="sCart__end-price">1 000 ₽
+									</div>
+									<a class="sCart__close" href="#">
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="sCart__content-wrap"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+										<div class="sCart__content">
+											<a class="sCart__type" href="#">Краски и эмали
+											</a>
+											<a class="sCart__title" href="#">Эмаль Condor ПФ-115
+											</a>
+										</div>
+									</div>
+								</td>
+								<td> 
+									<div class="sCart__price">500 ₽<span>620 ₽</span>
+									</div>
+								</td>
+								<td> 
+									<div class="addBlock">
+										<button class="addBlock__btn addBlock__btn--minus" type="button">
+										</button>
+										<input type="text" value="1"/>
+										<button class="addBlock__btn addBlock__btn--plus" type="button">
+										</button>
+									</div>
+								</td>
+								<td> 
+									<div class="sCart__end-price">1 000 ₽
+									</div>
+									<a class="sCart__close" href="#">
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="sCart__content-wrap"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+										<div class="sCart__content">
+											<a class="sCart__type" href="#">Краски и эмали
+											</a>
+											<a class="sCart__title" href="#">Эмаль Condor ПФ-115
+											</a>
+										</div>
+									</div>
+								</td>
+								<td> 
+									<div class="sCart__price">500 ₽<span>620 ₽</span>
+									</div>
+								</td>
+								<td> 
+									<div class="addBlock">
+										<button class="addBlock__btn addBlock__btn--minus" type="button">
+										</button>
+										<input type="text" value="1"/>
+										<button class="addBlock__btn addBlock__btn--plus" type="button">
+										</button>
+									</div>
+								</td>
+								<td> 
+									<div class="sCart__end-price">1 000 ₽
+									</div>
+									<a class="sCart__close" href="#">
+									</a>
+								</td>
+							</tr>
+						</table>
+						<div class="row">
+							<div class="col-lg-4 col-xl-3 ms-auto">
+								<div class="sCart__item"><span class="name">Сумма</span><span class="num">4 550 ₽</span>
+								</div>
+								<div class="sCart__item sCart__item--discount"><span class="name">Скидка</span><span class="num">— 250 ₽</span>
+								</div>
+								<div class="sCart__item sCart__item--endPrice"><span class="name">К оплате</span><span class="num">4 200 ₽</span>
+								</div>
+								<a class="sCart__btn btn btn-primary" href="#">ПЕРЕЙТИ К ОФОРМЛЕНИЮ
+								</a>
+							</div>
 						</div>
 					</div>
 				</section>

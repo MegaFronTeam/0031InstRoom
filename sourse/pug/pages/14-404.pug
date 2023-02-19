@@ -7,7 +7,7 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 
-include ../blocks/sCart/_sCart.pug
+include ../blocks/s404/_s404.pug
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -21,16 +21,7 @@ block pagecontent
 	//- +mob-mnu()
 	
 	
-	+header()
-		+topLine
-		+top-nav()
-	main
-		+page-head('Корзина', 'Корзина')
-			.col-auto
-				+e.btn.btn.btn-outline-dark(href='#') ПРОДОЛЖИТЬ ПОКУПКИ
-		+sCart
-	+footer()
-      
+	+s404
 
 
 
