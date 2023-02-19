@@ -21,7 +21,7 @@ mixin modal()
 		+b.modal-win
 			+form-wrap
 				.text-center
-					+e.title.form-data.h4 Заказать звонок
+					+e.title.form-data.h4 Регистрация
 
 				+input('', 'text', 'Фамилия')(required)
 				+input('', 'text', 'Имя')(required)
@@ -42,9 +42,9 @@ mixin modal()
 		+b.modal-win
 			+form-wrap
 				.text-center
-					+e.title.form-data.h4 Заказать звонок
+					+e.title.form-data.h4 Регистрация
 
-				+input('', 'text', 'Фамилия')(required)
+				+input('', 'text', 'Фамилия')(required).is-valid
 				+input('', 'text', 'Имя')(required)
 				+input('', 'tel', 'Телефон')(required)
 					span.region +7

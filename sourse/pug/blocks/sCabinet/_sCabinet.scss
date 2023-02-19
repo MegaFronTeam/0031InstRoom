@@ -233,9 +233,9 @@
 				margin-bottom: 0;
 				margin-top: var(--bs-gutter-y);
 			}
-			&__input.is-valid {
-				padding-bottom: 8px;
-			}
+			// &__input.is-valid {
+			// 	padding-bottom: 8px;
+			// }
 			&__btn {
 				--bs-btn-color: #fff;
 				--bs-btn-bg: #{$gray-300};

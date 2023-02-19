@@ -10,7 +10,7 @@ mixin topLine()
 						span 10:00–20:00
 				.col-auto.col-md.ms-auto.ms-md-0.order-3
 					+e.phone-link(href='tel:+74951203214') +7 495 120-32-14
-					+e.phone-btn(href='#') Заказать звонок
+					+e.phone-btn(href=`#` data-src="modal-call" data-fancybox="modal") Заказать звонок
 				.col-12.col-lg-auto.order-5.order-lg-4
 					+e.links
 						mixin link(icon, count='0')
