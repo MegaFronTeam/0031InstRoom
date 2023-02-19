@@ -16,3 +16,6 @@
 #### Личный кабинет
 1. <https://megafronteam.github.io/0031InstRoom/public/11-cabinet.html>
 2. <https://megafronteam.github.io/0031InstRoom/public/11-cabinet-2.html>
+
+#### Корзина
+1. <https://megafronteam.github.io/0031InstRoom/public/12-cart.html>

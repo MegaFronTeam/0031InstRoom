@@ -776,6 +776,24 @@
 			margin-bottom: 0;
 		}
 	}
+	.row {
+		--bs-gutter-y: #{rem(20)};
+
+		align-items: center;
+	}
+	&__btn {
+		--bs-btn-padding-x: #{rem(32)};
+		--bs-btn-color: #{$gray-800};
+    --bs-btn-border-color: #{$gray-300};
+		--bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #{$primary};
+    --bs-btn-hover-border-color: #{$primary};
+		--bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #{$primary};
+    --bs-btn-active-border-color: #{$primary};
+
+		text-transform: uppercase;
+	}
 }
 
 .btn-more-lg {
