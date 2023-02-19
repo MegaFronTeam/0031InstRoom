@@ -1,0 +1,88 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= ''
+
+block title
+	- let  title = 'Личный кабинет'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+topLine
+		+top-nav()
+	main
+		+page-head('Личный кабинет', 'Личный кабинет')
+		+sCabinet
+			+ddGroup()
+				+e.item.active
+					+e.head.dd-head-js
+						.h5 Заказ № 25463
+						+e.wrap
+							| Создан:
+							span 14.07.2022
+						+e.wrap
+							| Получен:
+							span 14.07.2022
+					+e.content.dd-content-js.active
+						+e.content-wrap
+							-for(let i = 0; i < 15; i++)
+								+e.content-inner
+									.row
+										.col-auto
+											a(href="#")
+												+img(`img/search-product-img.png`)
+										.col-auto
+											+e.link(href="#")  Эмаль Condor ПФ-115 жёлтая 1,8 кг
+										.col-auto.col-lg.me-auto
+											+e.price 500 ₽ x 2
+										.col-auto
+											+e.sum 1 000 ₽
+						+e.content-footer
+							+e.end Итого:
+							.h5 2 200 ₽
+				-for(let i = 0; i < 5; i++)
+					+e.item
+						+e.head.dd-head-js
+							.h5 Заказ № 25463
+							+e.wrap
+								| Создан:
+								span 14.07.2022
+							+e.wrap
+								| Получен:
+								span 14.07.2022
+						+e.content.dd-content-js
+							+e.content-wrap
+								-for(let i = 0; i < 15; i++)
+									+e.content-inner
+										.row
+											.col-auto
+												a(href="#")
+													+img(`img/search-product-img.png`)
+											.col-auto
+												+e.link(href="#")  Эмаль Condor ПФ-115 жёлтая 1,8 кг
+											.col-auto.col-lg.me-auto
+												+e.price 500 ₽ x 2
+											.col-auto
+												+e.sum 1 000 ₽
+							+e.content-footer
+								+e.end Итого:
+								.h5 2 200 ₽
+	+footer()
+      
+
+
+

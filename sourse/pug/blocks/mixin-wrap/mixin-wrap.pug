@@ -109,3 +109,17 @@ mixin sortDropdown
 				li: a(href="#") Сначала новые
 				li: a(href="#") От А до Я
 				li: a(href="#") От Я до А
+
+mixin news-item()
+	+b.news-items
+		.row
+			mixin newsItem(i, title, text)
+				+e.news-item.bg-wrap(href='#')
+					+img(`img/news-img-${i}.jpg`, 'bg').picture-bg
+					+e.news-content
+						h5!= title
+						p!= text
+			.col-sm-6.col-lg-12
+				+newsItem(1, 'Новое поступление', 'Успей покататься')
+			.col-sm-6.col-lg-12
+				+newsItem(2, 'Печи со скидкой', 'до 30%')

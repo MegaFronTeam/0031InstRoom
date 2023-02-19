@@ -100,18 +100,7 @@ mixin sCatalog(title, isCatalog=true)
 										+in-c('radio', 'Самовывоз', 'type')
 										+in-c('radio', 'Доставка курьером', 'type')
 										+in-c('radio', 'Любой', 'type')
-					+e.news-items
-						.row
-							mixin newsItem(i, title, text)
-								+e.news-item.bg-wrap(href='#')
-									+img(`img/news-img-${i}.jpg`, 'bg').picture-bg
-									+e.news-content
-										h5!= title
-										p!= text
-							.col-sm-6.col-lg-12
-								+newsItem(1, 'Новое поступление', 'Успей покататься')
-							.col-sm-6.col-lg-12
-								+newsItem(2, 'Печи со скидкой', 'до 30%')
+					+news-item()
 				.col-lg-8.col-xl-9
 					+e.head-row.row
 						.col-sm

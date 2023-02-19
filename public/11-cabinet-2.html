@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Контакты</title>
+		<title>Личный кабинет</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Prosto+One&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="10-contacts.jpg">
+	<body data-bg="">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -637,61 +637,155 @@
 							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 										<meta itemprop="position" content="1"/></a></li>
-								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Контакты</span>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Личный кабинет</span>
 										<meta itemprop="position" content="2"/></a></li>
 							</ol>
 						</nav>
-						<h1>Контакты</h1>
+						<h1>Личный кабинет</h1>
 					</div>
 				</div>
-				<!-- start sContact-->
-				<section class="sContact section" id="sContact">
-					<div class="container">
-						<div class="sContact__row row">
-							<div class="col-lg-6 order-lg-2">
-								<div class="sContact__inner-row row">
-									<div class="col-sm-6 col-lg-12">
-											<div class="sContact__item">
-												<h4>ул. 1-я Дубравная, 15</h4>
-												<div class="sContact__city">г.Можайск, Московская область
-												</div>
-												<a class="sContact__link h4" href="tel:+74951203215">+7 495 120-32-15
-												</a>
-											</div>
+				<!-- start sCabinet-->
+				<section class="sCabinet section" id="sCabinet">
+					<div class="sCabinet__container container">
+						<div class="sCabinet__row row">
+							<div class="col-lg-4 col-xl-3">
+								<div class="filter filter--js">
+									<div class="filter__btn btn btn-dark">Разделы
 									</div>
-									<div class="col-sm-6 col-lg-12">
-											<div class="sContact__item">
-												<h4>ул. Маяковского, 120</h4>
-												<div class="sContact__city">г.Краснодар
-												</div>
-												<a class="sContact__link h4" href="tel:+74951101012">+7 495 110-10-12
-												</a>
-											</div>
-									</div>
-									<div class="col-sm-6 col-lg-12">
-											<div class="sContact__item">
-												<h4>ул. Маршака, 2</h4>
-												<div class="sContact__city">г.Санкт-Петербург
-												</div>
-												<a class="sContact__link h4" href="tel:+74955601211">+7 495 560-12-11
-												</a>
-											</div>
+									<div class="filter__body">
+										<div class="filter__close filter__close--js">
+										</div>
+										<div class="filter__wrap">
+											<a class="filter__link active" href="#">История заказов
+											</a>
+											<a class="filter__link" href="#">Личная информация
+											</a>
+										</div>
 									</div>
 								</div>
-								<div class="sContact__soc">
-									<a class="sContact__soc-item" href="#">инстаграм
-									</a>
-									<a class="sContact__soc-item" href="#">вконтакте
-									</a>
-									<a class="sContact__soc-item" href="#">фейсбук
-									</a>
+								<div class="news-items">
+									<div class="row">
+										<div class="col-sm-6 col-lg-12">
+												<a class="news-items__news-item bg-wrap" href="#"><img class="object-fit-js picture-bg" src="img/news-img-1.jpg" alt="" loading="lazy"/>
+													<div class="news-items__news-content">
+														<h5>Новое поступление</h5>
+														<p>Успей покататься</p>
+													</div>
+												</a>
+										</div>
+										<div class="col-sm-6 col-lg-12">
+												<a class="news-items__news-item bg-wrap" href="#"><img class="object-fit-js picture-bg" src="img/news-img-2.jpg" alt="" loading="lazy"/>
+													<div class="news-items__news-content">
+														<h5>Печи со скидкой</h5>
+														<p>до 30%</p>
+													</div>
+												</a>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="col-lg-6 order-lg-1"><img src="img/map.jpg" alt=""/></div>
+							<div class="col-lg-8 col-xl-9">
+								<div class="sCabinet__wrap">
+									<div class="form-wrap">
+										<form>
+											<div class="h4">Личные данные</div>
+											<div class="form-wrap__row row">
+												<div class="col-lg-6">
+													<div class="form-wrap__wrap">
+														<div class="form-wrap__input-wrap form-group">
+															<label><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/><span class="form-wrap__input-title">Фамилия</span>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="form-wrap__input-wrap form-group">
+															<label><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/><span class="form-wrap__input-title">Имя</span>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="form-wrap__input-wrap form-group">
+															<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder=""/><span class="form-wrap__input-title">Телефон</span>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="form-wrap__input-wrap form-group">
+															<label><input class="form-wrap__input form-control" name="email" type="email" placeholder=""/><span class="form-wrap__input-title">Электронная почта</span>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+												</div>
+												<div class="col-lg-6">
+													<div class="form-wrap__wrap">
+														<div class="form-wrap__input-wrap form-group">
+															<label><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/><span class="form-wrap__input-title">Город</span>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="form-wrap__input-wrap form-group">
+															<label><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/><span class="form-wrap__input-title">Улица</span>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="form-wrap__input-wrap form-group">
+															<label><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/><span class="form-wrap__input-title">Корпус</span>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="form-wrap__inner-row row">
+															<div class="col-6">
+																<div class="form-wrap__input-wrap form-group">
+																	<label><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/><span class="form-wrap__input-title">Дом</span>
+																	</label>
+																</div>
+																<!-- +e.input-wrap-->
+															</div>
+															<div class="col-6">
+																<div class="form-wrap__input-wrap form-group">
+																	<label><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/><span class="form-wrap__input-title">Квартира</span>
+																	</label>
+																</div>
+																<!-- +e.input-wrap-->
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-12"> 
+													<button class="form-wrap__btn btn btn-light" type="submit">СОХРАНИТЬ ИЗМЕНЕНИЯ
+													</button>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="form-wrap">
+										<form>
+											<div class="h4">Изменение пароля</div>
+											<div class="form-wrap__wrap">
+												<div class="form-wrap__input-wrap form-group">
+													<label><input class="form-wrap__input form-control" name="password" type="password" placeholder=""/><span class="form-wrap__input-title">Старый пароль</span>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__input-wrap form-group">
+													<label><input class="form-wrap__input form-control" name="password" type="password" placeholder=""/><span class="form-wrap__input-title">Новый пароль</span>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__input-wrap form-group">
+													<label><input class="form-wrap__input form-control is-valid" name="password" type="password" placeholder=""/><span class="form-wrap__input-title">Подтвердите новый пароль</span>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__rule">Пароль не менее 6 символов, содержит заглавные буквы (A-Z)
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
-				<!-- end sContact-->
+				<!-- end sCabinet-->
 			</main>
 			<footer class="footer section">
 				<div class="container">

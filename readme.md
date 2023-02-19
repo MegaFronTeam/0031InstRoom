@@ -12,3 +12,7 @@
 10. <https://megafronteam.github.io/0031InstRoom/public/09-content.html>
 11. <https://megafronteam.github.io/0031InstRoom/public/10-contacts.html>
 12. <https://megafronteam.github.io/0031InstRoom/public/00-modal.html>
+
+#### Личный кабинет
+1. <https://megafronteam.github.io/0031InstRoom/public/11-cabinet.html>
+2. <https://megafronteam.github.io/0031InstRoom/public/11-cabinet-2.html>

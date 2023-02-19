@@ -1,0 +1,64 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= ''
+
+block title
+	- let  title = 'Личный кабинет'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+topLine
+		+top-nav()
+	main
+		+page-head('Личный кабинет', 'Личный кабинет')
+		+sCabinet
+			+e.wrap
+				+form-wrap
+					.h4 Личные данные
+					+e.row.row
+						.col-lg-6
+							+e.wrap
+								+input('', 'text', 'Фамилия')
+								+input('', 'text', 'Имя')
+								+input('', 'tel', 'Телефон')
+								+input('', 'email', 'Электронная почта')
+						.col-lg-6
+							+e.wrap
+								+input('', 'text', 'Город')
+								+input('', 'text', 'Улица')
+								+input('', 'text', 'Корпус')
+								+e.inner-row.row
+									.col-6
+										+input('', 'text', 'Дом')
+									.col-6
+										+input('', 'text', 'Квартира')
+						.col-12 
+							+e.btn.btn.btn-light(type='submit') СОХРАНИТЬ ИЗМЕНЕНИЯ
+				+form-wrap
+					.h4 Изменение пароля
+					+e.wrap
+						+input('', 'password', 'Старый пароль')
+						+input('', 'password', 'Новый пароль')
+						+input('', 'password', 'Подтвердите новый пароль').is-valid
+						+e.rule Пароль не менее 6 символов, содержит заглавные буквы (A-Z)
+
+	+footer()
+      
+
+
+

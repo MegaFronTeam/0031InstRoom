@@ -1,0 +1,17 @@
+mixin sCabinet(data)
+	// start sCabinet
+	+b.SECTION.sCabinet.section#sCabinet&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				.col-lg-4.col-xl-3
+					+b.filter--js
+						+e.btn.btn.btn-dark Разделы
+						+e.body
+							+e.close--js
+							+e.wrap
+								+e.link.active(href='#') История заказов
+								+e.link(href='#') Личная информация
+					+news-item()
+				.col-lg-8.col-xl-9
+					block
+	// end sCabinet
