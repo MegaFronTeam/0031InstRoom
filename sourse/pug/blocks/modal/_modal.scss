@@ -38,6 +38,14 @@
 			flex-direction: column;
 			height: 100%;
 		}
+		&__input-wrap {
+			// @extend .form-group;
+			position: relative;
+			@include rfs(1.5rem, margin-bottom);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 		&__title {
 			@include rfs(2.125rem, margin-bottom);
 		}
