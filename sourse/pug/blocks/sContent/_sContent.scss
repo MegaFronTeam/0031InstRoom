@@ -171,7 +171,7 @@
 		// align-items: center;
 		justify-content: center;
 		margin-left: auto;
-		padding: rem(20);
+		padding: rem(20) 0;
 		&:before {
 			content: '';
 			position: absolute;
@@ -189,6 +189,10 @@
 		@include media-breakpoint-up(lg) {
 			min-height: rem(600);
 			padding: 0;
+			padding-left: rem(40);
+		}
+		@include media-breakpoint-up(xxl) {
+			padding-left: rem(82);
 		}
 		p {
 			@include media-breakpoint-up(lg) {
@@ -308,6 +312,7 @@
 		margin-left: calc((100vw - 100%) / -2);
 		img {
 			width: 100vw;
+			object-fit: cover;
 			@include media-breakpoint-up(lg) {
 				width: 100%;
 			}
