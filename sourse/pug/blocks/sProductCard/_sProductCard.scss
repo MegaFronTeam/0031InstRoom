@@ -443,6 +443,9 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin-top: rem(-10);
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x:#{rem(80)};
+		}
 	}
 	&__btn {
 		font-weight: 500;

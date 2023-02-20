@@ -17,6 +17,9 @@
 		// @extend .form-control;
 		//  outline: 0 !important;
 		resize: none;
+		&::placeholder {
+			color: $gray-500;
+		}
 		&[type="password"] {
 			padding-top: 0;
 			padding-bottom: 0;
@@ -24,6 +27,9 @@
 			line-height: 1;
 			letter-spacing: 0.05em;
 			padding-bottom: 3px;
+		}
+		&[readonly="readonly"] {
+			border-color: var(--bs-border-color);
 		}
 		&[type="tel"] {
 			padding-left: 1.25em;
@@ -63,12 +69,12 @@
 		border-top: none;
 		border-left: none;
 		border-right: none;
-		&:not(textarea) {
-			// &:focus,
-			&:valid {
-				--bs-border-color: #{$black};
-			}
-		}
+		// &:not(textarea) {
+		// 	// &:focus,
+		// 	&:valid {
+		// 		--bs-border-color: #{$black};
+		// 	}
+		// }
 	}
 	textarea.form-control {
 		min-height: rem(100);
@@ -92,6 +98,9 @@
 .was-validated .form-control:invalid {
 	padding-right: 0;
 	color: $danger;
+	&::placeholder {
+		color: $danger;
+	}
 	& + .form-wrap__input-title {
 		color: $form-feedback-invalid-color;
 	}
