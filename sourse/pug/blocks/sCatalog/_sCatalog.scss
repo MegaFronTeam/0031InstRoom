@@ -78,7 +78,7 @@
 		}
 	}
 	.catalog-menu {
-		position: relative;
+		position: static;
     opacity: 1;
     pointer-events: all;
 		@include media-breakpoint-up(lg) {

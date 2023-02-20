@@ -1,0 +1,69 @@
+mixin sCompare(data)
+	// start sCompare
+	+b.SECTION.sCompare.section#sCompare&attributes(attributes)
+		.container
+			+breadcrumb('Главная', 'Сравнение')
+			+b.section-title
+				h1 Сравнение товаров
+			+e.main-row.row
+				+e.col--chars.col-auto
+					+e.c-title.h5 Основные характеристики
+					+e.c-items
+						+e.c-item.c-item-js Тип
+						+e.c-item.c-item-js Наименование
+						+e.c-item.c-item-js Назначение
+						+e.c-item.c-item-js Тип работ
+						+e.c-item.c-item-js Основа
+						+e.c-item.c-item-js Разбавитель
+						+e.c-item.c-item-js Цвет
+						+e.c-item.c-item-js Степень глянца
+						+e.c-item.c-item-js Вес
+						+e.c-item.c-item-js Расход
+					+e.c-title.h5 Дополнительные<br>характеристики
+						//- +e.c-item.c-item-js Тип
+						//- +e.c-item.c-item-js Наименование
+						//- +e.c-item.c-item-js Назначение
+						//- +e.c-item.c-item-js Тип работ
+						//- +e.c-item.c-item-js Основа
+						//- +e.c-item.c-item-js Разбавитель
+						//- +e.c-item.c-item-js Цвет
+						//- +e.c-item.c-item-js Степень глянца
+						//- +e.c-item.c-item-js Вес
+						//- +e.c-item.c-item-js Расход
+				+e.col--slider.col
+					+e.main-slider
+						.swiper.sCompare-main-slider-js
+							.swiper-wrapper
+								-for(var i=1; i <= 7; i++)
+									+sCompareMainSlide({})
+	// end sCompare
+
+mixin sCompareMainSlide(data)
+	+e.main-slide.swiper-slide
+		+e.sub-slider 
+			.sCompare-sub-slider
+				+sCompareSubSlide({
+					likeBtnClasses: '',
+					imgNum: '1',
+					price: '54 999 руб.',
+					title: 'Вытяжка 60 см Bosch Serie | 4 DWK65AD60R',
+					slideNum: '1',
+				})
+
+mixin sCompareSubSlide(data)
+	+b.compare-card--js
+		+e.content
+			+e.img(href="#")
+				img(loading="lazy" src=`img/search-product-img.png` alt="")
+			+e.title(href="#")=data.title
+	+e.slider-chars
+		+e.slide-char.slide-char-js Тип
+		+e.slide-char.slide-char-js Наименование
+		+e.slide-char.slide-char-js Назначение
+		+e.slide-char.slide-char-js Тип работ
+		+e.slide-char.slide-char-js Основа
+		+e.slide-char.slide-char-js Разбавитель
+		+e.slide-char.slide-char-js Цвет
+		+e.slide-char.slide-char-js Степень глянца
+		+e.slide-char.slide-char-js Вес
+		+e.slide-char.slide-char-js Расход

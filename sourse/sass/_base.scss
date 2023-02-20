@@ -89,10 +89,10 @@ body {
 		/* Other browsers */
 		overscroll-behavior: none;
 
-		&::before {
-			z-index: 999;
-			opacity: 0.76;
-		}
+		// &::before {
+		// 	z-index: 999;
+		// 	opacity: 0.76;
+		// }
 	}
 	&.fixed2 {
 		@include media-breakpoint-down(lg) {
