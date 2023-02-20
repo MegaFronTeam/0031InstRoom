@@ -1,0 +1,43 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sProductCard/_sProductCard.pug
+include ../blocks/sExtraGoods/_sExtraGoods.pug
+
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sOurBrands/_sOurBrands.pug
+//- include ../blocks/sAboutUs/_sAboutUs.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= 'sProductCard.jpg'
+
+block title
+	- let  title = 'Карточка товара'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+topLine
+		+top-nav()
+	main
+		+page-head(``, `Каталог`, `Для дома и дачи`, `Садово-огородный инвентарь`, `Farbitex`)
+		+sProductCard()
+		+sExtraGoods(`Похожие товары`)
+		+sExtraGoods(`С&nbsp;этим товаром покупают`)
+		//- +headerBlock 
+		//- +sOurBrands
+		//- +sAboutUs
+	+footer()
+      
+
+
+
