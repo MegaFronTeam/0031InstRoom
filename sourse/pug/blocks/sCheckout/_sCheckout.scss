@@ -142,6 +142,45 @@
 				max-width: rem(310);
 			}
 		}
+		&__agreement {
+			max-width: rem(310);
+		}
+		.form-wrap__payment {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			.custom-input {
+				width: auto;
+				margin-bottom: rem(8);
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&__input {
+					border: 1px solid $dark;
+					--bs-form-check-bg: $white;
+					&[type="radio"] {
+						&:checked {
+							background-color: $dark;
+							border-color: $dark;
+						}
+						&:disabled {
+							background-color: $light;
+							border-color: $gray-300;
+						}
+					}
+				}
+				&__text {
+					color: $dark;
+					font-weight: 400;
+				}
+				.form-check-input:disabled ~ .form-check-label,
+				.form-check-input[disabled] ~ .form-check-label {
+					cursor: default;
+					opacity: 1;
+					color: $gray-300;
+				}
+			}
+		}
 	}
 
 	.form-wrap--delivery {

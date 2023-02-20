@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Prosto+One&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="">
+	<body>
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -676,67 +676,19 @@
 												<div class="deliveryTabs__btn">Оплата онлайн</div>
 											</div>
 											<div class="deliveryTabs__content active">
-												<div class="form-wrap form-wrap--delivery">
+												<div class="form-wrap">
 													<form>
-														<div class="h6">Введите адрес доставки</div>
-														<div class="form-wrap__row row">
-															<div class="col-md-6">
-																<div class="form-wrap__wrap">
-																	<div class="form-wrap__input-wrap form-group">
-																		<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Город</span>
-																		</label>
-																	</div>
-																	<!-- +e.input-wrap-->
-																	<div class="form-wrap__input-wrap form-group">
-																		<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Улица</span>
-																		</label>
-																	</div>
-																	<!-- +e.input-wrap-->
-																</div>
-															</div>
-															<div class="col-md-6">
-																<div class="form-wrap__wrap">
-																	<div class="form-wrap__input-wrap form-group">
-																		<label><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/><span class="form-wrap__input-title">Корпус</span>
-																		</label>
-																	</div>
-																	<!-- +e.input-wrap-->
-																	<div class="form-wrap__row row">
-																		<div class="col-6">
-																			<div class="form-wrap__input-wrap form-group">
-																				<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Дом</span>
-																				</label>
-																			</div>
-																			<!-- +e.input-wrap-->
-																		</div>
-																		<div class="col-6">
-																			<div class="form-wrap__input-wrap form-group">
-																				<label><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/><span class="form-wrap__input-title">Квартира</span>
-																				</label>
-																			</div>
-																			<!-- +e.input-wrap-->
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col-md-6">
-																<div class="form-wrap__input-wrap form-group">
-																	<label><input class="form-wrap__input form-control" name="date" type="date" value="2023-02-28"/><span class="form-wrap__input-title">Ближайшая дата доставки</span>
-																	</label>
-																</div>
-																<!-- +e.input-wrap-->
-															</div>
-															<div class="col-md-6">
-																<div class="form-wrap__input-wrap form-group">
-																	<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="заполните все поля для расчёта" readonly="readonly"/><span class="form-wrap__input-title">Сумма доставки</span>
-																	</label>
-																</div>
-																<!-- +e.input-wrap-->
-															</div>
-															<div class="col-md-6 mt-0">
-																<button class="form-wrap__btn btn btn-dark" type="submit">Далее
-																</button>
-															</div>
+														<div class="form-wrap__payment">
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="payment" type="radio"/><span class="custom-input__text form-check-label">наличными</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="payment" type="radio" checked="checked"/><span class="custom-input__text form-check-label">банковской картой</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="payment" type="radio" disabled="disabled"/><span class="custom-input__text form-check-label">банковской картой</span>
+															</label>
+														</div>
+														<button class="form-wrap__btn btn btn-primary" type="submit">Подтвердить заказ
+														</button>
+														<div class="form-wrap__agreement">Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь <a href="#">на&nbsp;обработку ваших персональных данных</a>
 														</div>
 													</form>
 												</div>
@@ -744,29 +696,10 @@
 											<div class="deliveryTabs__content">
 												<div class="form-wrap">
 													<form>
-														<div class="custom-select">
-															<div class="custom-select__title">Выберите пункт доставки
-															</div>
-															<select class="custom-select__input form-select custom-select-js" data-placeholder="Москва, ул Первомайская 14">
-																<option label=" "></option>
-																<option value="Москва, ул Первомайская 15">Москва, ул Первомайская 15</option>
-																<option value="Москва, ул Первомайская 16">Москва, ул Первомайская 16</option>
-																<option value="Москва, ул Первомайская 17">Москва, ул Первомайская 17</option>
-																<option value="Москва, ул Первомайская 18">Москва, ул Первомайская 18</option>
-																<option value="Москва, ул Первомайская 19">Москва, ул Первомайская 19</option>
-																<option value="Москва, ул Первомайская 20">Москва, ул Первомайская 20</option>
-																<option value="Москва, ул Первомайская 18">Москва, ул Первомайская 18</option>
-																<option value="Москва, ул Первомайская 19">Москва, ул Первомайская 19</option>
-																<option value="Москва, ул Первомайская 20">Москва, ул Первомайская 20</option>
-															</select>
-														</div>
-														<ul>
-															<li>Доставка бесплатно до&nbsp;пункта выдачи</li>
-															<li>Дата доставки в&nbsp;пункт выдачи ориентировочно&nbsp;&mdash; 10&nbsp;февраля.</li>
-															<li>Срок хранения заказа 14&nbsp;дней</li>
-														</ul>
-														<button class="form-wrap__btn btn btn-dark" type="submit">Далее
+														<button class="form-wrap__btn btn btn-primary mt-0" type="submit">Подтвердить заказ
 														</button>
+														<div class="form-wrap__agreement">Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь <a href="#">на&nbsp;обработку ваших персональных данных</a>
+														</div>
 													</form>
 												</div>
 											</div>
