@@ -1,0 +1,2356 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Карточка товара</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prosto+One&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body data-bg="sProductCard.jpg">
+		<div class="main-wrapper">
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start topLine-->
+				<div class="topLine section" id="topLine">
+					<div class="container">
+						<div class="topLine__row row">
+							<div class="col col-sm-auto col-lg-1 col-xxl-2 order-1">
+								<a class="topLine__logo" href="/"><img src="img/svg/logo.svg" alt="" loading="lazy"/>
+								</a>
+							</div>
+							<div class="col-auto col-lg-2 col-xxl-3 d-none d-md-block order-2">
+								<div class="topLine__work-time">Время работы: <span>10:00–20:00</span>
+								</div>
+							</div>
+							<div class="col-auto col-md ms-auto ms-md-0 order-3">
+								<a class="topLine__phone-link" href="tel:+74951203214">+7 495 120-32-14
+								</a>
+								<a class="topLine__phone-btn" href="#" data-src="modal-call" data-fancybox="modal">Заказать звонок
+								</a>
+							</div>
+							<div class="col-12 col-lg-auto order-5 order-lg-4">
+								<div class="topLine__links">
+									<a class="topLine__link" href="#">
+										<div class="topLine__icon-wrap">
+											<svg class="icon icon-like ">
+												<use xlink:href="img/svg/sprite.svg#like"></use>
+											</svg><span>0</span>
+										</div>
+									</a>
+									<a class="topLine__link" href="#">
+										<div class="topLine__icon-wrap">
+											<svg class="icon icon-chart ">
+												<use xlink:href="img/svg/sprite.svg#chart"></use>
+											</svg><span>0</span>
+										</div>
+									</a>
+									<a class="topLine__link" href="#">
+										<div class="topLine__icon-wrap">
+											<svg class="icon icon-person ">
+												<use xlink:href="img/svg/sprite.svg#person"></use>
+											</svg>
+										</div>
+									</a>
+									<a class="topLine__link" href="#">
+										<div class="topLine__icon-wrap">
+											<svg class="icon icon-cart ">
+												<use xlink:href="img/svg/sprite.svg#cart"></use>
+											</svg><span>99</span>
+										</div>
+									</a>
+									<a class="topLine__link topLine__link--search-js d-lg-none" href="#">
+										<div class="topLine__icon-wrap">
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</div>
+									</a>
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+									</div>
+								</div>
+							</div>
+							<div class="col-auto d-none d-md-block order-4 order-lg-5">
+								<div class="topLine__price">Товаров на сумму<span>2 000 ₽</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end topLine-->
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="container">
+						<div class="top-nav__row row">
+							<div class="col col-lg-auto col-xxl-2 d-none d-lg-block">
+								<div class="catalog-toggle catalog-toggle--js">
+									<div class="catalog-toggle__line-wrap"><span></span>
+									</div>Каталог товаров
+								</div>
+							</div>
+							<div class="col-auto col-lg order-lg-0 order-last">
+								<div class="menu-mobile menu-mobile--js">
+									<div class="menu-mobile__inner">
+										<div class="top-nav__head-wrap d-lg-none">
+											<div class="row">
+												<div class="col">
+													<div class="catalog-toggle catalog-toggle--js d-lg-none">
+														<div class="catalog-toggle__line-wrap"><span></span>
+														</div>Каталог товаров
+													</div>
+												</div>
+												<div class="col-auto">
+													<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<nav>
+											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хиты сезона</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новинки</a></li>
+											</ul>
+										</nav>
+										<div class="topLine d-lg-none">
+											<div class="topLine__bottom-wrap">
+												<div class="row">
+													<div class="col">
+														<div class="topLine__work-time">Время работы: <span>10:00–20:00</span>
+														</div>
+													</div>
+													<div class="col">
+														<div class="topLine__price">Товаров на сумму<span>2 000 ₽</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="soc">
+												<a class="soc__item" href="#" target="_blank">
+													<svg class="icon icon-instagram ">
+														<use xlink:href="img/svg/sprite.svg#instagram"></use>
+													</svg>
+												</a>
+												<a class="soc__item" href="#" target="_blank">
+													<svg class="icon icon-vk ">
+														<use xlink:href="img/svg/sprite.svg#vk"></use>
+													</svg>
+												</a>
+												<a class="soc__item" href="#" target="_blank">
+													<svg class="icon icon-fb ">
+														<use xlink:href="img/svg/sprite.svg#fb"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-auto col-xl-2 d-none d-lg-block">
+								<div class="soc">
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-instagram ">
+											<use xlink:href="img/svg/sprite.svg#instagram"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-vk ">
+											<use xlink:href="img/svg/sprite.svg#vk"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-fb ">
+											<use xlink:href="img/svg/sprite.svg#fb"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="top-nav__search-wrap top-nav__search-wrap--js">
+									<div class="search-block">
+										<form>
+											<input type="text" placeholder="Поиск по каталогу"/>
+											<button> 
+												<svg class="icon icon-search ">
+													<use xlink:href="img/svg/sprite.svg#search"></use>
+												</svg>
+											</button>
+										</form>
+									</div>
+									<div class="top-nav__search-content">
+										<div class="top-nav__search-inner">
+											<a class="top-nav__search-item" href="#">
+												<div class="row">
+													<div class="col-auto">
+														<div class="top-nav__search-img-wrap">
+															<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
+													</div>
+													<div class="col-auto">
+														<div class="h4">500 ₽</div>
+													</div>
+												</div>
+											</a>
+											<a class="top-nav__search-item" href="#">
+												<div class="row">
+													<div class="col-auto">
+														<div class="top-nav__search-img-wrap">
+															<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
+													</div>
+													<div class="col-auto">
+														<div class="h4">500 ₽</div>
+													</div>
+												</div>
+											</a>
+											<a class="top-nav__search-item" href="#">
+												<div class="row">
+													<div class="col-auto">
+														<div class="top-nav__search-img-wrap">
+															<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
+													</div>
+													<div class="col-auto">
+														<div class="h4">500 ₽</div>
+													</div>
+												</div>
+											</a>
+											<a class="top-nav__search-item" href="#">
+												<div class="row">
+													<div class="col-auto">
+														<div class="top-nav__search-img-wrap">
+															<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
+													</div>
+													<div class="col-auto">
+														<div class="h4">500 ₽</div>
+													</div>
+												</div>
+											</a>
+											<a class="top-nav__search-item" href="#">
+												<div class="row">
+													<div class="col-auto">
+														<div class="top-nav__search-img-wrap">
+															<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
+													</div>
+													<div class="col-auto">
+														<div class="h4">500 ₽</div>
+													</div>
+												</div>
+											</a>
+											<a class="top-nav__search-item" href="#">
+												<div class="row">
+													<div class="col-auto">
+														<div class="top-nav__search-img-wrap">
+															<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
+													</div>
+													<div class="col-auto">
+														<div class="h4">500 ₽</div>
+													</div>
+												</div>
+											</a>
+											<a class="top-nav__search-item" href="#">
+												<div class="row">
+													<div class="col-auto">
+														<div class="top-nav__search-img-wrap">
+															<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
+													</div>
+													<div class="col-auto">
+														<div class="h4">500 ₽</div>
+													</div>
+												</div>
+											</a>
+											<a class="top-nav__search-item" href="#">
+												<div class="row">
+													<div class="col-auto">
+														<div class="top-nav__search-img-wrap">
+															<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
+													</div>
+													<div class="col-auto">
+														<div class="h4">500 ₽</div>
+													</div>
+												</div>
+											</a>
+											<a class="top-nav__search-item" href="#">
+												<div class="row">
+													<div class="col-auto">
+														<div class="top-nav__search-img-wrap">
+															<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
+													</div>
+													<div class="col-auto">
+														<div class="h4">500 ₽</div>
+													</div>
+												</div>
+											</a>
+											<a class="top-nav__search-item" href="#">
+												<div class="row">
+													<div class="col-auto">
+														<div class="top-nav__search-img-wrap">
+															<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
+													</div>
+													<div class="col-auto">
+														<div class="h4">500 ₽</div>
+													</div>
+												</div>
+											</a>
+											<a class="top-nav__search-item" href="#">
+												<div class="row">
+													<div class="col-auto">
+														<div class="top-nav__search-img-wrap">
+															<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
+													</div>
+													<div class="col-auto">
+														<div class="h4">500 ₽</div>
+													</div>
+												</div>
+											</a>
+											<a class="top-nav__search-item" href="#">
+												<div class="row">
+													<div class="col-auto">
+														<div class="top-nav__search-img-wrap">
+															<div class="img-wrap-center"><img src="img/search-product-img.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="col">
+														<p>Эмаль Condor ПФ-115 жёлтая 1,8 кг</p>
+													</div>
+													<div class="col-auto">
+														<div class="h4">500 ₽</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<a class="top-nav__search-btn btn btn-dark" href="#">Показать все
+										</a>
+										<div class="top-nav__nothing-found">Нет результатов
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="catalog-menu catalog-menu--js">
+						<div class="catalog-toggle catalog-toggle--js">
+							<div class="catalog-toggle__line-wrap"><span></span>
+							</div>
+						</div>
+						<div class="catalog-menu__container container-fluid container-lg">
+							<div class="catalog-menu__wrap">
+								<div class="catalog-menu__item">Малярные товары
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<div class="catalog-menu__content">
+									<div class="catalog-menu__back-btn">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+									<ul>
+										<li><a href="#">Садово огородный инвентарь</a></li>
+										<li><a href="#">Поливочный инвентарь</a></li>
+										<li><a href="#">Поликарбонат</a></li>
+										<li><a href="#">Грунт</a></li>
+										<li><a href="#">Насосы</a></li>
+										<li><a href="#">Сетка Рабица</a></li>
+										<li><a href="#">Летний душ, умывальники, рукомойники</a></li>
+										<li><a href="#">Побелка, краска садовая</a></li>
+										<li><a href="#">Садовый декор</a></li>
+										<li><a href="#">Товары для отдыха</a></li>
+										<li><a href="#">Печное литьё и аксессуары</a></li>
+										<li><a href="#">Садово огородный инвентарь</a></li>
+										<li><a href="#">Поливочный инвентарь</a></li>
+										<li><a href="#">Поликарбонат</a></li>
+										<li><a href="#">Грунт</a></li>
+										<li><a href="#">Насосы</a></li>
+										<li><a href="#">Сетка Рабица</a></li>
+										<li><a href="#">Летний душ, умывальники, рукомойники</a></li>
+										<li><a href="#">Побелка, краска садовая</a></li>
+										<li><a href="#">Садовый декор</a></li>
+										<li><a href="#">Товары для отдыха</a></li>
+										<li><a href="#">Печное литьё и аксессуары</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="catalog-menu__wrap">
+								<div class="catalog-menu__item">Электроинструмент
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<div class="catalog-menu__content">
+									<div class="catalog-menu__back-btn">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+									<ul>
+										<li><a href="#">Садово огородный инвентарь</a></li>
+										<li><a href="#">Поливочный инвентарь</a></li>
+										<li><a href="#">Поликарбонат</a></li>
+										<li><a href="#">Грунт</a></li>
+										<li><a href="#">Насосы</a></li>
+										<li><a href="#">Сетка Рабица</a></li>
+										<li><a href="#">Летний душ, умывальники, рукомойники</a></li>
+										<li><a href="#">Побелка, краска садовая</a></li>
+										<li><a href="#">Садовый декор</a></li>
+										<li><a href="#">Товары для отдыха</a></li>
+										<li><a href="#">Печное литьё и аксессуары</a></li>
+										<li><a href="#">Садово огородный инвентарь</a></li>
+										<li><a href="#">Поливочный инвентарь</a></li>
+										<li><a href="#">Поликарбонат</a></li>
+										<li><a href="#">Грунт</a></li>
+										<li><a href="#">Насосы</a></li>
+										<li><a href="#">Сетка Рабица</a></li>
+										<li><a href="#">Летний душ, умывальники, рукомойники</a></li>
+										<li><a href="#">Побелка, краска садовая</a></li>
+										<li><a href="#">Садовый декор</a></li>
+										<li><a href="#">Товары для отдыха</a></li>
+										<li><a href="#">Печное литьё и аксессуары</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="catalog-menu__wrap">
+								<div class="catalog-menu__item">Спецодежда
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<div class="catalog-menu__content">
+									<div class="catalog-menu__back-btn">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+									<ul>
+										<li><a href="#">Садово огородный инвентарь</a></li>
+										<li><a href="#">Поливочный инвентарь</a></li>
+										<li><a href="#">Поликарбонат</a></li>
+										<li><a href="#">Грунт</a></li>
+										<li><a href="#">Насосы</a></li>
+										<li><a href="#">Сетка Рабица</a></li>
+										<li><a href="#">Летний душ, умывальники, рукомойники</a></li>
+										<li><a href="#">Побелка, краска садовая</a></li>
+										<li><a href="#">Садовый декор</a></li>
+										<li><a href="#">Товары для отдыха</a></li>
+										<li><a href="#">Печное литьё и аксессуары</a></li>
+										<li><a href="#">Садово огородный инвентарь</a></li>
+										<li><a href="#">Поливочный инвентарь</a></li>
+										<li><a href="#">Поликарбонат</a></li>
+										<li><a href="#">Грунт</a></li>
+										<li><a href="#">Насосы</a></li>
+										<li><a href="#">Сетка Рабица</a></li>
+										<li><a href="#">Летний душ, умывальники, рукомойники</a></li>
+										<li><a href="#">Побелка, краска садовая</a></li>
+										<li><a href="#">Садовый декор</a></li>
+										<li><a href="#">Товары для отдыха</a></li>
+										<li><a href="#">Печное литьё и аксессуары</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="catalog-menu__wrap">
+								<div class="catalog-menu__item">Сезонное
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<div class="catalog-menu__content">
+									<div class="catalog-menu__back-btn">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+									<ul>
+										<li><a href="#">Садово огородный инвентарь</a></li>
+										<li><a href="#">Поливочный инвентарь</a></li>
+										<li><a href="#">Поликарбонат</a></li>
+										<li><a href="#">Грунт</a></li>
+										<li><a href="#">Насосы</a></li>
+										<li><a href="#">Сетка Рабица</a></li>
+										<li><a href="#">Летний душ, умывальники, рукомойники</a></li>
+										<li><a href="#">Побелка, краска садовая</a></li>
+										<li><a href="#">Садовый декор</a></li>
+										<li><a href="#">Товары для отдыха</a></li>
+										<li><a href="#">Печное литьё и аксессуары</a></li>
+										<li><a href="#">Садово огородный инвентарь</a></li>
+										<li><a href="#">Поливочный инвентарь</a></li>
+										<li><a href="#">Поликарбонат</a></li>
+										<li><a href="#">Грунт</a></li>
+										<li><a href="#">Насосы</a></li>
+										<li><a href="#">Сетка Рабица</a></li>
+										<li><a href="#">Летний душ, умывальники, рукомойники</a></li>
+										<li><a href="#">Побелка, краска садовая</a></li>
+										<li><a href="#">Садовый декор</a></li>
+										<li><a href="#">Товары для отдыха</a></li>
+										<li><a href="#">Печное литьё и аксессуары</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="catalog-menu__wrap">
+								<div class="catalog-menu__item">Для дома и дачи
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<div class="catalog-menu__content">
+									<div class="catalog-menu__back-btn">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+									<ul>
+										<li><a href="#">Садово огородный инвентарь</a></li>
+										<li><a href="#">Поливочный инвентарь</a></li>
+										<li><a href="#">Поликарбонат</a></li>
+										<li><a href="#">Грунт</a></li>
+										<li><a href="#">Насосы</a></li>
+										<li><a href="#">Сетка Рабица</a></li>
+										<li><a href="#">Летний душ, умывальники, рукомойники</a></li>
+										<li><a href="#">Побелка, краска садовая</a></li>
+										<li><a href="#">Садовый декор</a></li>
+										<li><a href="#">Товары для отдыха</a></li>
+										<li><a href="#">Печное литьё и аксессуары</a></li>
+										<li><a href="#">Садово огородный инвентарь</a></li>
+										<li><a href="#">Поливочный инвентарь</a></li>
+										<li><a href="#">Поликарбонат</a></li>
+										<li><a href="#">Грунт</a></li>
+										<li><a href="#">Насосы</a></li>
+										<li><a href="#">Сетка Рабица</a></li>
+										<li><a href="#">Летний душ, умывальники, рукомойники</a></li>
+										<li><a href="#">Побелка, краска садовая</a></li>
+										<li><a href="#">Садовый декор</a></li>
+										<li><a href="#">Товары для отдыха</a></li>
+										<li><a href="#">Печное литьё и аксессуары</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="catalog-menu__wrap">
+								<div class="catalog-menu__item">Инструменты
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<div class="catalog-menu__content">
+									<div class="catalog-menu__back-btn">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+									<ul>
+										<li><a href="#">Садово огородный инвентарь</a></li>
+										<li><a href="#">Поливочный инвентарь</a></li>
+										<li><a href="#">Поликарбонат</a></li>
+										<li><a href="#">Грунт</a></li>
+										<li><a href="#">Насосы</a></li>
+										<li><a href="#">Сетка Рабица</a></li>
+										<li><a href="#">Летний душ, умывальники, рукомойники</a></li>
+										<li><a href="#">Побелка, краска садовая</a></li>
+										<li><a href="#">Садовый декор</a></li>
+										<li><a href="#">Товары для отдыха</a></li>
+										<li><a href="#">Печное литьё и аксессуары</a></li>
+										<li><a href="#">Садово огородный инвентарь</a></li>
+										<li><a href="#">Поливочный инвентарь</a></li>
+										<li><a href="#">Поликарбонат</a></li>
+										<li><a href="#">Грунт</a></li>
+										<li><a href="#">Насосы</a></li>
+										<li><a href="#">Сетка Рабица</a></li>
+										<li><a href="#">Летний душ, умывальники, рукомойники</a></li>
+										<li><a href="#">Побелка, краска садовая</a></li>
+										<li><a href="#">Садовый декор</a></li>
+										<li><a href="#">Товары для отдыха</a></li>
+										<li><a href="#">Печное литьё и аксессуары</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Каталог</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Для дома и дачи</span>
+										<meta itemprop="position" content="3"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Садово-огородный инвентарь</span>
+										<meta itemprop="position" content="4"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Farbitex</span>
+										<meta itemprop="position" content="5"/></a></li>
+							</ol>
+						</nav>
+						<div class="row">
+							<div class="col-md">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- start sProductCard-->
+				<section class="sProductCard section" id="sProductCard">
+					<div class="container">
+						<div class="sProductCard__wrapper"><img src="img/sProductCard-logo-1.png" alt="" loading="lazy"/>
+							<div class="sProductCard__row row">
+								<div class="col-lg-6">
+									<div class="sProductCard__slider-wrap">
+										<div class="sProductCard__slider sProductCard__slider--js swiper">
+											<div class="swiper-wrapper">
+													<div class="sProductCard__slide swiper-slide">
+														<a class="sProductCard__img-wrap" data-fancybox="sProductCard" data-src="img/sProductCard-1.jpg">
+															<div class="img-wrap-center"><img src="img/sProductCard-1.jpg" alt="" loading="lazy"/>
+															</div>
+														</a>
+													</div>
+													<div class="sProductCard__slide swiper-slide">
+														<a class="sProductCard__img-wrap" data-fancybox="sProductCard" data-src="img/sProductCard-1.jpg">
+															<div class="img-wrap-center"><img src="img/sProductCard-1.jpg" alt="" loading="lazy"/>
+															</div>
+														</a>
+													</div>
+													<div class="sProductCard__slide swiper-slide">
+														<a class="sProductCard__img-wrap" data-fancybox="sProductCard" data-src="img/sProductCard-1.jpg">
+															<div class="img-wrap-center"><img src="img/sProductCard-1.jpg" alt="" loading="lazy"/>
+															</div>
+														</a>
+													</div>
+													<div class="sProductCard__slide swiper-slide">
+														<a class="sProductCard__img-wrap" data-fancybox="sProductCard" data-src="img/sProductCard-1.jpg">
+															<div class="img-wrap-center"><img src="img/sProductCard-1.jpg" alt="" loading="lazy"/>
+															</div>
+														</a>
+													</div>
+													<div class="sProductCard__slide swiper-slide">
+														<a class="sProductCard__img-wrap" data-fancybox="sProductCard" data-src="img/sProductCard-1.jpg">
+															<div class="img-wrap-center"><img src="img/sProductCard-1.jpg" alt="" loading="lazy"/>
+															</div>
+														</a>
+													</div>
+													<div class="sProductCard__slide swiper-slide">
+														<a class="sProductCard__img-wrap" data-fancybox="sProductCard" data-src="img/sProductCard-1.jpg">
+															<div class="img-wrap-center"><img src="img/sProductCard-1.jpg" alt="" loading="lazy"/>
+															</div>
+														</a>
+													</div>
+											</div>
+										</div>
+										<div class="sProductCard__thumb-slider sProductCard__thumb-slider--js swiper">
+											<div class="swiper-wrapper">
+													<div class="sProductCard__slide swiper-slide">
+														<div class="sProductCard__img-wrap">
+															<div class="img-wrap-center"><img src="img/sProductCard-sm-1.jpg" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="sProductCard__slide swiper-slide">
+														<div class="sProductCard__img-wrap">
+															<div class="img-wrap-center"><img src="img/sProductCard-sm-1.jpg" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="sProductCard__slide swiper-slide">
+														<div class="sProductCard__img-wrap">
+															<div class="img-wrap-center"><img src="img/sProductCard-sm-1.jpg" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="sProductCard__slide swiper-slide">
+														<div class="sProductCard__img-wrap">
+															<div class="img-wrap-center"><img src="img/sProductCard-sm-1.jpg" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="sProductCard__slide swiper-slide">
+														<div class="sProductCard__img-wrap">
+															<div class="img-wrap-center"><img src="img/sProductCard-sm-1.jpg" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="sProductCard__slide swiper-slide">
+														<div class="sProductCard__img-wrap">
+															<div class="img-wrap-center"><img src="img/sProductCard-sm-1.jpg" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="sProductCard__caption">
+										<h1>Краска Farbitex Для садовых деревьев</h1>
+										<div class="sProductCard__info">В&nbsp;наличии
+										</div>
+										<p>Быстросохнущая, высокоукрывистая, защита от&nbsp;водорослей, мха, лишайника, защита от&nbsp;грибка, светостойкая, термостойкая, защита от&nbsp;вредителей</p>
+									</div>
+									<div class="sProductCard__price-wrap"><span>500&nbsp;₽</span><small>720&nbsp;₽</small>
+									</div>
+									<div class="sProductCard__btn-wrap">
+										<a class="sProductCard__btn-addCart btn btn-primary" href="#">В&nbsp;корзину
+										</a>
+										<a class="sProductCard__btn" href="#">
+											<svg class="icon icon-compare ">
+												<use xlink:href="img/svg/sprite.svg#compare"></use>
+											</svg>
+										</a>
+										<a class="sProductCard__btn" href="#">
+											<svg class="icon icon-favorites ">
+												<use xlink:href="img/svg/sprite.svg#favorites"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sProductCard__details-wrap">
+							<div class="tabs">
+								<div class="swiper tabs-swiper">
+									<div class="tabs__caption swiper-wrapper">
+										<div class="tabs__btn active swiper-slide">Описание</div>
+										<div class="tabs__btn swiper-slide">Характеристики</div>
+										<div class="tabs__btn swiper-slide">Доставка</div>
+										<div class="tabs__btn swiper-slide">Отзывы</div>
+									</div>
+								</div>
+								<div class="tabs__content active">
+									<div class="sProductCard__description">
+										<p>Farbitex Для садовых деревьев&nbsp;&mdash; высококачественная водно-дисперсионнная краска. Изготовлена на&nbsp;оборудовании &laquo;NETZSCH&raquo; по&nbsp;специальным рецептурам, разработанным компанией &laquo;ABC FARBEN&raquo;. Предназначена для защиты коры деревьев и&nbsp;кустарников от&nbsp;резких перепадов температур, грибка и&nbsp;плесени, вредителей, придаёт декоративный вид.</p>
+										<h6>Подзаголовок:</h6>
+										<ul>
+											<li>Заполненное и&nbsp;подписанное заявление о&nbsp;государственной регистрации прекращения деятельности физических лиц в&nbsp;качестве ИП&nbsp;&mdash; форма &#8470;&nbsp;R26001.;</li>
+											<li>Документ об&nbsp;уплате госпошлины в&nbsp;размере 160&nbsp;₽;</li>
+											<li>Документ, подтверждающий предоставление информации в&nbsp;территориальный орган ПФР.;</li>
+										</ul>
+									</div>
+								</div>
+								<div class="tabs__content">
+									<div class="sProductCard__features">
+										<div class="row">
+											<div class="col-md-6 col-lg-4">
+												<ul>
+														<li><span>Расход:</span><small>от&nbsp;0,15 до&nbsp;0,18&nbsp;кг/м2</small></li>
+														<li><span>Назначение:</span><small>Для деревьев</small></li>
+														<li><span>Тип работ:</span><small>Наружное</small></li>
+														<li><span>Упаковка:</span><small>Ведро</small></li>
+														<li><span>Время высыхания:</span><small>1ч</small></li>
+												</ul>
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<ul>
+														<li><span>Расход:</span><small>от&nbsp;0,15 до&nbsp;0,18&nbsp;кг/м2</small></li>
+														<li><span>Назначение:</span><small>Для деревьев</small></li>
+														<li><span>Тип работ:</span><small>Наружное</small></li>
+														<li><span>Упаковка:</span><small>Ведро</small></li>
+														<li><span>Время высыхания:</span><small>1ч</small></li>
+												</ul>
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<ul>
+														<li><span>Расход:</span><small>от&nbsp;0,15 до&nbsp;0,18&nbsp;кг/м2</small></li>
+														<li><span>Назначение:</span><small>Для деревьев</small></li>
+														<li><span>Тип работ:</span><small>Наружное</small></li>
+														<li><span>Упаковка:</span><small>Ведро</small></li>
+														<li><span>Время высыхания:</span><small>1ч</small></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__content">
+									<div class="sProductCard__delivery">
+										<div class="sProductCard__infoBlock">
+											<div class="sProductCard__info-item">
+												<svg class="icon icon-check-circle ">
+													<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+												</svg><span>Доставка курьером</span>
+											</div>
+											<div class="sProductCard__info-item">
+												<svg class="icon icon-check-circle ">
+													<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+												</svg><span>Самовывоз</span>
+											</div>
+										</div>
+										<p>Мы&nbsp;доставим вашу покупку в&nbsp;любую точку Российской Федерации. Чтобы узнать подробности доставки, выберите один из&nbsp;пунктов. Приведённый ниже расчёт стоимости доставки носит информационный характер. Точную информацию о&nbsp;стоимости товара или заказа в&nbsp;целом можно увидеть при оформлении заказа.</p>
+										<div class="deliveryTabs">
+											<div class="deliveryTabs__caption">
+												<div class="deliveryTabs__btn">Доставка курьером</div>
+												<div class="deliveryTabs__btn">Самовывоз</div>
+											</div>
+											<div class="deliveryTabs__content">
+												<div class="custom-select">
+													<div class="custom-select__title">Выберите населённый пункт
+													</div>
+													<select class="custom-select__input form-select custom-select-js" data-placeholder="Москва">
+														<option label=" "></option>
+														<option value="Москва">Москва</option>
+														<option value="Санкт-Петербург">Санкт-Петербург</option>
+														<option value="Мурманск">Мурманск</option>
+														<option value="Владивосток">Владивосток</option>
+														<option value="Иркутск">Иркутск</option>
+														<option value="Тверь">Тверь</option>
+														<option value="Ростов на Дону">Ростов на Дону</option>
+														<option value="Калининград">Калининград</option>
+														<option value="Мурманск">Мурманск</option>
+														<option value="Владивосток">Владивосток</option>
+														<option value="Иркутск">Иркутск</option>
+														<option value="Тверь">Тверь</option>
+													</select>
+												</div>
+												<p>Курьером до&nbsp;клиента</p>
+												<ul>
+													<li>В&nbsp;заказе только мелкие товары&nbsp;&mdash; 500&nbsp;₽.;</li>
+													<li>В&nbsp;заказе есть крупные товары&nbsp;&mdash; 1&nbsp;500&nbsp;₽.;</li>
+													<li>В&nbsp;заказе есть габаритный товар&nbsp;&mdash; 3&nbsp;000&nbsp;₽;</li>
+													<li>Общая стоимость товаров менее 2000 - + 100&nbsp;₽;</li>
+												</ul>
+											</div>
+											<div class="deliveryTabs__content">
+												<div class="custom-select">
+													<div class="custom-select__title">Выберите пункт доставки
+													</div>
+													<select class="custom-select__input form-select custom-select-js" data-placeholder="Москва, ул Первомайская 14">
+														<option label=" "></option>
+														<option value="Москва, ул Первомайская 15">Москва, ул Первомайская 15</option>
+														<option value="Москва, ул Первомайская 16">Москва, ул Первомайская 16</option>
+														<option value="Москва, ул Первомайская 17">Москва, ул Первомайская 17</option>
+														<option value="Москва, ул Первомайская 18">Москва, ул Первомайская 18</option>
+														<option value="Москва, ул Первомайская 19">Москва, ул Первомайская 19</option>
+														<option value="Москва, ул Первомайская 20">Москва, ул Первомайская 20</option>
+														<option value="Москва, ул Первомайская 18">Москва, ул Первомайская 18</option>
+														<option value="Москва, ул Первомайская 19">Москва, ул Первомайская 19</option>
+														<option value="Москва, ул Первомайская 20">Москва, ул Первомайская 20</option>
+													</select>
+												</div>
+												<p>Доставка бесплатно до&nbsp;пункта выдачи</p>
+												<p>Ближайшая дата доставки&nbsp;&mdash; 10&nbsp;февраля. Срок хранения заказа 14&nbsp;дней</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__content">
+									<div class="sProductCard__reviews">
+										<div class="sProductCard__reviews-row row">
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__review-col col-lg-6">
+												<div class="reviews-item">
+													<div class="reviews-item__name">Анна Фёдорова
+													</div><small>08.11.2022</small>
+													<p>Неделю назад покрасила деревья. Температура была околонулевая, краскопультом не&nbsp;получилось, только кистью. Прилагаю фото после первого дождя. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus commodi corrupti velit ad nostrum, aut ratione quod minus dignissimos voluptate ab dolore, amet vero id, beatae quidem sunt in mollitia.<a href="#">Далее</a></p>
+												</div>
+											</div>
+											<div class="sProductCard__col-more col-12">
+												<button class="btn btn-more-lg">
+													<svg class="icon icon-rotate ">
+														<use xlink:href="img/svg/sprite.svg#rotate"></use>
+													</svg><span>Показать ещё</span>
+												</button>
+											</div>
+										</div>
+										<div class="sProductCard__btnWrap">
+											<a class="sProductCard__review-btn btn btn-primary" href="#" data-src="#modal-review" data-fancybox="modal">ОСТАВИТЬ ОТЗЫВ
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sProductCard-->
+				<!-- start sExtraGoods-->
+				<section class="sExtraGoods section">
+					<div class="container">
+						<div class="controls-wrap-js">
+							<div class="section-title">
+								<div class="row">
+									<div class="col-auto">
+										<h2>Похожие товары</h2>
+									</div>
+									<div class="col-auto">
+										<div class="section-title__arrow-wrap">
+											<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+												<svg class="icon icon-chevron-left ">
+													<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+												</svg>
+											</div>
+											<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+												<svg class="icon icon-chevron-right ">
+													<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sExtraGoods__slider swiper default-slider-js">
+								<div class="swiper-wrapper">
+									<div class="sExtraGoods__slide swiper-slide">
+										<div class="card">
+											<div class="card__label card__label--sale">Акция
+											</div>
+											<div class="card__control-wrap">
+												<a class="card__link active" href="#">
+													<svg class="icon icon-bar-chart ">
+														<use xlink:href="img/svg/sprite.svg#bar-chart"></use>
+													</svg>
+												</a>
+												<a class="card__link active" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</a>
+											</div>
+											<a class="card__slider card__slider--js swiper" href="#">
+												<div class="swiper-wrapper">
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-pagination"></div>
+											</a>
+											<div class="card__content">
+												<a class="card__title" href="#">Эмаль Condor ПФ-115 жёлтая 1,8 кг
+												</a>
+												<div class="card__inner-row row">
+													<div class="card__price-col col-auto">
+														<div class="card__price">500 ₽
+														</div>
+													</div>
+													<div class="card__old-price-col col-auto">
+														<div class="card__old-price">720 ₽
+														</div>
+													</div>
+													<div class="card__info-col col-auto ms-auto">
+														<div class="card__info-wrap">
+															<div class="card__info">
+																<svg class="icon icon-check ">
+																	<use xlink:href="img/svg/sprite.svg#check"></use>
+																</svg><span>в наличии</span>
+															</div>
+															<a class="card__add-to-cart-btn active" href="#">
+																<svg class="icon icon-shopping-cart ">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg>
+																<svg class="icon icon-check-circle ">
+																	<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sExtraGoods__slide swiper-slide">
+										<div class="card">
+											<div class="card__control-wrap">
+												<a class="card__link" href="#">
+													<svg class="icon icon-bar-chart ">
+														<use xlink:href="img/svg/sprite.svg#bar-chart"></use>
+													</svg>
+												</a>
+												<a class="card__link" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</a>
+											</div>
+											<a class="card__slider card__slider--js swiper" href="#">
+												<div class="swiper-wrapper">
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-pagination"></div>
+											</a>
+											<div class="card__content">
+												<a class="card__title" href="#">Эмаль Condor ПФ-115 жёлтая 1,8 кг
+												</a>
+												<div class="card__inner-row row">
+													<div class="card__price-col col-auto">
+														<div class="card__price">500 ₽
+														</div>
+													</div>
+													<div class="card__old-price-col col-auto">
+														<div class="card__old-price">720 ₽
+														</div>
+													</div>
+													<div class="card__info-col col-auto ms-auto">
+														<div class="card__info-wrap">
+															<div class="card__info"><span class="on-order">под заказ</span>
+															</div>
+															<a class="card__add-to-cart-btn" href="#">
+																<svg class="icon icon-shopping-cart ">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg>
+																<svg class="icon icon-check-circle ">
+																	<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sExtraGoods__slide swiper-slide">
+										<div class="card">
+											<div class="card__label">Новинка
+											</div>
+											<div class="card__control-wrap">
+												<a class="card__link" href="#">
+													<svg class="icon icon-bar-chart ">
+														<use xlink:href="img/svg/sprite.svg#bar-chart"></use>
+													</svg>
+												</a>
+												<a class="card__link" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</a>
+											</div>
+											<a class="card__slider card__slider--js swiper" href="#">
+												<div class="swiper-wrapper">
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-pagination"></div>
+											</a>
+											<div class="card__content">
+												<a class="card__title" href="#">Эмаль Condor ПФ-115 жёлтая 1,8 кг
+												</a>
+												<div class="card__inner-row row">
+													<div class="card__price-col col-auto">
+														<div class="card__price">500 ₽
+														</div>
+													</div>
+													<div class="card__old-price-col col-auto">
+														<div class="card__old-price">720 ₽
+														</div>
+													</div>
+													<div class="card__info-col col-auto ms-auto">
+														<div class="card__info-wrap">
+															<div class="card__info">
+																<svg class="icon icon-check ">
+																	<use xlink:href="img/svg/sprite.svg#check"></use>
+																</svg><span>в наличии</span>
+															</div>
+															<a class="card__add-to-cart-btn" href="#">
+																<svg class="icon icon-shopping-cart ">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg>
+																<svg class="icon icon-check-circle ">
+																	<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sExtraGoods__slide swiper-slide">
+										<div class="card">
+											<div class="card__control-wrap">
+												<a class="card__link" href="#">
+													<svg class="icon icon-bar-chart ">
+														<use xlink:href="img/svg/sprite.svg#bar-chart"></use>
+													</svg>
+												</a>
+												<a class="card__link" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</a>
+											</div>
+											<a class="card__slider card__slider--js swiper" href="#">
+												<div class="swiper-wrapper">
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-pagination"></div>
+											</a>
+											<div class="card__content">
+												<a class="card__title" href="#">Эмаль Condor ПФ-115 жёлтая 1,8 кг
+												</a>
+												<div class="card__inner-row row">
+													<div class="card__price-col col-auto">
+														<div class="card__price">500 ₽
+														</div>
+													</div>
+													<div class="card__old-price-col col-auto">
+														<div class="card__old-price">720 ₽
+														</div>
+													</div>
+													<div class="card__info-col col-auto ms-auto">
+														<div class="card__info-wrap">
+															<div class="card__info"><span class="on-order">под заказ</span>
+															</div>
+															<a class="card__add-to-cart-btn" href="#">
+																<svg class="icon icon-shopping-cart ">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg>
+																<svg class="icon icon-check-circle ">
+																	<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sExtraGoods__slide swiper-slide">
+										<div class="card">
+											<div class="card__label">Новинка
+											</div>
+											<div class="card__control-wrap">
+												<a class="card__link" href="#">
+													<svg class="icon icon-bar-chart ">
+														<use xlink:href="img/svg/sprite.svg#bar-chart"></use>
+													</svg>
+												</a>
+												<a class="card__link" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</a>
+											</div>
+											<a class="card__slider card__slider--js swiper" href="#">
+												<div class="swiper-wrapper">
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-pagination"></div>
+											</a>
+											<div class="card__content">
+												<a class="card__title" href="#">Эмаль Condor ПФ-115 жёлтая 1,8 кг
+												</a>
+												<div class="card__inner-row row">
+													<div class="card__price-col col-auto">
+														<div class="card__price">500 ₽
+														</div>
+													</div>
+													<div class="card__old-price-col col-auto">
+														<div class="card__old-price">720 ₽
+														</div>
+													</div>
+													<div class="card__info-col col-auto ms-auto">
+														<div class="card__info-wrap">
+															<div class="card__info">
+																<svg class="icon icon-check ">
+																	<use xlink:href="img/svg/sprite.svg#check"></use>
+																</svg><span>в наличии</span>
+															</div>
+															<a class="card__add-to-cart-btn" href="#">
+																<svg class="icon icon-shopping-cart ">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg>
+																<svg class="icon icon-check-circle ">
+																	<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sExtraGoods__slide swiper-slide">
+										<div class="card">
+											<div class="card__control-wrap">
+												<a class="card__link" href="#">
+													<svg class="icon icon-bar-chart ">
+														<use xlink:href="img/svg/sprite.svg#bar-chart"></use>
+													</svg>
+												</a>
+												<a class="card__link" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</a>
+											</div>
+											<a class="card__slider card__slider--js swiper" href="#">
+												<div class="swiper-wrapper">
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-pagination"></div>
+											</a>
+											<div class="card__content">
+												<a class="card__title" href="#">Эмаль Condor ПФ-115 жёлтая 1,8 кг
+												</a>
+												<div class="card__inner-row row">
+													<div class="card__price-col col-auto">
+														<div class="card__price">500 ₽
+														</div>
+													</div>
+													<div class="card__old-price-col col-auto">
+														<div class="card__old-price">720 ₽
+														</div>
+													</div>
+													<div class="card__info-col col-auto ms-auto">
+														<div class="card__info-wrap">
+															<div class="card__info">
+																<svg class="icon icon-check ">
+																	<use xlink:href="img/svg/sprite.svg#check"></use>
+																</svg><span>в наличии</span>
+															</div>
+															<a class="card__add-to-cart-btn" href="#">
+																<svg class="icon icon-shopping-cart ">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg>
+																<svg class="icon icon-check-circle ">
+																	<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sExtraGoods-->
+				<!-- start sExtraGoods-->
+				<section class="sExtraGoods section">
+					<div class="container">
+						<div class="controls-wrap-js">
+							<div class="section-title">
+								<div class="row">
+									<div class="col-auto">
+										<h2>С&nbsp;этим товаром покупают</h2>
+									</div>
+									<div class="col-auto">
+										<div class="section-title__arrow-wrap">
+											<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+												<svg class="icon icon-chevron-left ">
+													<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+												</svg>
+											</div>
+											<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+												<svg class="icon icon-chevron-right ">
+													<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sExtraGoods__slider swiper default-slider-js">
+								<div class="swiper-wrapper">
+									<div class="sExtraGoods__slide swiper-slide">
+										<div class="card">
+											<div class="card__label card__label--sale">Акция
+											</div>
+											<div class="card__control-wrap">
+												<a class="card__link active" href="#">
+													<svg class="icon icon-bar-chart ">
+														<use xlink:href="img/svg/sprite.svg#bar-chart"></use>
+													</svg>
+												</a>
+												<a class="card__link active" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</a>
+											</div>
+											<a class="card__slider card__slider--js swiper" href="#">
+												<div class="swiper-wrapper">
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-pagination"></div>
+											</a>
+											<div class="card__content">
+												<a class="card__title" href="#">Эмаль Condor ПФ-115 жёлтая 1,8 кг
+												</a>
+												<div class="card__inner-row row">
+													<div class="card__price-col col-auto">
+														<div class="card__price">500 ₽
+														</div>
+													</div>
+													<div class="card__old-price-col col-auto">
+														<div class="card__old-price">720 ₽
+														</div>
+													</div>
+													<div class="card__info-col col-auto ms-auto">
+														<div class="card__info-wrap">
+															<div class="card__info">
+																<svg class="icon icon-check ">
+																	<use xlink:href="img/svg/sprite.svg#check"></use>
+																</svg><span>в наличии</span>
+															</div>
+															<a class="card__add-to-cart-btn active" href="#">
+																<svg class="icon icon-shopping-cart ">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg>
+																<svg class="icon icon-check-circle ">
+																	<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sExtraGoods__slide swiper-slide">
+										<div class="card">
+											<div class="card__control-wrap">
+												<a class="card__link" href="#">
+													<svg class="icon icon-bar-chart ">
+														<use xlink:href="img/svg/sprite.svg#bar-chart"></use>
+													</svg>
+												</a>
+												<a class="card__link" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</a>
+											</div>
+											<a class="card__slider card__slider--js swiper" href="#">
+												<div class="swiper-wrapper">
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-pagination"></div>
+											</a>
+											<div class="card__content">
+												<a class="card__title" href="#">Эмаль Condor ПФ-115 жёлтая 1,8 кг
+												</a>
+												<div class="card__inner-row row">
+													<div class="card__price-col col-auto">
+														<div class="card__price">500 ₽
+														</div>
+													</div>
+													<div class="card__old-price-col col-auto">
+														<div class="card__old-price">720 ₽
+														</div>
+													</div>
+													<div class="card__info-col col-auto ms-auto">
+														<div class="card__info-wrap">
+															<div class="card__info"><span class="on-order">под заказ</span>
+															</div>
+															<a class="card__add-to-cart-btn" href="#">
+																<svg class="icon icon-shopping-cart ">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg>
+																<svg class="icon icon-check-circle ">
+																	<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sExtraGoods__slide swiper-slide">
+										<div class="card">
+											<div class="card__label">Новинка
+											</div>
+											<div class="card__control-wrap">
+												<a class="card__link" href="#">
+													<svg class="icon icon-bar-chart ">
+														<use xlink:href="img/svg/sprite.svg#bar-chart"></use>
+													</svg>
+												</a>
+												<a class="card__link" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</a>
+											</div>
+											<a class="card__slider card__slider--js swiper" href="#">
+												<div class="swiper-wrapper">
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-pagination"></div>
+											</a>
+											<div class="card__content">
+												<a class="card__title" href="#">Эмаль Condor ПФ-115 жёлтая 1,8 кг
+												</a>
+												<div class="card__inner-row row">
+													<div class="card__price-col col-auto">
+														<div class="card__price">500 ₽
+														</div>
+													</div>
+													<div class="card__old-price-col col-auto">
+														<div class="card__old-price">720 ₽
+														</div>
+													</div>
+													<div class="card__info-col col-auto ms-auto">
+														<div class="card__info-wrap">
+															<div class="card__info">
+																<svg class="icon icon-check ">
+																	<use xlink:href="img/svg/sprite.svg#check"></use>
+																</svg><span>в наличии</span>
+															</div>
+															<a class="card__add-to-cart-btn" href="#">
+																<svg class="icon icon-shopping-cart ">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg>
+																<svg class="icon icon-check-circle ">
+																	<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sExtraGoods__slide swiper-slide">
+										<div class="card">
+											<div class="card__control-wrap">
+												<a class="card__link" href="#">
+													<svg class="icon icon-bar-chart ">
+														<use xlink:href="img/svg/sprite.svg#bar-chart"></use>
+													</svg>
+												</a>
+												<a class="card__link" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</a>
+											</div>
+											<a class="card__slider card__slider--js swiper" href="#">
+												<div class="swiper-wrapper">
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-pagination"></div>
+											</a>
+											<div class="card__content">
+												<a class="card__title" href="#">Эмаль Condor ПФ-115 жёлтая 1,8 кг
+												</a>
+												<div class="card__inner-row row">
+													<div class="card__price-col col-auto">
+														<div class="card__price">500 ₽
+														</div>
+													</div>
+													<div class="card__old-price-col col-auto">
+														<div class="card__old-price">720 ₽
+														</div>
+													</div>
+													<div class="card__info-col col-auto ms-auto">
+														<div class="card__info-wrap">
+															<div class="card__info"><span class="on-order">под заказ</span>
+															</div>
+															<a class="card__add-to-cart-btn" href="#">
+																<svg class="icon icon-shopping-cart ">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg>
+																<svg class="icon icon-check-circle ">
+																	<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sExtraGoods__slide swiper-slide">
+										<div class="card">
+											<div class="card__label">Новинка
+											</div>
+											<div class="card__control-wrap">
+												<a class="card__link" href="#">
+													<svg class="icon icon-bar-chart ">
+														<use xlink:href="img/svg/sprite.svg#bar-chart"></use>
+													</svg>
+												</a>
+												<a class="card__link" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</a>
+											</div>
+											<a class="card__slider card__slider--js swiper" href="#">
+												<div class="swiper-wrapper">
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-pagination"></div>
+											</a>
+											<div class="card__content">
+												<a class="card__title" href="#">Эмаль Condor ПФ-115 жёлтая 1,8 кг
+												</a>
+												<div class="card__inner-row row">
+													<div class="card__price-col col-auto">
+														<div class="card__price">500 ₽
+														</div>
+													</div>
+													<div class="card__old-price-col col-auto">
+														<div class="card__old-price">720 ₽
+														</div>
+													</div>
+													<div class="card__info-col col-auto ms-auto">
+														<div class="card__info-wrap">
+															<div class="card__info">
+																<svg class="icon icon-check ">
+																	<use xlink:href="img/svg/sprite.svg#check"></use>
+																</svg><span>в наличии</span>
+															</div>
+															<a class="card__add-to-cart-btn" href="#">
+																<svg class="icon icon-shopping-cart ">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg>
+																<svg class="icon icon-check-circle ">
+																	<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sExtraGoods__slide swiper-slide">
+										<div class="card">
+											<div class="card__control-wrap">
+												<a class="card__link" href="#">
+													<svg class="icon icon-bar-chart ">
+														<use xlink:href="img/svg/sprite.svg#bar-chart"></use>
+													</svg>
+												</a>
+												<a class="card__link" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+												</a>
+											</div>
+											<a class="card__slider card__slider--js swiper" href="#">
+												<div class="swiper-wrapper">
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+													<div class="card__slide swiper-slide">
+														<div class="card__img-wrap">
+															<div class="img-wrap-center"><img src="img/product-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-pagination"></div>
+											</a>
+											<div class="card__content">
+												<a class="card__title" href="#">Эмаль Condor ПФ-115 жёлтая 1,8 кг
+												</a>
+												<div class="card__inner-row row">
+													<div class="card__price-col col-auto">
+														<div class="card__price">500 ₽
+														</div>
+													</div>
+													<div class="card__old-price-col col-auto">
+														<div class="card__old-price">720 ₽
+														</div>
+													</div>
+													<div class="card__info-col col-auto ms-auto">
+														<div class="card__info-wrap">
+															<div class="card__info">
+																<svg class="icon icon-check ">
+																	<use xlink:href="img/svg/sprite.svg#check"></use>
+																</svg><span>в наличии</span>
+															</div>
+															<a class="card__add-to-cart-btn" href="#">
+																<svg class="icon icon-shopping-cart ">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg>
+																<svg class="icon icon-check-circle ">
+																	<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sExtraGoods-->
+			</main>
+			<footer class="footer section">
+				<div class="container">
+					<div class="footer__row row">
+						<div class="col-md-5 col-lg-3 order-md-2">
+							<div class="footer__wrap">
+								<a class="footer__logo" href="/"><img src="img/svg/logo.svg" alt="" loading="lazy"/>
+								</a>
+								<div class="footer__tel-wrap">
+									<a class="footer__tel-link" href="tel:+74951203214">+7 495 120-32-14
+									</a>
+									<a class="footer__tel-link" href="tel:+74951203215">+7 495 120-32-15
+									</a>
+								</div>
+								<div class="soc">
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-instagram ">
+											<use xlink:href="img/svg/sprite.svg#instagram"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-vk ">
+											<use xlink:href="img/svg/sprite.svg#vk"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-fb ">
+											<use xlink:href="img/svg/sprite.svg#fb"></use>
+										</svg>
+									</a>
+								</div>
+								<a class="footer__privacy" href="#">Соглашение пользователя
+								</a>
+								<div class="footer__copyright">&laquo;Copyright &copy;&nbsp;Название <span></span>&raquo;
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7 col-lg-8 ms-auto order-md-1">
+							<div class="footer__nav">
+								<ul>
+									<li><a href="#">Малярные товары</a></li>
+									<li><a href="#">Электрооборудование</a></li>
+									<li><a href="#">Спецодежда</a></li>
+									<li><a href="#">Для дома и дачи</a></li>
+									<li><a href="#">Сезонное</a></li>
+									<li><a href="#">Инструмент</a></li>
+									<li><a href="#">О компании</a></li>
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#">Новинки</a></li>
+									<li><a href="#">Хиты сезона</a></li>
+									<li><a href="#">Распродажи</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h4">Заказать звонок
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Имя</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="" required="required"/><span class="form-wrap__input-title">Телефон</span><span class="region">+7</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea><span class="form-wrap__input-title">Комментарий</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn btn-dark" type="submit">Отправить
+						</button>
+						<div class="form-wrap__agreement">Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь <a href="#">на&nbsp;обработку ваших персональных данных</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-registry" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h4">Регистрация
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Фамилия</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Имя</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="" required="required"/><span class="form-wrap__input-title">Телефон</span><span class="region">+7</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="" required="required"/><span class="form-wrap__input-title">Электронная почта</span><span class="invalid-feedback">Пользователь с&nbsp;таким email уже существует</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="password" type="password" placeholder="" required="required"/><span class="form-wrap__input-title">Пароль</span><span class="invalid-feedback">Пароль не&nbsp;менее 6&nbsp;символов, <br> содержит заглавные буквы (A-Z)</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="password" type="password" placeholder="" required="required"/><span class="form-wrap__input-title">Подтвердите пароль</span><span class="invalid-feedback">Пароли не&nbsp;совпадают</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn btn-dark" type="submit">Регистрация
+						</button>
+						<div class="form-wrap__agreement">Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь <a href="#">на&nbsp;обработку ваших персональных данных</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-registry-->
+		<div id="modal-registry-invalid" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h4">Регистрация
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control is-valid" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Фамилия</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Имя</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="" required="required"/><span class="form-wrap__input-title">Телефон</span><span class="region">+7</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control is-invalid" name="email" type="email" placeholder="" required="required"/><span class="form-wrap__input-title">Электронная почта</span><span class="invalid-feedback">Пользователь с&nbsp;таким email уже существует</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control is-invalid" name="password" type="password" placeholder="" required="required"/><span class="form-wrap__input-title">Пароль</span><span class="invalid-feedback">Пароль не&nbsp;менее 6&nbsp;символов, <br> содержит заглавные буквы (A-Z)</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control is-invalid" name="password" type="password" placeholder="" required="required"/><span class="form-wrap__input-title">Подтвердите пароль</span><span class="invalid-feedback">Пароли не&nbsp;совпадают</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn btn-dark" type="submit">Регистрация
+						</button>
+						<div class="form-wrap__agreement">Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь <a href="#">на&nbsp;обработку ваших персональных данных</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-registry-invalid-->
+		<div id="modal-enter" style="display: none">
+			<div class="modal-win modal-win--enter modal-win--sm">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h4">Вход
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="" required="required"/><span class="form-wrap__input-title">Телефон</span><span class="region">+7</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn btn-dark" type="submit">Получить код
+						</button>
+						<div class="form-wrap__agreement">Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь <a href="#">на&nbsp;обработку ваших персональных данных</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-enter-->
+		<div id="modal-thanx" style="display: none">
+			<div class="modal-win modal-win--thanx modal-win--sm">
+				<div class="form-wrap">
+					<div class="text-center">
+						<div class="form-wrap__title h4">Ваша заявка принята
+						</div>
+						<p>Спасибо за&nbsp;заявку! Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайщее время</p>
+					</div>
+					<a class="form-wrap__btn btn btn-primary" href="/">На главную
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-enter-->
+		<div id="modal-code" style="display: none">
+			<div class="modal-win modal-win--code modal-win--sm">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h4">Введите код из&nbsp;СМС
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="password" type="password" placeholder="" required="required"/><span class="form-wrap__input-title">4 цифры</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__row row">
+							<div class="col">
+								<p>Код отправлен на номер:</p>
+							</div>
+							<div class="col-auto">
+								<div class="form-wrap__code-tel">*********5612
+								</div>
+							</div>
+							<div class="col-12 text-end"><a href="#">Изменить</a></div>
+						</div>
+						<div class="form-wrap__timer">Отправить код ещё раз можно через <span>00:59</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-code-->
+		<div id="modal-review" style="display: none">
+			<div class="modal-win modal-win--review">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h4">Оставить отзыв
+							</div>
+						</div>
+						<div class="form-wrap__row row">
+							<div class="col-sm-4">
+								<div class="form-wrap__input-title">Ваше имя
+								</div>
+							</div>
+							<div class="col-sm-8">
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+						<div class="form-wrap__row row">
+							<div class="col-sm-4">
+								<div class="form-wrap__input-title">Оставьте свой комментарий
+								</div>
+							</div>
+							<div class="col-sm-8">
+								<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваш комментарий"></textarea>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+						<div class="form-wrap__row form-wrap__row--footer row">
+							<div class="col">
+								<div class="form-wrap__agreement">Перед отправкой отзыва, пожалуйста, <br><a href="#">ознакомьтесь с&nbsp;правилами публикации.</a>
+								</div>
+							</div>
+							<div class="col-sm-auto">
+								<button class="form-wrap__btn btn btn-primary" type="submit">Опубликовать
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-review-->
+		<!-- end modals-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
+		<script src="libs/select2/js/i18n/ru.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
