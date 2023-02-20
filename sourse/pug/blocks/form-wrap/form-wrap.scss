@@ -137,6 +137,23 @@
 .parsley-errors-list {
 	color: red;
 }
+.form-wrap__input-wrap {
+	.dateChange {
+		position: absolute;
+		display: inline-block;
+		right: 0;
+		bottom: 3px;
+		font-weight: 400;
+		font-size: rem(12);
+		line-height: calc(20 / 12);
+		pointer-events: none;
+	}
+}
+::-webkit-calendar-picker-indicator {
+	background-image: none;
+	width: rem(60);
+	cursor: pointer;
+}
 
 //
 @include media-breakpoint-up(xl) {
