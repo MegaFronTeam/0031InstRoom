@@ -148,6 +148,12 @@
 		max-width: rem(660);
 	}
 	.deliveryTabs {
+		&__title {
+			font-weight: 500;
+			font-size: rem(16);
+			line-height: calc(20 / 16);
+			@include rfs(2rem, margin-bottom);
+		}
 		&__content {
 			@include rfs(2rem, margin-top);
 			ul {

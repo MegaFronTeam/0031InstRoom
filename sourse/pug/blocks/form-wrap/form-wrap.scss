@@ -28,9 +28,7 @@
 			letter-spacing: 0.05em;
 			padding-bottom: 3px;
 		}
-		&[readonly="readonly"] {
-			border-color: var(--bs-border-color);
-		}
+
 		&[type="tel"] {
 			padding-left: 1.25em;
 			& ~ {
@@ -43,6 +41,7 @@
 				}
 			}
 		}
+		
 	}
 	&__input-title {
 		font-size: rem(12);
@@ -52,7 +51,6 @@
 		display: inline-block;
 		margin-bottom: 3px;
 		order: -1;
-		
 	}
 	&__btn {
 		cursor: pointer;

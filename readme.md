@@ -14,8 +14,10 @@
 12. <https://megafronteam.github.io/0031InstRoom/public/11-contacts.html>
 13. <https://megafronteam.github.io/0031InstRoom/public/14-checkout.html>
 14. <https://megafronteam.github.io/0031InstRoom/public/14-checkout-2.html>
-15. <https://megafronteam.github.io/0031InstRoom/public/15-404.html>
-16. <https://megafronteam.github.io/0031InstRoom/public/00-modal.html>
+15. <https://megafronteam.github.io/0031InstRoom/public/14-checkout-2-1.html>
+16. <https://megafronteam.github.io/0031InstRoom/public/14-checkout-2-2.html>
+17. <https://megafronteam.github.io/0031InstRoom/public/15-404.html>
+18. <https://megafronteam.github.io/0031InstRoom/public/00-modal.html>
 
 #### Личный кабинет
 1. <https://megafronteam.github.io/0031InstRoom/public/12-cabinet.html>

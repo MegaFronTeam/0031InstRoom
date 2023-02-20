@@ -29,13 +29,13 @@ block pagecontent
 		+sCheckout()
 			+e.stages-row.row
 				+stagesLink(`Данные покупателя`)
-				+stagesLink(`Доставка`).active
-				+stagesLink(`Оплата`)
+				+stagesLink(`Доставка`)
+				+stagesLink(`Оплата`).active
 			.deliveryTabs
-				.deliveryTabs__title Выберите подходящий вам вариант доставки:
+				.deliveryTabs__title Выберите подходящий вам вариант оплаты:
 				.deliveryTabs__caption
-					.deliveryTabs__btn.active Доставка курьером
-					.deliveryTabs__btn Самовывоз
+					.deliveryTabs__btn.active Оплата при получении
+					.deliveryTabs__btn Оплата онлайн
 				.deliveryTabs__content.active
 					+form-wrap.--delivery
 						.h6 Введите адрес доставки
