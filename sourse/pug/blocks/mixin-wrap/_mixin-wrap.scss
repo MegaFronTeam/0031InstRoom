@@ -1142,6 +1142,7 @@
 			line-height: calc(20 / 16);
 			padding: rem(6);
 			color: $dark;
+			margin-bottom: 0;
 			&--selected {
 				color: $primary;
 				background-color: transparent;
