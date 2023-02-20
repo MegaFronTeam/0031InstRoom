@@ -27,6 +27,24 @@ block pagecontent
 	main
 		+page-head('Оформление заказа', 'Оформление заказа')
 		+sCheckout()
+			+e.stages-row.row
+				+stagesLink(`Данные покупателя`).active
+				+stagesLink(`Доставка`)
+				+stagesLink(`Оплата`)
+			+form-wrap
+				+e.row.row
+					.col-md-6
+						+input('', 'text', 'Фамилия')(required)
+					.col-md-6
+						+input('', 'text', 'Имя')(required)
+					.col-md-6
+						+input('', 'tel', 'Телефон')(required)
+							span.region +7
+					.col-md-6
+						+input('', 'email', 'Электронная почта')(required)
+					.col-md-6.mt-0
+						+e.BUTTON.btn.btn.btn-dark(type="submit") Далее
+					
 
 	+footer()
       

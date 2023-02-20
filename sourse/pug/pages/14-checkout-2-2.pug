@@ -1,0 +1,74 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sCheckout/_sCheckout.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null 
+
+block title
+	- let  title = 'Оформление заказа'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+topLine
+		+top-nav()
+	main
+		+page-head('Оформление заказа', 'Оформление заказа')
+		+sCheckout()
+			+e.stages-row.row
+				+stagesLink(`Данные покупателя`)
+				+stagesLink(`Доставка`).active
+				+stagesLink(`Оплата`)
+			.deliveryTabs
+				.deliveryTabs__title Выберите подходящий вам вариант доставки:
+				.deliveryTabs__caption
+					.deliveryTabs__btn.active Доставка курьером
+					.deliveryTabs__btn Самовывоз
+				.deliveryTabs__content.active
+					+form-wrap.--delivery
+						.h6 Введите адрес доставки
+						+e.row.row
+							.col-md-6
+								+e.wrap
+									+input('', 'text', 'Город')(required)
+									+input('', 'text', 'Улица')(required)
+							.col-md-6
+								+e.wrap
+									+input('', 'text', 'Корпус')
+									+e.row.row
+										.col-6
+											+input('', 'text', 'Дом')(required)
+										.col-6
+											+input('', 'text', 'Квартира')
+							.col-md-6
+								+input('', 'date', 'Ближайшая дата доставки')(value="2023-02-28")
+							.col-md-6
+								+input('заполните все поля для расчёта', 'text', 'Сумма доставки')(readonly).is-invalid
+							.col-md-6.mt-0
+								+e.BUTTON.btn.btn.btn-dark(type="submit") Далее
+					
+				.deliveryTabs__content
+					+form-wrap
+						+customSelect(`Выберите пункт доставки`, `Москва, ул Первомайская 15`, `Москва, ул Первомайская 16`, `Москва, ул Первомайская 17`, `Москва, ул Первомайская 18`, `Москва, ул Первомайская 19`, `Москва, ул Первомайская 20`, `Москва, ул Первомайская 18`, `Москва, ул Первомайская 19`, `Москва, ул Первомайская 20`)(data-placeholder=`Москва, ул Первомайская 14`)
+						ul
+							li Доставка бесплатно до&nbsp;пункта выдачи
+							li Дата доставки в&nbsp;пункт выдачи ориентировочно&nbsp;&mdash; 10&nbsp;февраля.
+							li Срок хранения заказа 14&nbsp;дней
+						+e.BUTTON.btn.btn.btn-dark(type="submit") Далее
+	+footer()
+      
+
+
+

@@ -2,29 +2,26 @@ mixin sCheckout(data)
 	// start sCheckout
 	+b.sCheckout.section#sCheckout&attributes(attributes)
 		.container
-			+e.wrapper
+			+e.main-wrap
 				+e.row.row
 					.col-lg-8
-						p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium repellat quos ad exercitationem dolorum quaerat explicabo fugiat corrupti omnis. Nisi deserunt accusamus, dolorum eos molestias ipsum rerum! Voluptatibus, asperiores quia!
-						block
+						+e.content-wrap
+							mixin stagesLink(t)
+								.col-sm-auto
+									+e.stages-link(href="#")&attributes(attributes)!= t
+							block
 					.col-lg-4
 						+e.total-wrap
-							table
-								thead
-									tr
-										td Наименование
-										td Описание
-										
-								tbody
-									tr
-										td Имя
-										td Характеристики
-									tr
-										td Имя #2
-										td Характеристики
-									tr
-										td Имя #3
-										td Характеристики
-
+							mixin totalItem(name, price)
+								+e.total-item&attributes(attributes)
+									.row
+										.col
+											span!= name
+										.col-auto
+											span.price!= price
+							+totalItem(`Итого`, `5&nbsp;700&nbsp;₽`).--head
+							+totalItem(`11&nbsp;товаров`, `4&nbsp;200&nbsp;₽`)
+							+totalItem(`Скидка`, `&mdash; 250&nbsp;₽`)
+							+totalItem(`Доставка`, `1&nbsp;500&nbsp;₽`)
 							
 	// end sCheckout

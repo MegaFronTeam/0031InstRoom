@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Prosto+One&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="">
+	<body>
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -657,7 +657,7 @@
 									<div class="sCheckout__content-wrap">
 										<div class="sCheckout__stages-row row">
 											<div class="col-sm-auto">
-												<a class="sCheckout__stages-link active" href="#">Данные покупателя
+												<a class="sCheckout__stages-link" href="#">Данные покупателя
 												</a>
 											</div>
 											<div class="col-sm-auto">
@@ -665,47 +665,44 @@
 												</a>
 											</div>
 											<div class="col-sm-auto">
-												<a class="sCheckout__stages-link" href="#">Оплата
+												<a class="sCheckout__stages-link active" href="#">Оплата
 												</a>
 											</div>
 										</div>
-										<div class="form-wrap">
-											<form>
-												<div class="form-wrap__row row">
-													<div class="col-md-6">
-														<div class="form-wrap__input-wrap form-group">
-															<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Фамилия</span>
+										<div class="deliveryTabs">
+											<div class="deliveryTabs__title">Выберите подходящий вам вариант оплаты:</div>
+											<div class="deliveryTabs__caption">
+												<div class="deliveryTabs__btn active">Оплата при получении</div>
+												<div class="deliveryTabs__btn">Оплата онлайн</div>
+											</div>
+											<div class="deliveryTabs__content active">
+												<div class="form-wrap">
+													<form>
+														<div class="form-wrap__payment">
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="payment" type="radio"/><span class="custom-input__text form-check-label">наличными</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="payment" type="radio" checked="checked"/><span class="custom-input__text form-check-label">банковской картой</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="payment" type="radio" disabled="disabled"/><span class="custom-input__text form-check-label">банковской картой</span>
 															</label>
 														</div>
-														<!-- +e.input-wrap-->
-													</div>
-													<div class="col-md-6">
-														<div class="form-wrap__input-wrap form-group">
-															<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Имя</span>
-															</label>
-														</div>
-														<!-- +e.input-wrap-->
-													</div>
-													<div class="col-md-6">
-														<div class="form-wrap__input-wrap form-group">
-															<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="" required="required"/><span class="form-wrap__input-title">Телефон</span><span class="region">+7</span>
-															</label>
-														</div>
-														<!-- +e.input-wrap-->
-													</div>
-													<div class="col-md-6">
-														<div class="form-wrap__input-wrap form-group">
-															<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="" required="required"/><span class="form-wrap__input-title">Электронная почта</span>
-															</label>
-														</div>
-														<!-- +e.input-wrap-->
-													</div>
-													<div class="col-md-6 mt-0">
-														<button class="form-wrap__btn btn btn-dark" type="submit">Далее
+														<button class="form-wrap__btn btn btn-primary" type="submit">Подтвердить заказ
 														</button>
-													</div>
+														<div class="form-wrap__agreement">Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь <a href="#">на&nbsp;обработку ваших персональных данных</a>
+														</div>
+													</form>
 												</div>
-											</form>
+											</div>
+											<div class="deliveryTabs__content">
+												<div class="form-wrap">
+													<form>
+														<button class="form-wrap__btn btn btn-primary mt-0" type="submit">Подтвердить заказ
+														</button>
+														<div class="form-wrap__agreement">Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь <a href="#">на&nbsp;обработку ваших персональных данных</a>
+														</div>
+													</form>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>

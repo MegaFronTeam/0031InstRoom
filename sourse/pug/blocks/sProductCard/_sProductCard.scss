@@ -229,6 +229,8 @@
 					font-size: rem(18);
 					line-height: calc(24 / 20);
 					color: $gray-300;
+					padding-bottom: 2px;
+					display: inline-block;
 					@include media-breakpoint-up(lg) {
 						font-size: rem(20);
 					}
@@ -441,6 +443,9 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin-top: rem(-10);
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x:#{rem(80)};
+		}
 	}
 	&__btn {
 		font-weight: 500;

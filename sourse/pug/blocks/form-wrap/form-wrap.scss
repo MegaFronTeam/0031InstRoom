@@ -17,6 +17,9 @@
 		// @extend .form-control;
 		//  outline: 0 !important;
 		resize: none;
+		&::placeholder {
+			color: $gray-500;
+		}
 		&[type="password"] {
 			padding-top: 0;
 			padding-bottom: 0;
@@ -25,6 +28,7 @@
 			letter-spacing: 0.05em;
 			padding-bottom: 3px;
 		}
+
 		&[type="tel"] {
 			padding-left: 1.25em;
 			& ~ {
@@ -46,7 +50,6 @@
 		display: inline-block;
 		margin-bottom: 3px;
 		order: -1;
-		
 	}
 	&__btn {
 		cursor: pointer;
@@ -63,12 +66,12 @@
 		border-top: none;
 		border-left: none;
 		border-right: none;
-		&:not(textarea) {
-			// &:focus,
-			&:valid {
-				--bs-border-color: #{$black};
-			}
-		}
+		// &:not(textarea) {
+		// 	// &:focus,
+		// 	&:valid {
+		// 		--bs-border-color: #{$black};
+		// 	}
+		// }
 	}
 	textarea.form-control {
 		min-height: rem(100);
@@ -78,6 +81,19 @@
 		margin-top: rem(9);
 		&:focus {
 			border-color: $black;
+		}
+	}
+	&__agreement {
+		margin-top: rem(12);
+		font-size: rem(12);
+		line-height: calc(16 / 12);
+		color: $gray-500;
+		font-weight: 500;
+		a {
+			color: inherit;
+			&:hover {
+				color: $black;
+			}
 		}
 	}
 }
@@ -92,6 +108,9 @@
 .was-validated .form-control:invalid {
 	padding-right: 0;
 	color: $danger;
+	&::placeholder {
+		color: $danger;
+	}
 	& + .form-wrap__input-title {
 		color: $form-feedback-invalid-color;
 	}

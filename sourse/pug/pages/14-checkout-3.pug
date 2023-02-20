@@ -1,0 +1,58 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sCheckout/_sCheckout.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null 
+
+block title
+	- let  title = 'Оформление заказа'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+topLine
+		+top-nav()
+	main
+		+page-head('Оформление заказа', 'Оформление заказа')
+		+sCheckout()
+			+e.stages-row.row
+				+stagesLink(`Данные покупателя`)
+				+stagesLink(`Доставка`)
+				+stagesLink(`Оплата`).active
+			.deliveryTabs
+				.deliveryTabs__title Выберите подходящий вам вариант оплаты:
+				.deliveryTabs__caption
+					.deliveryTabs__btn.active Оплата при получении
+					.deliveryTabs__btn Оплата онлайн
+				.deliveryTabs__content.active
+					+form-wrap
+						+e.payment
+							+in-c('radio', 'наличными', 'payment')
+							+in-c('radio', 'банковской картой', 'payment')(checked)
+							+in-c('radio', 'банковской картой', 'payment')(disabled)
+						+e.BUTTON.btn.btn.btn-primary(type="submit") Подтвердить заказ
+						+e.agreement Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь 
+							a(href="#") на&nbsp;обработку ваших персональных данных
+				.deliveryTabs__content
+					+form-wrap
+						+e.BUTTON.btn.btn.btn-primary.mt-0(type="submit") Подтвердить заказ
+						+e.agreement Нажимая на&nbsp;кнопку вы&nbsp;соглашаетесь 
+							a(href="#") на&nbsp;обработку ваших персональных данных
+					
+	+footer()
+      
+
+
+
