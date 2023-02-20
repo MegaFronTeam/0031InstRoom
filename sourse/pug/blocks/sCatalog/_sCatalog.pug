@@ -19,87 +19,83 @@ mixin sCatalog(title, isCatalog=true)
 				+e.title.h2!= title
 			.row
 				.col-lg-4.col-xl-3
-					+b.filter--js
-						+e.btn.btn.btn-dark Фильтр
-						+e.body
-							+e.close--js
-							if isCatalog
-								+catalogDropdown()
-							+ddGroup()
-								+ddGroupItem('Цена, ₽')
-									.range-slider
-										input.js-range-slider(type='text' value='')
-									.extra-controls
-										label
-											input.js-input-from(type='text' value='0')
-										| -
-										label
-											input.js-input-to(type='text' value='0')
-								+ddGroupItem('Бренд')
-									+e.custom-inputs-wrap
-										-for(let i = 0; i < 4; i++)
-											+in-c('checkbox', '', 'brend')
-												+e.text Asko
-													span.num 15
-											+in-c('checkbox', '', 'brend')
-												+e.text Alpicool
-													span.num 12
-											+in-c('checkbox', '', 'brend')
-												+e.text Bertazzoni
-													span.num 8
-											+in-c('checkbox', '', 'brend')
-												+e.text Cold Vine
-													span.num 42
-											+in-c('checkbox', '', 'brend')
-												+e.text Dunavox
-													span.num 74
-											+in-c('checkbox', '', 'brend')
-												+e.text Neff
-													span.num 2
-											+in-c('checkbox', '', 'brend')
-												+e.text Кнауф
-													span.num 150
-											+in-c('checkbox', '', 'brend')
-												+e.text Новолукомль
-													span.num 14
-								+ddGroupItem('Страна производитель')
-									+e.custom-inputs-wrap
-										-for(let i = 0; i < 4; i++)
-											+in-c('checkbox', '', 'city')
-												+e.text Англия
-													span.num 15
-											+in-c('checkbox', '', 'city')
-												+e.text Болгария
-													span.num 12
-											+in-c('checkbox', '', 'city')
-												+e.text Венесуэлла
-													span.num 8
-											+in-c('checkbox', '', 'city')
-												+e.text Испания
-													span.num 42
-											+in-c('checkbox', '', 'city')
-												+e.text Италия
-													span.num 42
-											+in-c('checkbox', '', 'city')
-												+e.text Португалия
-													span.num 42
-											+in-c('checkbox', '', 'city')
-												+e.text Россия
-													span.num 74
-											+in-c('checkbox', '', 'city')
-												+e.text Словения
-													span.num 2
-								+ddGroupItem('Цвет')
-									+e.custom-inputs-wrap
-										-for(let i = 0; i < 4; i++)
-											+in-c('checkbox', '', 'color')
-												+e.text Цвет
-													span.num 15
-								+ddGroupItem('Способ доставки')
-									+e.custom-inputs-wrap
-										+in-c('radio', 'Самовывоз', 'type')
-										+in-c('radio', 'Доставка курьером', 'type')
-										+in-c('radio', 'Любой', 'type')
+					+filter()
+						+catalogDropdown()
+						+ddGroup()
+							+ddGroupItem('Цена, ₽')
+								.range-slider
+									input.js-range-slider(type='text' value='')
+								.extra-controls
+									label
+										input.js-input-from(type='text' value='0')
+									| -
+									label
+										input.js-input-to(type='text' value='0')
+							+ddGroupItem('Бренд')
+								+e.custom-inputs-wrap
+									-for(let i = 0; i < 4; i++)
+										+in-c('checkbox', '', 'brend')
+											+e.text Asko
+												span.num 15
+										+in-c('checkbox', '', 'brend')
+											+e.text Alpicool
+												span.num 12
+										+in-c('checkbox', '', 'brend')
+											+e.text Bertazzoni
+												span.num 8
+										+in-c('checkbox', '', 'brend')
+											+e.text Cold Vine
+												span.num 42
+										+in-c('checkbox', '', 'brend')
+											+e.text Dunavox
+												span.num 74
+										+in-c('checkbox', '', 'brend')
+											+e.text Neff
+												span.num 2
+										+in-c('checkbox', '', 'brend')
+											+e.text Кнауф
+												span.num 150
+										+in-c('checkbox', '', 'brend')
+											+e.text Новолукомль
+												span.num 14
+							+ddGroupItem('Страна производитель')
+								+e.custom-inputs-wrap
+									-for(let i = 0; i < 4; i++)
+										+in-c('checkbox', '', 'city')
+											+e.text Англия
+												span.num 15
+										+in-c('checkbox', '', 'city')
+											+e.text Болгария
+												span.num 12
+										+in-c('checkbox', '', 'city')
+											+e.text Венесуэлла
+												span.num 8
+										+in-c('checkbox', '', 'city')
+											+e.text Испания
+												span.num 42
+										+in-c('checkbox', '', 'city')
+											+e.text Италия
+												span.num 42
+										+in-c('checkbox', '', 'city')
+											+e.text Португалия
+												span.num 42
+										+in-c('checkbox', '', 'city')
+											+e.text Россия
+												span.num 74
+										+in-c('checkbox', '', 'city')
+											+e.text Словения
+												span.num 2
+							+ddGroupItem('Цвет')
+								+e.custom-inputs-wrap
+									-for(let i = 0; i < 4; i++)
+										+in-c('checkbox', '', 'color')
+											+e.text Цвет
+												span.num 15
+							+ddGroupItem('Способ доставки')
+								+e.custom-inputs-wrap
+									+in-c('radio', 'Самовывоз', 'type')
+									+in-c('radio', 'Доставка курьером', 'type')
+									+in-c('radio', 'Любой', 'type')
 					+news-item()
 				.col-lg-8.col-xl-9
 					+e.head-row.row

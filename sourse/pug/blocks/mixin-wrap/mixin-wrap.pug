@@ -126,3 +126,10 @@ mixin news-item()
 				+newsItem(1, 'Новое поступление', 'Успей покататься')
 			.col-sm-6.col-lg-12
 				+newsItem(2, 'Печи со скидкой', 'до 30%')
+
+mixin filter()
+	+b.filter--js
+		+e.btn.btn.btn-dark Фильтр
+		+e.body
+			+e.close--js
+			block
