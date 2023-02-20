@@ -3,30 +3,124 @@
 	--sPT: 0;
 	--sPB: 0;
 	// --sTPB: #{rem()};
-	&__row{
+	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
-
 	}
-	.section-title{
-		
+	.section-title {
 	}
-	&__col{
-
+	&__col {
 	}
-	&__item{
-
+	&__item {
 	}
-	&__wrapper {
+	&__main-wrap {
 		background-color: $white;
 		border-radius: 5px 5px 0px 0px;
+		padding-bottom: rem(40);
+	}
+	&__content-wrap {
+		padding: rem(40);
+		height: 100%;
+	}
+	&__stages-row {
+		--bs-gutter-x: #{rem(60)};
+		--bs-gutter-y: #{rem(6)};
+		@include rfs(2rem, margin-bottom);
+		@include media-breakpoint-only(sm) {
+			--bs-gutter-x: #{rem(30)};
+		}
 	}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	&__stages-link {
+		@include mt;
+		font-family: $font-family-monospace;
+		width: auto;
+		border-bottom: 1px solid transparent;
+		font-weight: 400;
+		font-size: rem(20);
+		line-height: calc(24 / 20);
+		color: $gray-300;
+		padding-bottom: 2px;
+		display: inline-block;
+		// @include media-breakpoint-up(lg) {
+		// 	font-size: rem(20);
+		// }
+		@include media-breakpoint-only(sm) {
+			font-size: rem(18);
+		}
+		&.active {
+			border-color: $primary;
+			color: $black;
+		}
+	}
+
+	a.sCheckout__stages-link {
+		&:hover {
+			border-color: $primary;
+			color: $black;
+		}
+	}
+
+	&__total-wrap {
+		background-color: $dark;
+		border-radius: 5px;
+		padding: 9%;
+		@include media-breakpoint-up(sm) {
+			padding: rem(60) rem(70);
+		}
+		@include media-breakpoint-up(lg) {
+			padding: 12%;
+		}
+		// @include media-breakpoint-up(xl) {
+		// 	padding: rem(50);
+		// }
+		@include media-breakpoint-up(xxl) {
+			padding: rem(60) rem(70);
+		}
+		.row {
+			--bs-gutter-y: #{rem(6)};
+		}
+	}
+
+	&__total-item {
+		font-weight: 500;
+		font-size: rem(16);
+		line-height: calc(20 / 16);
+		color: $white;
+		margin-bottom: rem(16);
+		&:last-child {
+			margin-bottom: 0;
+		}
+		span {
+			display: inline-block;
+		}
+		.price {
+			min-width: rem(85);
+		}
+	}
+	&__total-item--head {
+		font-weight: 400;
+		font-size: rem(20);
+		line-height: calc(24 / 20);
+		color: $white;
+		font-family: $font-family-monospace;
+		.price {
+			color: $primary;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sCheckout

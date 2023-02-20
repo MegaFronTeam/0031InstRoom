@@ -27,6 +27,14 @@ block pagecontent
 	main
 		+page-head('Оформление заказа', 'Оформление заказа')
 		+sCheckout()
+			+e.stages-row.row
+				+stagesLink(`Данные покупателя`)
+				+stagesLink(`Доставка`).active
+				+stagesLink(`Оплата`)
+			+form-wrap 
+				+e.row.row
+					.col-6
+						
 
 	+footer()
       

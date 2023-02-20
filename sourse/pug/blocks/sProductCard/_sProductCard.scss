@@ -229,6 +229,8 @@
 					font-size: rem(18);
 					line-height: calc(24 / 20);
 					color: $gray-300;
+					padding-bottom: 2px;
+					display: inline-block;
 					@include media-breakpoint-up(lg) {
 						font-size: rem(20);
 					}
