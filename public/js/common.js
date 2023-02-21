@@ -748,6 +748,21 @@ function eventHandler() {
 
   compareCardResize();
 
+	let compareDropDowns = document.querySelectorAll('.sCompare__c-title');
+	if(compareDropDowns) {
+		for (let i = 0; i < compareDropDowns.length; i++) {
+			compareDropDowns[i].addEventListener('click', () => {
+				compareDropDowns[i].classList.toggle('active');
+				compareDropDowns[i].nextElementSibling.classList.toggle('active')
+				$(compareDropDowns[i].nextElementSibling).slideToggle();
+				let subSliders = document.querySelectorAll('.sCompare-sub-slider');
+				subSliders.forEach(subSlider => {
+					$(subSlider.querySelectorAll('.sCompare__slider-chars')[i]).children().slideToggle();
+				})
+			})
+		}
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -13,8 +13,8 @@ mixin sCompare(data)
 				+e.head-slider--js.swiper
 					.swiper-wrapper
 						mixin slide(t)
-							+e.slide.swiper-slide(href='#')!=t
-						+slide('Малярные товары')
+							+e.slide.swiper-slide&attributes(attributes)(href='#')!=t
+						+slide('Малярные товары').active
 						+slide('Электрооборудование')
 						+slide('Кисти')
 						+slide('Тачки садовые')

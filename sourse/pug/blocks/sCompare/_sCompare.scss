@@ -182,9 +182,9 @@
 			@include media-breakpoint-up(xl){
 				width: 25%;
 			}
-			@include media-breakpoint-up(base){
-				width: calc(#{rem(301)} +  var(--bs-gutter-x));
-			}
+			// @include media-breakpoint-up(base){
+			// 	width: calc(#{rem(301)} +  var(--bs-gutter-x));
+			// }
 		}
 		&--slider{
 			width: 100%;
@@ -202,13 +202,44 @@
 	&__c-title{
 		// font-size: rem(24);
 		// line-height: 1;
-		@include media-breakpoint-up(base){
-			// font-size: rem(25);
-			// line-height: calc(34/25);
-		}
+		position: relative;
 		color: #fff;
 		height: var(--c-title-h);
 		margin-bottom: var(--c-title-mb);
+		z-index: 12;
+		cursor: pointer;
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: rem(24);
+			height: rem(24);
+			right: rem(15);
+			top: 0;
+			background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9L12 15L18 9' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			@include media-breakpoint-up(sm) {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+		@include media-breakpoint-up(sm){
+			width: calc(100vw - ((100vw - 540px)));
+		}
+		@include media-breakpoint-up(md){
+			width: calc(100vw - ((100vw - 720px)));
+		}
+		@include media-breakpoint-up(lg){
+			width: calc(100vw - ((100vw - 960px)));
+		}
+		@include media-breakpoint-up(xl){
+			width: calc(100vw - ((100vw - 1140px)));
+		}
+		@include media-breakpoint-up(xxl){
+			width: calc(100vw - ((100vw - 1318px)));
+		}
 	}
 	&__c-items{
 		font-size: var(--c-item-fs);
