@@ -574,6 +574,7 @@
 		// padding-right: rem(12);
 		max-width: rem(230);
 		margin-bottom: auto;
+		flex-grow: 1;
 		&:not(:hover) {
 			color: #000;
 		}
