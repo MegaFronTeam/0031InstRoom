@@ -69,6 +69,7 @@
 	&__slide {
 		width: calc((100% / var(--sliderCount)) - var(--sliderGutter));
 		margin-right: calc(var(--sliderGutter) + 1px);
+		height: auto;
 	}
 	&__footer-wrap {
 		display: flex;

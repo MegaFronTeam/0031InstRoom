@@ -36,6 +36,9 @@
 		}
 		&__head-slider {
 			margin-right: rem(-2);
+			@include media-breakpoint-down(md) {
+				overflow: visible
+			}
 		}
 		&__slide {
 			@include mt;

@@ -192,6 +192,9 @@
 		&__sum {
 			font-weight: 500;
 		}
+		&__text-col {
+			max-width: rem(351);
+		}
 	}
 	&__wrap {
 		display: flex;

@@ -55,8 +55,10 @@
 			&:nth-child(1) {
 				border-top: none;
 				padding-left: rem(20);
+				padding-right: rem(35);
 				@include media-breakpoint-up(lg) {
 					padding-left: rem(45);
+					padding-right: 0;
 				}
 			}
 			&:nth-child(4) {

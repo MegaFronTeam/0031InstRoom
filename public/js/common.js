@@ -394,15 +394,18 @@ function eventHandler() {
 	});
 
 
-	const swiperCompare = new Swiper('.section-title__head-slider--js', {
-		slidesPerView: 'auto',
-		freeMode: true,
-		watchOverflow: true,
-		navigation: {
-			nextEl: document.querySelector('.section-title').querySelector('.swiper-button-next'),
-			prevEl: document.querySelector('.section-title').querySelector('.swiper-button-prev'),
-		},
-	});
+	let compareBlock = document.querySelector('.sCompare');
+	if(compareBlock) {
+		const swiperCompare = new Swiper('.section-title__head-slider--js', {
+			slidesPerView: 'auto',
+			freeMode: true,
+			watchOverflow: true,
+			navigation: {
+				nextEl: document.querySelector('.section-title').querySelector('.swiper-button-next'),
+				prevEl: document.querySelector('.section-title').querySelector('.swiper-button-prev'),
+			},
+		});
+	}
 
 	let defaultSliders = document.querySelectorAll('.default-slider-js');
 	if (defaultSliders) {
@@ -477,14 +480,16 @@ function eventHandler() {
 	// modal window
 
 	let catalogMainBtns = document.querySelectorAll('.catalog-toggle--js');
-	let catalogMenu = document.querySelector('.catalog-menu--js');
-	if (catalogMenu) {
+	let catalogMenus = document.querySelectorAll('.catalog-menu--js');
+	if (catalogMenus) {
 		catalogMainBtns.forEach(catalogMainBtn => {
 			catalogMainBtn.addEventListener('click', function (event) {
 				catalogMainBtns.forEach(catalogMainBtn => {
 					catalogMainBtn.classList.toggle('active');
 				})
-				catalogMenu.classList.toggle('active');
+				catalogMenus.forEach(catalogMenu => {
+					catalogMenu.classList.toggle('active');
+				})
 			});
 		});
 
@@ -495,14 +500,18 @@ function eventHandler() {
 				catalogMainBtns.forEach(catalogMainBtn => {
 					catalogMainBtn.classList.remove('active');
 				});
-				catalogMenu.classList.remove('active');
+				catalogMenus.forEach(catalogMenu => {
+					catalogMenu.classList.remove('active');
+				})
 			}
 			window.addEventListener('resize', () => {
 				if (window.matchMedia("(max-width: 992px)").matches) {
 					catalogMainBtns.forEach(catalogMainBtn => {
 						catalogMainBtn.classList.remove('active');
 					});
-					catalogMenu.classList.remove('active');
+					catalogMenus.forEach(catalogMenu => {
+						catalogMenu.classList.remove('active');
+					})
 				};
 			}, { passive: true });
 		})

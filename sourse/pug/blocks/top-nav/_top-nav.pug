@@ -30,15 +30,16 @@ mixin top-nav()
 				.col-auto.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
-							+e.head-wrap.d-lg-none
-								.row
-									.col
-										+b.catalog-toggle--js.d-lg-none
-											+e.line-wrap
-												span
-											| Каталог товаров
-									.col-auto
-										+menu-toggle()
+							//- +e.head-wrap.d-lg-none
+								//- .row
+								//- 	.col
+								//- 		+b.catalog-toggle--js.d-lg-none
+								//- 			+e.line-wrap
+								//- 				span
+								//- 			| Каталог товаров
+								//- 	.col-auto
+							+catalogDropdown.d-lg-none
+							+menu-toggle()
 							+mnu()
 							+b.topLine.d-lg-none
 								+e.bottom-wrap
@@ -82,14 +83,14 @@ mixin top-nav()
 								+item()
 							+e.search-btn.btn.btn-dark(href='#') Показать все
 							+e.nothing-found Нет результатов
-		+catalogDropdown
+		+catalogDropdown.d-none.d-lg-block
 			+b.catalog-toggle--js
 				+e.line-wrap
 					span
 	// end top-nav
 
 mixin catalogDropdown()
-	+b.catalog-menu--js
+	+b.catalog-menu--js&attributes(attributes)
 		block
 		+e.container.container-fluid.container-lg
 			mixin item(title)

@@ -40,6 +40,9 @@
 	&__slide {
 		width: calc((100% / var(--sliderCount)) - var(--sliderGutter));
 		margin-right: calc(var(--sliderGutter) + 1px);
+		@include media-breakpoint-down(sm) {
+			width: calc((100% / var(--sliderCount)) - var(--sliderGutter) - rem(8));
+		}
 	}
 	&__img-wrap {
 		@include block(200, 78);

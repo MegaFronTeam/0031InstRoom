@@ -148,17 +148,24 @@
 		border-radius: 0px 0px 5px 5px;
 	}
 	.catalog-menu {
-		@include media-breakpoint-down(lg) {
-			transform: translateX(-100%);
-			&.active {
-				transform: translateX(0);
-			}
-		}
+		// @include media-breakpoint-down(lg) {
+		// 	transform: translateX(-100%);
+		// 	&.active {
+		// 		transform: translateX(0);
+		// 	}
+		// }
 		&__content {
 			@include media-breakpoint-down(lg) {
-				transform: translateX(-100%);
+				transform: translateX(100vw);
 				&.active {
 					transform: translateX(0);
+				}
+			}
+		}
+		&__wrap {
+			ul {
+				li {
+					border: none;
 				}
 			}
 		}

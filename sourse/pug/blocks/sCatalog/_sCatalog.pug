@@ -113,7 +113,7 @@ mixin sCatalog(title, isCatalog=true)
 								//- 			li: a(href="#") Сначала новые
 								//- 			li: a(href="#") От А до Я
 								//- 			li: a(href="#") От Я до А
-						.col-sm-auto
+						.col-sm-auto.d-none.d-md-block
 							+e.view
 								| Вид:
 								+e.view-link.active(href='#'): +icon('grid')

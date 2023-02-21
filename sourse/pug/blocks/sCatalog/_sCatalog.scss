@@ -12,7 +12,7 @@
 			padding-bottom: rem(450);
 		}
 		@include media-breakpoint-down(lg) {
-			padding-bottom: rem(220);
+			padding-bottom: rem(230);
 		}
 	}
 	&__row{
@@ -24,7 +24,10 @@
 		--bs-gutter-x: #{rem(20)};
 		--bs-gutter-y: #{rem(20)};
 
-		margin-bottom: rem(32);
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(32);
+		}
 		&--in-row {
 			@include media-breakpoint-up(md) {
 				--bs-gutter-y: #{rem(2)};

@@ -450,6 +450,7 @@
 		position: absolute;
 		top: 11px;
 		left: 15px;
+		z-index: 12;
 		cursor: pointer;
 		.icon {
 			font-size: rem(24);
@@ -894,7 +895,9 @@
 	background-color: $gray-900;
 	margin-bottom: 0;
 	&__item {
-		border-bottom: 1px solid $gray-800;
+		&:not(:last-child) {
+			border-bottom: 1px solid $gray-800;
+		}
 		&.active {
 			.dd-group__head {
 				&:after {
@@ -963,8 +966,8 @@
 			background-color: $gray-900;
 			// padding-top: rem(44);
 			will-change: transform;
-			overflow-x: hidden;
-			overflow-y: auto;
+			// overflow-x: hidden;
+			// overflow-y: auto;
 			// padding: calc(env(safe-area-inset-top, 0px) + #{rem(44)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
 			&.active {
 				transform: translateX(0);
@@ -976,7 +979,12 @@
 				@include media-breakpoint-down(lg) {
 					overflow: hidden;
 					.catalog-menu {
-						position: relative;
+						// position: fixed;
+						// &__iner-wrap-adss {
+						// 	position: fixed;
+						// 	top: 0;
+						// 	left: 0;
+						// }
 					}
 				}
 			}
@@ -989,16 +997,18 @@
 			}
 		}
 	}
-	// &__body-wrap {
-	// 	// padding: calc(env(safe-area-inset-top, 0px) + #{rem(44)}) 0 calc(env(safe-area-inset-top, 0px) + #{rem(20)});
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	height: 100vh;
-	// 	background-color: $gray-900;
-	// 	overflow-x: hidden;
-	// 	overflow-y: auto;
-	// 	-webkit-overflow-scrolling: touch;
-	// }
+	&__body-inner {
+		@include media-breakpoint-down(lg) {
+			padding: calc(env(safe-area-inset-top, 0px) + #{rem(20)}) 0 calc(env(safe-area-inset-top, 0px) + #{rem(20)});
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+			background-color: $gray-900;
+			overflow-x: hidden;
+			overflow-y: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+	}
 	&__wrap {
 		&:before {
 			pointer-events: none;

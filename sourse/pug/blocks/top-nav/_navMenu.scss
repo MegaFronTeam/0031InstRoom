@@ -136,6 +136,9 @@
 			color: #FFF;
 			// top: rem(10);
 			z-index: 9999; 
+			position: absolute;
+			top: 12px;
+			right: 12px;
 			span:after,
 			span:before {
 				--color: #ffffff;
@@ -144,7 +147,7 @@
 		&__inner {
 			display: flex;
     	flex-direction: column;
-			padding: calc(env(safe-area-inset-top, 0px) + #{rem(20)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
+			padding: calc(env(safe-area-inset-top, 0px) + #{rem(40)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
 			overflow-x: hidden;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
@@ -205,6 +208,29 @@
 			margin-right: auto;
 			&__bottom-wrap {
 				margin-bottom: rem(20);
+			}
+		}
+		.catalog-menu {
+			position: static;
+			transform: unset !important;
+			padding: 0;
+			&__container {
+				height: auto;
+			}
+			&__item {
+				background-color: $gray-900;
+				border-bottom-color: $gray-800;
+				color: #fff;
+				&:hover {
+					background-color: $primary;
+				}
+			}
+			&__content {
+				li {
+					a {
+						padding: 0;
+					}
+				}
 			}
 		}
 	}
