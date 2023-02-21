@@ -25,12 +25,36 @@
 			padding: rem(40);
 		}
 	}
-	&__stages-row {
-		--bs-gutter-x: #{rem(60)};
-		--bs-gutter-y: #{rem(6)};
+	// &__stages-row {
+	// --bs-gutter-x: #{rem(60)};
+	// --bs-gutter-y: #{rem(6)};
+	// @include rfs(2rem, margin-bottom);
+	// @include media-breakpoint-only(sm) {
+	// 	--bs-gutter-x: #{rem(30)};
+	// }
+	// }
+
+	.tabs-swiper {
 		@include rfs(2rem, margin-bottom);
-		@include media-breakpoint-only(sm) {
-			--bs-gutter-x: #{rem(30)};
+		margin-left: rem(-20);
+		margin-right: rem(-20);
+		padding-left: rem(20);
+		padding-right: rem(20);
+		@include media-breakpoint-up(md) {
+			margin-left: rem(-40);
+			margin-right: rem(-40);
+			padding-left: rem(40);
+			padding-right: rem(40);
+		}
+		.sCheckout__stages-row {
+			@include roww(20px, m);
+			width: calc(100% + var(--bs-gutter-x));
+			@include media-breakpoint-up(sm) {
+				--bs-gutter-x: #{rem(30)};
+			}
+			@include media-breakpoint-up(xl) {
+				--bs-gutter-x: #{rem(60)};
+			}
 		}
 	}
 
@@ -40,16 +64,17 @@
 		width: auto;
 		border-bottom: 1px solid transparent;
 		font-weight: 400;
-		font-size: rem(20);
 		line-height: calc(24 / 20);
 		color: $gray-300;
 		padding-bottom: 2px;
 		display: inline-block;
+		width: auto;
+		font-size: rem(18);
 		// @include media-breakpoint-up(lg) {
-		// 	font-size: rem(20);
-		// }
-		@include media-breakpoint-only(sm) {
-			font-size: rem(18);
+			// 	font-size: rem(20);
+			// }
+			@include media-breakpoint-up(md) {
+				font-size: rem(20);
 		}
 		&.active {
 			border-color: $primary;
