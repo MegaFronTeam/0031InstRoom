@@ -27,10 +27,11 @@ block pagecontent
 	main
 		+page-head('Оформление заказа', 'Оформление заказа')
 		+sCheckout()
-			+e.stages-row.row
-				+stagesLink(`Данные покупателя`).active
-				+stagesLink(`Доставка`)
-				+stagesLink(`Оплата`)
+			.swiper.tabs-swiper
+				+e.stages-row.swiper-wrapper
+					+e.stages-link.swiper-slide(href="#").active Данные покупателя
+					+e.stages-link.swiper-slide(href="#") Доставка
+					+e.stages-link.swiper-slide(href="#") Оплата
 			+form-wrap
 				+e.row.row
 					.col-md-6

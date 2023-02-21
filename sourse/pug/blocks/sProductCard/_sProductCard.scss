@@ -88,17 +88,17 @@
 		}
 	}
 	&__thumb-slider {
-		padding: rem(8) rem(8) rem(25);
-		margin: rem(-8) rem(-8) rem(-25);
+		padding: rem(8) rem(10) rem(15);
+		margin: rem(-8) rem(-10) rem(-15);
 		// overflow: visible;
 		.sProductCard__slide {
 			background-color: $white;
-			box-shadow: 0 rem(15) rem(20) rgba(0, 0, 0, 0.05);
+			box-shadow: 0 rem(8) rem(10) rgba(0, 0, 0, 0.05);
 			border-radius: 5px;
 			cursor: pointer;
 			&:hover,
 			&.swiper-slide-thumb-active {
-				box-shadow: 0px rem(5) rem(20) rgba(240, 90, 0, 0.2);
+				box-shadow: 0px rem(8) rem(10) rgba(240, 90, 0, 0.2);
 			}
 		}
 		.sProductCard__img-wrap {

@@ -27,10 +27,11 @@ block pagecontent
 	main
 		+page-head('Оформление заказа', 'Оформление заказа')
 		+sCheckout()
-			+e.stages-row.row
-				+stagesLink(`Данные покупателя`)
-				+stagesLink(`Доставка`).active
-				+stagesLink(`Оплата`)
+			.swiper.tabs-swiper
+				+e.stages-row.swiper-wrapper
+					+e.stages-link.swiper-slide(href="#") Данные покупателя
+					+e.stages-link.swiper-slide(href="#").active Доставка
+					+e.stages-link.swiper-slide(href="#") Оплата
 			.deliveryTabs
 				.deliveryTabs__title Выберите подходящий вам вариант доставки:
 				.deliveryTabs__caption
