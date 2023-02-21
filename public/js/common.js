@@ -757,7 +757,9 @@ function eventHandler() {
 				$(compareDropDowns[i].nextElementSibling).slideToggle();
 				let subSliders = document.querySelectorAll('.sCompare-sub-slider');
 				subSliders.forEach(subSlider => {
-					$(subSlider.querySelectorAll('.sCompare__slider-chars')[i]).children().slideToggle();
+					$(subSlider.querySelectorAll('.sCompare__slider-chars')[i]).slideToggle(function() {
+					});
+					subSlider.querySelectorAll('.sCompare__slider-chars')[i].classList.toggle('hidden');
 				})
 			})
 		}

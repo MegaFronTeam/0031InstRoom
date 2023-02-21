@@ -209,6 +209,7 @@
 		z-index: 12;
 		cursor: pointer;
 		&:after {
+			@include mt;
 			content: '';
 			position: absolute;
 			display: block;
@@ -223,6 +224,14 @@
 			@include media-breakpoint-up(sm) {
 				top: 50%;
 				transform: translateY(-50%);
+			}
+		}
+		&.active {
+			&:after {
+				transform: rotate(180deg);
+				@include media-breakpoint-up(sm) {
+					transform: translateY(-50%) rotate(180deg);
+				}
 			}
 		}
 		@include media-breakpoint-up(sm){
@@ -358,10 +367,14 @@
 
 	//
 	&__slider-chars{
+		// @include mt;
 		// margin-bottom: calc(var(--c-items-mb) + var(--c-title-h) + var(--c-title-mb) - var(--c-item-h) - var(--slide-char-pt));
 		margin-bottom: rem(52.800);
 		&:last-of-type {
 			margin-bottom: 0;
+		}
+		&.hidden ~ & {
+			margin-top: rem(60);
 		}
 		@include media-breakpoint-up(lg){
 			margin-bottom: calc(var(--c-items-mb) + var(--c-title-h) + var(--c-title-mb));
