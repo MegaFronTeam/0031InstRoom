@@ -4,14 +4,34 @@ mixin sCompare(data)
 		.container
 			+breadcrumb('Главная', 'Сравнение')
 			+b.section-title
-				h1 Сравнение товаров
+				.row
+					.col-sm
+						h1 Сравнение товаров
+					.col-sm-auto
+						+e.arrow-wrap
+							+arrow
+				+e.head-slider--js.swiper
+					.swiper-wrapper
+						mixin slide(t)
+							+e.slide.swiper-slide(href='#')!=t
+						+slide('Малярные товары')
+						+slide('Электрооборудование')
+						+slide('Кисти')
+						+slide('Тачки садовые')
+						+slide('Грунт')
+						+slide('Насосы')
+						+slide('Поликарбон')
+						+slide('Грунт')
+						+slide('Насосы')
+						+slide('Поликарбон')
 			+e.main-row.row
 				+e.col--chars.col-auto
+					+e.show-difference(href='#') показать только отличия
 					+e.c-title.h5 Основные характеристики
 					+e.c-items
 						+e.c-item.c-item-js Тип
 						+e.c-item.c-item-js Наименование
-						+e.c-item.c-item-js Назначение
+						+e.c-item--forWhat.c-item-js Назначение
 						+e.c-item.c-item-js Тип работ
 						+e.c-item.c-item-js Основа
 						+e.c-item.c-item-js Разбавитель
@@ -20,21 +40,23 @@ mixin sCompare(data)
 						+e.c-item.c-item-js Вес
 						+e.c-item.c-item-js Расход
 					+e.c-title.h5 Дополнительные<br>характеристики
-						//- +e.c-item.c-item-js Тип
-						//- +e.c-item.c-item-js Наименование
-						//- +e.c-item.c-item-js Назначение
-						//- +e.c-item.c-item-js Тип работ
-						//- +e.c-item.c-item-js Основа
-						//- +e.c-item.c-item-js Разбавитель
-						//- +e.c-item.c-item-js Цвет
-						//- +e.c-item.c-item-js Степень глянца
-						//- +e.c-item.c-item-js Вес
-						//- +e.c-item.c-item-js Расход
+					+e.c-items
+						+e.c-item.c-item-js Тип
+						+e.c-item.c-item-js Наименование
+						+e.c-item--forWhat.c-item-js Назначение
+						+e.c-item.c-item-js Тип работ
+						+e.c-item.c-item-js Основа
+						+e.c-item.c-item-js Разбавитель
+						+e.c-item.c-item-js Цвет
+						+e.c-item.c-item-js Степень глянца
+						+e.c-item.c-item-js Вес
+						+e.c-item.c-item-js Расход
 				+e.col--slider.col
 					+e.main-slider
 						.swiper.sCompare-main-slider-js
 							.swiper-wrapper
-								-for(var i=1; i <= 7; i++)
+								+sCompareMainSlide({customClass: 'active'})
+								-for(var i=1; i <= 6; i++)
 									+sCompareMainSlide({})
 	// end sCompare
 
@@ -48,22 +70,42 @@ mixin sCompareMainSlide(data)
 					price: '54 999 руб.',
 					title: 'Вытяжка 60 см Bosch Serie | 4 DWK65AD60R',
 					slideNum: '1',
+					customClass: data.customClass
 				})
 
 mixin sCompareSubSlide(data)
 	+b.compare-card--js
 		+e.content
+			+e.close
 			+e.img(href="#")
 				img(loading="lazy" src=`img/search-product-img.png` alt="")
 			+e.title(href="#")=data.title
+			.row
+				.col
+					+e.price 500 ₽
+				.col-auto
+					+e.button(href='#' class=data.customClass)
+						+icon('shopping-cart')
+						+icon('check-circle')
 	+e.slider-chars
-		+e.slide-char.slide-char-js Тип
-		+e.slide-char.slide-char-js Наименование
-		+e.slide-char.slide-char-js Назначение
-		+e.slide-char.slide-char-js Тип работ
-		+e.slide-char.slide-char-js Основа
-		+e.slide-char.slide-char-js Разбавитель
-		+e.slide-char.slide-char-js Цвет
-		+e.slide-char.slide-char-js Степень глянца
-		+e.slide-char.slide-char-js Вес
-		+e.slide-char.slide-char-js Расход
+		+e.slide-char.slide-char-js Эмаль
+		+e.slide-char.slide-char-js Эмаль
+		+e.slide-char--forWhat.slide-char-js для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
+		+e.slide-char.slide-char-js внутренние, наружные
+		+e.slide-char.slide-char-js акриловая
+		+e.slide-char.slide-char-js вода
+		+e.slide-char.slide-char-js Красный
+		+e.slide-char.slide-char-js матовая
+		+e.slide-char.slide-char-js 1 кг
+		+e.slide-char.slide-char-js 0,1 кг/м2
+	+e.slider-chars
+		+e.slide-char.slide-char-js Эмаль
+		+e.slide-char.slide-char-js Эмаль
+		+e.slide-char--forWhat.slide-char-js для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
+		+e.slide-char.slide-char-js внутренние, наружные
+		+e.slide-char.slide-char-js акриловая
+		+e.slide-char.slide-char-js вода
+		+e.slide-char.slide-char-js Красный
+		+e.slide-char.slide-char-js матовая
+		+e.slide-char.slide-char-js 1 кг
+		+e.slide-char.slide-char-js 0,1 кг/м2

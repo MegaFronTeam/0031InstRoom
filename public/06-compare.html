@@ -643,10 +643,54 @@
 							</ol>
 						</nav>
 						<div class="section-title">
-							<h1>Сравнение товаров</h1>
+							<div class="row">
+								<div class="col-sm">
+									<h1>Сравнение товаров</h1>
+								</div>
+								<div class="col-sm-auto">
+									<div class="section-title__arrow-wrap">
+										<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+											<svg class="icon icon-chevron-left ">
+												<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+											</svg>
+										</div>
+										<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+											<svg class="icon icon-chevron-right ">
+												<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="section-title__head-slider section-title__head-slider--js swiper">
+								<div class="swiper-wrapper">
+										<a class="section-title__slide swiper-slide" href="#">Малярные товары
+										</a>
+										<a class="section-title__slide swiper-slide" href="#">Электрооборудование
+										</a>
+										<a class="section-title__slide swiper-slide" href="#">Кисти
+										</a>
+										<a class="section-title__slide swiper-slide" href="#">Тачки садовые
+										</a>
+										<a class="section-title__slide swiper-slide" href="#">Грунт
+										</a>
+										<a class="section-title__slide swiper-slide" href="#">Насосы
+										</a>
+										<a class="section-title__slide swiper-slide" href="#">Поликарбон
+										</a>
+										<a class="section-title__slide swiper-slide" href="#">Грунт
+										</a>
+										<a class="section-title__slide swiper-slide" href="#">Насосы
+										</a>
+										<a class="section-title__slide swiper-slide" href="#">Поликарбон
+										</a>
+								</div>
+							</div>
 						</div>
 						<div class="sCompare__main-row row">
 							<div class="sCompare__col sCompare__col--chars col-auto">
+								<a class="sCompare__show-difference" href="#">показать только отличия
+								</a>
 								<div class="sCompare__c-title h5">Основные характеристики
 								</div>
 								<div class="sCompare__c-items">
@@ -654,7 +698,7 @@
 									</div>
 									<div class="sCompare__c-item c-item-js">Наименование
 									</div>
-									<div class="sCompare__c-item c-item-js">Назначение
+									<div class="sCompare__c-item sCompare__c-item--forWhat c-item-js">Назначение
 									</div>
 									<div class="sCompare__c-item c-item-js">Тип работ
 									</div>
@@ -673,6 +717,28 @@
 								</div>
 								<div class="sCompare__c-title h5">Дополнительные<br>характеристики
 								</div>
+								<div class="sCompare__c-items">
+									<div class="sCompare__c-item c-item-js">Тип
+									</div>
+									<div class="sCompare__c-item c-item-js">Наименование
+									</div>
+									<div class="sCompare__c-item sCompare__c-item--forWhat c-item-js">Назначение
+									</div>
+									<div class="sCompare__c-item c-item-js">Тип работ
+									</div>
+									<div class="sCompare__c-item c-item-js">Основа
+									</div>
+									<div class="sCompare__c-item c-item-js">Разбавитель
+									</div>
+									<div class="sCompare__c-item c-item-js">Цвет
+									</div>
+									<div class="sCompare__c-item c-item-js">Степень глянца
+									</div>
+									<div class="sCompare__c-item c-item-js">Вес
+									</div>
+									<div class="sCompare__c-item c-item-js">Расход
+									</div>
+								</div>
 							</div>
 							<div class="sCompare__col sCompare__col--slider col">
 								<div class="sCompare__main-slider">
@@ -683,32 +749,72 @@
 													<div class="sCompare-sub-slider">
 														<div class="compare-card compare-card--js">
 															<div class="compare-card__content">
+																<div class="compare-card__close">
+																</div>
 																<a class="compare-card__img" href="#"><img loading="lazy" src="img/search-product-img.png" alt=""/>
 																</a>
 																<a class="compare-card__title" href="#">Вытяжка 60 см Bosch Serie | 4 DWK65AD60R
 																</a>
+																<div class="row">
+																	<div class="col">
+																		<div class="compare-card__price">500 ₽
+																		</div>
+																	</div>
+																	<div class="col-auto">
+																		<a class="compare-card__button active" href="#">
+																			<svg class="icon icon-shopping-cart ">
+																				<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																			</svg>
+																			<svg class="icon icon-check-circle ">
+																				<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																			</svg>
+																		</a>
+																	</div>
+																</div>
 															</div>
 														</div>
 														<div class="sCompare__slider-chars">
-															<div class="sCompare__slide-char slide-char-js">Тип
+															<div class="sCompare__slide-char slide-char-js">Эмаль
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Наименование
+															<div class="sCompare__slide-char slide-char-js">Эмаль
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Назначение
+															<div class="sCompare__slide-char sCompare__slide-char--forWhat slide-char-js">для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Тип работ
+															<div class="sCompare__slide-char slide-char-js">внутренние, наружные
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Основа
+															<div class="sCompare__slide-char slide-char-js">акриловая
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Разбавитель
+															<div class="sCompare__slide-char slide-char-js">вода
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Цвет
+															<div class="sCompare__slide-char slide-char-js">Красный
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Степень глянца
+															<div class="sCompare__slide-char slide-char-js">матовая
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Вес
+															<div class="sCompare__slide-char slide-char-js">1 кг
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Расход
+															<div class="sCompare__slide-char slide-char-js">0,1 кг/м2
+															</div>
+														</div>
+														<div class="sCompare__slider-chars">
+															<div class="sCompare__slide-char slide-char-js">Эмаль
+															</div>
+															<div class="sCompare__slide-char slide-char-js">Эмаль
+															</div>
+															<div class="sCompare__slide-char sCompare__slide-char--forWhat slide-char-js">для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
+															</div>
+															<div class="sCompare__slide-char slide-char-js">внутренние, наружные
+															</div>
+															<div class="sCompare__slide-char slide-char-js">акриловая
+															</div>
+															<div class="sCompare__slide-char slide-char-js">вода
+															</div>
+															<div class="sCompare__slide-char slide-char-js">Красный
+															</div>
+															<div class="sCompare__slide-char slide-char-js">матовая
+															</div>
+															<div class="sCompare__slide-char slide-char-js">1 кг
+															</div>
+															<div class="sCompare__slide-char slide-char-js">0,1 кг/м2
 															</div>
 														</div>
 													</div>
@@ -719,32 +825,72 @@
 													<div class="sCompare-sub-slider">
 														<div class="compare-card compare-card--js">
 															<div class="compare-card__content">
+																<div class="compare-card__close">
+																</div>
 																<a class="compare-card__img" href="#"><img loading="lazy" src="img/search-product-img.png" alt=""/>
 																</a>
 																<a class="compare-card__title" href="#">Вытяжка 60 см Bosch Serie | 4 DWK65AD60R
 																</a>
+																<div class="row">
+																	<div class="col">
+																		<div class="compare-card__price">500 ₽
+																		</div>
+																	</div>
+																	<div class="col-auto">
+																		<a class="compare-card__button" href="#">
+																			<svg class="icon icon-shopping-cart ">
+																				<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																			</svg>
+																			<svg class="icon icon-check-circle ">
+																				<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																			</svg>
+																		</a>
+																	</div>
+																</div>
 															</div>
 														</div>
 														<div class="sCompare__slider-chars">
-															<div class="sCompare__slide-char slide-char-js">Тип
+															<div class="sCompare__slide-char slide-char-js">Эмаль
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Наименование
+															<div class="sCompare__slide-char slide-char-js">Эмаль
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Назначение
+															<div class="sCompare__slide-char sCompare__slide-char--forWhat slide-char-js">для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Тип работ
+															<div class="sCompare__slide-char slide-char-js">внутренние, наружные
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Основа
+															<div class="sCompare__slide-char slide-char-js">акриловая
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Разбавитель
+															<div class="sCompare__slide-char slide-char-js">вода
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Цвет
+															<div class="sCompare__slide-char slide-char-js">Красный
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Степень глянца
+															<div class="sCompare__slide-char slide-char-js">матовая
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Вес
+															<div class="sCompare__slide-char slide-char-js">1 кг
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Расход
+															<div class="sCompare__slide-char slide-char-js">0,1 кг/м2
+															</div>
+														</div>
+														<div class="sCompare__slider-chars">
+															<div class="sCompare__slide-char slide-char-js">Эмаль
+															</div>
+															<div class="sCompare__slide-char slide-char-js">Эмаль
+															</div>
+															<div class="sCompare__slide-char sCompare__slide-char--forWhat slide-char-js">для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
+															</div>
+															<div class="sCompare__slide-char slide-char-js">внутренние, наружные
+															</div>
+															<div class="sCompare__slide-char slide-char-js">акриловая
+															</div>
+															<div class="sCompare__slide-char slide-char-js">вода
+															</div>
+															<div class="sCompare__slide-char slide-char-js">Красный
+															</div>
+															<div class="sCompare__slide-char slide-char-js">матовая
+															</div>
+															<div class="sCompare__slide-char slide-char-js">1 кг
+															</div>
+															<div class="sCompare__slide-char slide-char-js">0,1 кг/м2
 															</div>
 														</div>
 													</div>
@@ -755,32 +901,72 @@
 													<div class="sCompare-sub-slider">
 														<div class="compare-card compare-card--js">
 															<div class="compare-card__content">
+																<div class="compare-card__close">
+																</div>
 																<a class="compare-card__img" href="#"><img loading="lazy" src="img/search-product-img.png" alt=""/>
 																</a>
 																<a class="compare-card__title" href="#">Вытяжка 60 см Bosch Serie | 4 DWK65AD60R
 																</a>
+																<div class="row">
+																	<div class="col">
+																		<div class="compare-card__price">500 ₽
+																		</div>
+																	</div>
+																	<div class="col-auto">
+																		<a class="compare-card__button" href="#">
+																			<svg class="icon icon-shopping-cart ">
+																				<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																			</svg>
+																			<svg class="icon icon-check-circle ">
+																				<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																			</svg>
+																		</a>
+																	</div>
+																</div>
 															</div>
 														</div>
 														<div class="sCompare__slider-chars">
-															<div class="sCompare__slide-char slide-char-js">Тип
+															<div class="sCompare__slide-char slide-char-js">Эмаль
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Наименование
+															<div class="sCompare__slide-char slide-char-js">Эмаль
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Назначение
+															<div class="sCompare__slide-char sCompare__slide-char--forWhat slide-char-js">для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Тип работ
+															<div class="sCompare__slide-char slide-char-js">внутренние, наружные
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Основа
+															<div class="sCompare__slide-char slide-char-js">акриловая
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Разбавитель
+															<div class="sCompare__slide-char slide-char-js">вода
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Цвет
+															<div class="sCompare__slide-char slide-char-js">Красный
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Степень глянца
+															<div class="sCompare__slide-char slide-char-js">матовая
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Вес
+															<div class="sCompare__slide-char slide-char-js">1 кг
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Расход
+															<div class="sCompare__slide-char slide-char-js">0,1 кг/м2
+															</div>
+														</div>
+														<div class="sCompare__slider-chars">
+															<div class="sCompare__slide-char slide-char-js">Эмаль
+															</div>
+															<div class="sCompare__slide-char slide-char-js">Эмаль
+															</div>
+															<div class="sCompare__slide-char sCompare__slide-char--forWhat slide-char-js">для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
+															</div>
+															<div class="sCompare__slide-char slide-char-js">внутренние, наружные
+															</div>
+															<div class="sCompare__slide-char slide-char-js">акриловая
+															</div>
+															<div class="sCompare__slide-char slide-char-js">вода
+															</div>
+															<div class="sCompare__slide-char slide-char-js">Красный
+															</div>
+															<div class="sCompare__slide-char slide-char-js">матовая
+															</div>
+															<div class="sCompare__slide-char slide-char-js">1 кг
+															</div>
+															<div class="sCompare__slide-char slide-char-js">0,1 кг/м2
 															</div>
 														</div>
 													</div>
@@ -791,32 +977,72 @@
 													<div class="sCompare-sub-slider">
 														<div class="compare-card compare-card--js">
 															<div class="compare-card__content">
+																<div class="compare-card__close">
+																</div>
 																<a class="compare-card__img" href="#"><img loading="lazy" src="img/search-product-img.png" alt=""/>
 																</a>
 																<a class="compare-card__title" href="#">Вытяжка 60 см Bosch Serie | 4 DWK65AD60R
 																</a>
+																<div class="row">
+																	<div class="col">
+																		<div class="compare-card__price">500 ₽
+																		</div>
+																	</div>
+																	<div class="col-auto">
+																		<a class="compare-card__button" href="#">
+																			<svg class="icon icon-shopping-cart ">
+																				<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																			</svg>
+																			<svg class="icon icon-check-circle ">
+																				<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																			</svg>
+																		</a>
+																	</div>
+																</div>
 															</div>
 														</div>
 														<div class="sCompare__slider-chars">
-															<div class="sCompare__slide-char slide-char-js">Тип
+															<div class="sCompare__slide-char slide-char-js">Эмаль
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Наименование
+															<div class="sCompare__slide-char slide-char-js">Эмаль
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Назначение
+															<div class="sCompare__slide-char sCompare__slide-char--forWhat slide-char-js">для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Тип работ
+															<div class="sCompare__slide-char slide-char-js">внутренние, наружные
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Основа
+															<div class="sCompare__slide-char slide-char-js">акриловая
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Разбавитель
+															<div class="sCompare__slide-char slide-char-js">вода
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Цвет
+															<div class="sCompare__slide-char slide-char-js">Красный
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Степень глянца
+															<div class="sCompare__slide-char slide-char-js">матовая
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Вес
+															<div class="sCompare__slide-char slide-char-js">1 кг
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Расход
+															<div class="sCompare__slide-char slide-char-js">0,1 кг/м2
+															</div>
+														</div>
+														<div class="sCompare__slider-chars">
+															<div class="sCompare__slide-char slide-char-js">Эмаль
+															</div>
+															<div class="sCompare__slide-char slide-char-js">Эмаль
+															</div>
+															<div class="sCompare__slide-char sCompare__slide-char--forWhat slide-char-js">для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
+															</div>
+															<div class="sCompare__slide-char slide-char-js">внутренние, наружные
+															</div>
+															<div class="sCompare__slide-char slide-char-js">акриловая
+															</div>
+															<div class="sCompare__slide-char slide-char-js">вода
+															</div>
+															<div class="sCompare__slide-char slide-char-js">Красный
+															</div>
+															<div class="sCompare__slide-char slide-char-js">матовая
+															</div>
+															<div class="sCompare__slide-char slide-char-js">1 кг
+															</div>
+															<div class="sCompare__slide-char slide-char-js">0,1 кг/м2
 															</div>
 														</div>
 													</div>
@@ -827,32 +1053,72 @@
 													<div class="sCompare-sub-slider">
 														<div class="compare-card compare-card--js">
 															<div class="compare-card__content">
+																<div class="compare-card__close">
+																</div>
 																<a class="compare-card__img" href="#"><img loading="lazy" src="img/search-product-img.png" alt=""/>
 																</a>
 																<a class="compare-card__title" href="#">Вытяжка 60 см Bosch Serie | 4 DWK65AD60R
 																</a>
+																<div class="row">
+																	<div class="col">
+																		<div class="compare-card__price">500 ₽
+																		</div>
+																	</div>
+																	<div class="col-auto">
+																		<a class="compare-card__button" href="#">
+																			<svg class="icon icon-shopping-cart ">
+																				<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																			</svg>
+																			<svg class="icon icon-check-circle ">
+																				<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																			</svg>
+																		</a>
+																	</div>
+																</div>
 															</div>
 														</div>
 														<div class="sCompare__slider-chars">
-															<div class="sCompare__slide-char slide-char-js">Тип
+															<div class="sCompare__slide-char slide-char-js">Эмаль
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Наименование
+															<div class="sCompare__slide-char slide-char-js">Эмаль
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Назначение
+															<div class="sCompare__slide-char sCompare__slide-char--forWhat slide-char-js">для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Тип работ
+															<div class="sCompare__slide-char slide-char-js">внутренние, наружные
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Основа
+															<div class="sCompare__slide-char slide-char-js">акриловая
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Разбавитель
+															<div class="sCompare__slide-char slide-char-js">вода
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Цвет
+															<div class="sCompare__slide-char slide-char-js">Красный
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Степень глянца
+															<div class="sCompare__slide-char slide-char-js">матовая
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Вес
+															<div class="sCompare__slide-char slide-char-js">1 кг
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Расход
+															<div class="sCompare__slide-char slide-char-js">0,1 кг/м2
+															</div>
+														</div>
+														<div class="sCompare__slider-chars">
+															<div class="sCompare__slide-char slide-char-js">Эмаль
+															</div>
+															<div class="sCompare__slide-char slide-char-js">Эмаль
+															</div>
+															<div class="sCompare__slide-char sCompare__slide-char--forWhat slide-char-js">для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
+															</div>
+															<div class="sCompare__slide-char slide-char-js">внутренние, наружные
+															</div>
+															<div class="sCompare__slide-char slide-char-js">акриловая
+															</div>
+															<div class="sCompare__slide-char slide-char-js">вода
+															</div>
+															<div class="sCompare__slide-char slide-char-js">Красный
+															</div>
+															<div class="sCompare__slide-char slide-char-js">матовая
+															</div>
+															<div class="sCompare__slide-char slide-char-js">1 кг
+															</div>
+															<div class="sCompare__slide-char slide-char-js">0,1 кг/м2
 															</div>
 														</div>
 													</div>
@@ -863,32 +1129,72 @@
 													<div class="sCompare-sub-slider">
 														<div class="compare-card compare-card--js">
 															<div class="compare-card__content">
+																<div class="compare-card__close">
+																</div>
 																<a class="compare-card__img" href="#"><img loading="lazy" src="img/search-product-img.png" alt=""/>
 																</a>
 																<a class="compare-card__title" href="#">Вытяжка 60 см Bosch Serie | 4 DWK65AD60R
 																</a>
+																<div class="row">
+																	<div class="col">
+																		<div class="compare-card__price">500 ₽
+																		</div>
+																	</div>
+																	<div class="col-auto">
+																		<a class="compare-card__button" href="#">
+																			<svg class="icon icon-shopping-cart ">
+																				<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																			</svg>
+																			<svg class="icon icon-check-circle ">
+																				<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																			</svg>
+																		</a>
+																	</div>
+																</div>
 															</div>
 														</div>
 														<div class="sCompare__slider-chars">
-															<div class="sCompare__slide-char slide-char-js">Тип
+															<div class="sCompare__slide-char slide-char-js">Эмаль
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Наименование
+															<div class="sCompare__slide-char slide-char-js">Эмаль
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Назначение
+															<div class="sCompare__slide-char sCompare__slide-char--forWhat slide-char-js">для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Тип работ
+															<div class="sCompare__slide-char slide-char-js">внутренние, наружные
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Основа
+															<div class="sCompare__slide-char slide-char-js">акриловая
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Разбавитель
+															<div class="sCompare__slide-char slide-char-js">вода
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Цвет
+															<div class="sCompare__slide-char slide-char-js">Красный
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Степень глянца
+															<div class="sCompare__slide-char slide-char-js">матовая
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Вес
+															<div class="sCompare__slide-char slide-char-js">1 кг
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Расход
+															<div class="sCompare__slide-char slide-char-js">0,1 кг/м2
+															</div>
+														</div>
+														<div class="sCompare__slider-chars">
+															<div class="sCompare__slide-char slide-char-js">Эмаль
+															</div>
+															<div class="sCompare__slide-char slide-char-js">Эмаль
+															</div>
+															<div class="sCompare__slide-char sCompare__slide-char--forWhat slide-char-js">для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
+															</div>
+															<div class="sCompare__slide-char slide-char-js">внутренние, наружные
+															</div>
+															<div class="sCompare__slide-char slide-char-js">акриловая
+															</div>
+															<div class="sCompare__slide-char slide-char-js">вода
+															</div>
+															<div class="sCompare__slide-char slide-char-js">Красный
+															</div>
+															<div class="sCompare__slide-char slide-char-js">матовая
+															</div>
+															<div class="sCompare__slide-char slide-char-js">1 кг
+															</div>
+															<div class="sCompare__slide-char slide-char-js">0,1 кг/м2
 															</div>
 														</div>
 													</div>
@@ -899,32 +1205,72 @@
 													<div class="sCompare-sub-slider">
 														<div class="compare-card compare-card--js">
 															<div class="compare-card__content">
+																<div class="compare-card__close">
+																</div>
 																<a class="compare-card__img" href="#"><img loading="lazy" src="img/search-product-img.png" alt=""/>
 																</a>
 																<a class="compare-card__title" href="#">Вытяжка 60 см Bosch Serie | 4 DWK65AD60R
 																</a>
+																<div class="row">
+																	<div class="col">
+																		<div class="compare-card__price">500 ₽
+																		</div>
+																	</div>
+																	<div class="col-auto">
+																		<a class="compare-card__button" href="#">
+																			<svg class="icon icon-shopping-cart ">
+																				<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																			</svg>
+																			<svg class="icon icon-check-circle ">
+																				<use xlink:href="img/svg/sprite.svg#check-circle"></use>
+																			</svg>
+																		</a>
+																	</div>
+																</div>
 															</div>
 														</div>
 														<div class="sCompare__slider-chars">
-															<div class="sCompare__slide-char slide-char-js">Тип
+															<div class="sCompare__slide-char slide-char-js">Эмаль
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Наименование
+															<div class="sCompare__slide-char slide-char-js">Эмаль
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Назначение
+															<div class="sCompare__slide-char sCompare__slide-char--forWhat slide-char-js">для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Тип работ
+															<div class="sCompare__slide-char slide-char-js">внутренние, наружные
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Основа
+															<div class="sCompare__slide-char slide-char-js">акриловая
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Разбавитель
+															<div class="sCompare__slide-char slide-char-js">вода
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Цвет
+															<div class="sCompare__slide-char slide-char-js">Красный
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Степень глянца
+															<div class="sCompare__slide-char slide-char-js">матовая
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Вес
+															<div class="sCompare__slide-char slide-char-js">1 кг
 															</div>
-															<div class="sCompare__slide-char slide-char-js">Расход
+															<div class="sCompare__slide-char slide-char-js">0,1 кг/м2
+															</div>
+														</div>
+														<div class="sCompare__slider-chars">
+															<div class="sCompare__slide-char slide-char-js">Эмаль
+															</div>
+															<div class="sCompare__slide-char slide-char-js">Эмаль
+															</div>
+															<div class="sCompare__slide-char sCompare__slide-char--forWhat slide-char-js">для фасадов, для стен, для потолков, для кухонных/ванных комнат, для детских комнат
+															</div>
+															<div class="sCompare__slide-char slide-char-js">внутренние, наружные
+															</div>
+															<div class="sCompare__slide-char slide-char-js">акриловая
+															</div>
+															<div class="sCompare__slide-char slide-char-js">вода
+															</div>
+															<div class="sCompare__slide-char slide-char-js">Красный
+															</div>
+															<div class="sCompare__slide-char slide-char-js">матовая
+															</div>
+															<div class="sCompare__slide-char slide-char-js">1 кг
+															</div>
+															<div class="sCompare__slide-char slide-char-js">0,1 кг/м2
 															</div>
 														</div>
 													</div>

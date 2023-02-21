@@ -393,6 +393,17 @@ function eventHandler() {
 		watchOverflow: true
 	});
 
+
+	const swiperCompare = new Swiper('.section-title__head-slider--js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true,
+		navigation: {
+			nextEl: document.querySelector('.section-title').querySelector('.swiper-button-next'),
+			prevEl: document.querySelector('.section-title').querySelector('.swiper-button-prev'),
+		},
+	});
+
 	let defaultSliders = document.querySelectorAll('.default-slider-js');
 	if (defaultSliders) {
 		for (const defaultSlider of defaultSliders) {
